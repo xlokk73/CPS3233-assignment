@@ -2,6 +2,7 @@
 \usepackage{graphicx}
 \usepackage{listings}
 \usepackage{tikz}
+\usepackage{amssymb}
 \usetikzlibrary{automata, positioning, arrows}
 
 
@@ -106,7 +107,7 @@ Important to note in the automaton is that the alphabet is composed of signals t
 
 The first time property that is handled states that "upon a request, after the door closes, the elevator starts moving in less than 3 seconds". When adapted to the provided automaton, this translates to "when the lift is \textit{Idle} (because a floor button was pressed so the door closed), it goes either up or down in less than 3 seconds". This is verified by clock x.
 
-The second time property states that "after the door has been open for 3 seconds, it closes automatically". This implies that when the lift has its doors opened i.e. its in the \textit{Loading} state, it must go to the \textit{Idle} in less then 3 seconds. This is because if a user presses the button in less than 3 seconds, the door will close and if he does not press any button, the door closes automatically. This is verified by clock y. 
+The second time property states that "after the door has been open for 3 seconds, it closes automatically". This implies that when the lift has its doors opened i.e. its in the \textit{Loading} state, it must go to the \textit{Idle} in less than 3 seconds. This is because if a user presses the button in less than 3 seconds, the door will close and if he does not press any button, the door closes automatically. This is verified by clock y. 
 
 \begin{lstlisting}[
 caption={TA definition}
@@ -123,6 +124,8 @@ M = {
     [ Idle, Moving, goUp, {}, x<3 ]
     
     [ Idle, Moving, goDown, {y:=0}, x<3 ]
+    
+    [ Loading, Loading, true]
     
     [ Loading, Idle, closeDoor, {x:=0}, y<3 ]
     
@@ -150,7 +153,17 @@ M = {
 \end{figure}
 
 \subsection{Duration Calculus}
+For the DC specifications, two formulas where defined, one for each time constrain. The first time constrain states that: "upon a request, after the door closes, the elevator starts moving in less than 3 seconds". This is expressed by the formula:
 
+$$\square [Idle] ; [Loading] ;  [Moving]  \wedge [idle] ; [Loading] ; [Idle] \Rightarrow \int loading < 3$$
+
+The square means that it is checking for all subintervals. Then the pattern the formula is looking for is \textit{Idle}, followed my \textit{Loading}, followed by \textit{Moving}. Then, the expression verifies that the time of loading is less than 3.
+
+The second time constrain says that: after the door has been open for 3 seconds, it closes automatically". The formula describing this is as follows:
+
+$$\square [doorOpen] ; [\neg doorOpen] \Rightarrow \int doorOpen < 3$$
+
+The formula looks for the pattern of an open door followed by a closed door and then verifies that the door was open for less than 3 seconds. 
 
 \section{Runtime Verification}
 
