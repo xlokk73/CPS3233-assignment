@@ -6,31 +6,38 @@ GLOBAL {
 	
 	EVENTS {
 			
-		moveLift(int moveLiftNumeber, int moveFloorNumber) = {*.moveLift(int liftNumber, int floorNumber)}
-		closeLiftDoor(int clodeLiftNumber) = {*.closeLiftDoor(int liftNumber)}
-		openLiftDoor(int openLiftNumber) = {*.openLiftDoor(int liftNumber)}
-		callLiftToFloor(int callFloorNumber) = {*.callLiftToFloor(int floor)}
+		moveLift() = {*.moveLift()}
+		closeLiftDoor() = {*.closeLiftDoor()}
+		openLiftDoor() = {*.openLiftDoor()}
+		callLiftToFloor() = {*.callLiftToFloor()}
 		
 	}
 	
-	PROPERTY doorsWhileMoving{
+	PROPERTY AutomaticDoorClose{
 		STATES {
 			BAD {
-				
+				DoorOpenTooLong {System.out.println("Oqqow!! lift open too long");}
 			}
 			
 			NORMAL {
-				Loading
-				Moving
+				Loading {System.out.println("Lift is Loading");}
+				Moving {System.out.println("Lift is moving");}
 			}
 			
 			STARTING {
-				Idle
+				Idle  {System.out.println("Started verification");}
 			}
 		}
 		
 		TRANSITIONS {
+			Idle -> Loading [ openLiftDoor \ \ y.reset(); ]
+			%% Loading -> Idle [ closeLiftDoor \ y.compareTo(3) < 3 \ x.reset(); ]
+			Loading -> Idle [ closeLiftDoor \  \ x.reset(); ]
+			Idle -> Moving [moveLift \ \ ]
+			Moving -> Loading [ openLiftDoor \ \ ]
 			
+			
+			Loading -> DoorOpenTooLong [ closeLiftDoor \ y.compareTo(3) >=3 \ ]
 		}
 	}
 

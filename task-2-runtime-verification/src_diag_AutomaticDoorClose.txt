@@ -1,0 +1,12 @@
+digraph _logic_AutomaticDoorClose {
+rankdir=LR;
+node [shape = circle]; Loading Moving Idle;
+node [shape = octagon]; DoorOpenTooLong;
+node [shape = point]; _s_s;
+_s_s -> Idle;
+Loading -> Idle [ label = "(1) closeLiftDoor\\\\x . reset ( ) ; "];
+Loading -> DoorOpenTooLong [ label = "(2) closeLiftDoor\\y . compareTo ( 3 ) >= 3 "];
+Idle -> Loading [ label = "(1) openLiftDoor\\\\y . reset ( ) ; "];
+Idle -> Moving [ label = "(2) moveLift"];
+Moving -> Loading [ label = "(1) openLiftDoor"];
+}
