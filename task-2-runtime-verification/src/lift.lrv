@@ -4,13 +4,10 @@ GLOBAL {
 		Clock y = new Clock();
 	}
 	
-	EVENTS {
-			
-		moveLift() = {*.moveLift()}
-		closeLiftDoor() = {*.closeLiftDoor()}
-		openLiftDoor() = {*.openLiftDoor()}
-		callLiftToFloor() = {*.callLiftToFloor()}
-		
+	EVENTS {				
+		setMoving(boolean moving) = {*.setMoving(moving)}
+		closeDoors() = {*.closeDoors()}
+		openDoors() = {*.openDoors()}
 	}
 	
 	PROPERTY AutomaticDoorClose{
@@ -20,24 +17,22 @@ GLOBAL {
 			}
 			
 			NORMAL {
-				Loading {System.out.println("Lift is Loading");}
-				Moving {System.out.println("Lift is moving");}
+				Loading
+				Moving 
 			}
 			
 			STARTING {
-				Idle  {System.out.println("Started verification");}
+				Idle
 			}
 		}
 		
-		TRANSITIONS {
-			Idle -> Loading [ openLiftDoor \ \ y.reset(); ]
-			%% Loading -> Idle [ closeLiftDoor \ y.compareTo(3) < 3 \ x.reset(); ]
-			Loading -> Idle [ closeLiftDoor \  \ x.reset(); ]
-			Idle -> Moving [moveLift \ \ ]
-			Moving -> Loading [ openLiftDoor \ \ ]
+		TRANSITIONS {			
+			Idle -> Loading [openDoors \ \ y.reset();]
+			Idle -> Moving [setMoving \ moving==true \ y.reset();]
 			
+			Loading -> Idle [closeDoors \ \ x.reset();]
 			
-			Loading -> DoorOpenTooLong [ closeLiftDoor \ y.compareTo(3) >=3 \ ]
+			Moving -> Idle [setMoving \ moving==false \ x.reset();]
 		}
 	}
 

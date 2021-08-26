@@ -23,6 +23,7 @@ _cls_lift0_instances.put(root, root);
 }
 
 _cls_lift0 parent; //to remain null - this class does not have a parent!
+public static boolean moving;
 int no_automata = 1;
 public Clock x = new Clock(this,"x");
 public Clock y = new Clock(this,"y");
@@ -35,9 +36,6 @@ public _cls_lift0() {
 }
 
 public void initialisation() {
-
-_cls_lift0.pw .println ("Started verification");
-
    x.reset();
    y.reset();
 }
@@ -96,7 +94,7 @@ else if (no_automata < 0)
 }catch(Exception ex){ex.printStackTrace();}
 }
 
-int _state_id_AutomaticDoorClose = 57;
+int _state_id_AutomaticDoorClose = 63;
 
 public void _performLogic_AutomaticDoorClose(String _info, int... _event) {
 
@@ -104,49 +102,36 @@ _cls_lift0.pw.println("[AutomaticDoorClose]AUTOMATON::> AutomaticDoorClose("+") 
 _cls_lift0.pw.flush();
 
 if (0==1){}
-else if (_state_id_AutomaticDoorClose==55){
+else if (_state_id_AutomaticDoorClose==61){
 		if (1==0){}
-		else if ((_occurredEvent(_event,114/*closeLiftDoor*/))){
+		else if ((_occurredEvent(_event,90/*closeDoors*/))){
 		x .reset ();
 
-		_state_id_AutomaticDoorClose = 57;//moving to state Idle
-_cls_lift0.pw .println ("Started verification");
-
-		_goto_AutomaticDoorClose(_info);
-		}
-		else if ((_occurredEvent(_event,114/*closeLiftDoor*/)) && (y .compareTo (3 )>=3 )){
-		
-		_state_id_AutomaticDoorClose = 54;//moving to state DoorOpenTooLong
-_cls_lift0.pw .println ("Oqqow!! lift open too long");
-
+		_state_id_AutomaticDoorClose = 63;//moving to state Idle
 		_goto_AutomaticDoorClose(_info);
 		}
 }
-else if (_state_id_AutomaticDoorClose==57){
+else if (_state_id_AutomaticDoorClose==63){
 		if (1==0){}
-		else if ((_occurredEvent(_event,116/*openLiftDoor*/))){
+		else if ((_occurredEvent(_event,92/*openDoors*/))){
 		y .reset ();
 
-		_state_id_AutomaticDoorClose = 55;//moving to state Loading
-_cls_lift0.pw .println ("Lift is Loading");
-
+		_state_id_AutomaticDoorClose = 61;//moving to state Loading
 		_goto_AutomaticDoorClose(_info);
 		}
-		else if ((_occurredEvent(_event,112/*moveLift*/))){
-		
-		_state_id_AutomaticDoorClose = 56;//moving to state Moving
-_cls_lift0.pw .println ("Lift is moving");
+		else if ((_occurredEvent(_event,88/*setMoving*/)) && (moving ==true )){
+		y .reset ();
 
+		_state_id_AutomaticDoorClose = 62;//moving to state Moving
 		_goto_AutomaticDoorClose(_info);
 		}
 }
-else if (_state_id_AutomaticDoorClose==56){
+else if (_state_id_AutomaticDoorClose==62){
 		if (1==0){}
-		else if ((_occurredEvent(_event,116/*openLiftDoor*/))){
-		
-		_state_id_AutomaticDoorClose = 55;//moving to state Loading
-_cls_lift0.pw .println ("Lift is Loading");
+		else if ((_occurredEvent(_event,88/*setMoving*/)) && (moving ==false )){
+		x .reset ();
 
+		_state_id_AutomaticDoorClose = 63;//moving to state Idle
 		_goto_AutomaticDoorClose(_info);
 		}
 }
@@ -159,10 +144,10 @@ _cls_lift0.pw.flush();
 
 public String _string_AutomaticDoorClose(int _state_id, int _mode){
 switch(_state_id){
-case 54: if (_mode == 0) return "DoorOpenTooLong"; else return "!!!SYSTEM REACHED BAD STATE!!! DoorOpenTooLong "+new _BadStateExceptionlift().toString()+" ";
-case 55: if (_mode == 0) return "Loading"; else return "Loading";
-case 56: if (_mode == 0) return "Moving"; else return "Moving";
-case 57: if (_mode == 0) return "Idle"; else return "Idle";
+case 60: if (_mode == 0) return "DoorOpenTooLong"; else return "!!!SYSTEM REACHED BAD STATE!!! DoorOpenTooLong "+new _BadStateExceptionlift().toString()+" ";
+case 61: if (_mode == 0) return "Loading"; else return "Loading";
+case 62: if (_mode == 0) return "Moving"; else return "Moving";
+case 63: if (_mode == 0) return "Idle"; else return "Idle";
 default: return "!!!SYSTEM REACHED AN UNKNOWN STATE!!!";
 }
 }

@@ -124,7 +124,7 @@ public class LiftController {
 	}
 	
 	public static void main(String[] args) throws Exception {
-		new LiftController(6, 1, true);
+		new LiftController(6, 1, false);
 	}
 
 }

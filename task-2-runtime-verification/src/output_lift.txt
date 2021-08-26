@@ -1,8 +1,21 @@
-Started verification
 [AutomaticDoorClose]AUTOMATON::> AutomaticDoorClose() STATE::>Idle
-Lift is moving
-[AutomaticDoorClose]MOVED ON METHODCALL: void com.liftmania.LiftController.moveLift(Lift, int) TO STATE::> Moving
+[AutomaticDoorClose]MOVED ON METHODCALL: void com.liftmania.Lift.setMoving(boolean) TO STATE::> Moving
 [AutomaticDoorClose]AUTOMATON::> AutomaticDoorClose() STATE::>Moving
 [AutomaticDoorClose]AUTOMATON::> AutomaticDoorClose() STATE::>Moving
 [AutomaticDoorClose]AUTOMATON::> AutomaticDoorClose() STATE::>Moving
 [AutomaticDoorClose]AUTOMATON::> AutomaticDoorClose() STATE::>Moving
+[AutomaticDoorClose]MOVED ON METHODCALL: void com.liftmania.Lift.setMoving(boolean) TO STATE::> Idle
+[AutomaticDoorClose]AUTOMATON::> AutomaticDoorClose() STATE::>Idle
+[AutomaticDoorClose]MOVED ON METHODCALL: void com.liftmania.Lift.setMoving(boolean) TO STATE::> Moving
+[AutomaticDoorClose]AUTOMATON::> AutomaticDoorClose() STATE::>Moving
+[AutomaticDoorClose]AUTOMATON::> AutomaticDoorClose() STATE::>Moving
+[AutomaticDoorClose]AUTOMATON::> AutomaticDoorClose() STATE::>Moving
+[AutomaticDoorClose]AUTOMATON::> AutomaticDoorClose() STATE::>Moving
+[AutomaticDoorClose]MOVED ON METHODCALL: void com.liftmania.Lift.setMoving(boolean) TO STATE::> Idle
+[AutomaticDoorClose]AUTOMATON::> AutomaticDoorClose() STATE::>Idle
+[AutomaticDoorClose]MOVED ON METHODCALL: void com.liftmania.Lift.setMoving(boolean) TO STATE::> Moving
+[AutomaticDoorClose]AUTOMATON::> AutomaticDoorClose() STATE::>Moving
+[AutomaticDoorClose]AUTOMATON::> AutomaticDoorClose() STATE::>Moving
+[AutomaticDoorClose]AUTOMATON::> AutomaticDoorClose() STATE::>Moving
+[AutomaticDoorClose]AUTOMATON::> AutomaticDoorClose() STATE::>Moving
+[AutomaticDoorClose]MOVED ON METHODCALL: void com.liftmania.Lift.setMoving(boolean) TO STATE::> Idle
