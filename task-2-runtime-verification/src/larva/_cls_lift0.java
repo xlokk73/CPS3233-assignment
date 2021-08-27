@@ -58,7 +58,7 @@ return 0;
 
 public void _call(String _info, int... _event){
 synchronized(_cls_lift0_instances){
-_performLogic_AutomaticDoorClose(_info, _event);
+_performLogic_TimeProperties(_info, _event);
 }
 }
 
@@ -94,59 +94,66 @@ else if (no_automata < 0)
 }catch(Exception ex){ex.printStackTrace();}
 }
 
-int _state_id_AutomaticDoorClose = 63;
+int _state_id_TimeProperties = 71;
 
-public void _performLogic_AutomaticDoorClose(String _info, int... _event) {
+public void _performLogic_TimeProperties(String _info, int... _event) {
 
-_cls_lift0.pw.println("[AutomaticDoorClose]AUTOMATON::> AutomaticDoorClose("+") STATE::>"+ _string_AutomaticDoorClose(_state_id_AutomaticDoorClose, 0));
+_cls_lift0.pw.println("[TimeProperties]AUTOMATON::> TimeProperties("+") STATE::>"+ _string_TimeProperties(_state_id_TimeProperties, 0));
 _cls_lift0.pw.flush();
 
 if (0==1){}
-else if (_state_id_AutomaticDoorClose==61){
+else if (_state_id_TimeProperties==69){
 		if (1==0){}
-		else if ((_occurredEvent(_event,90/*closeDoors*/))){
+		else if ((_occurredEvent(_event,106/*closeDoors*/)) && (y .compareTo (3 )<0 )){
 		x .reset ();
 
-		_state_id_AutomaticDoorClose = 63;//moving to state Idle
-		_goto_AutomaticDoorClose(_info);
+		_state_id_TimeProperties = 71;//moving to state Idle
+		_goto_TimeProperties(_info);
+		}
+		else if ((_occurredEvent(_event,106/*closeDoors*/)) && (y .compareTo (3 )>=0 )){
+		
+		_state_id_TimeProperties = 68;//moving to state DoorOpenTooLong
+_cls_lift0.pw .println ("Oqqow!! lift open too long");
+
+		_goto_TimeProperties(_info);
 		}
 }
-else if (_state_id_AutomaticDoorClose==63){
+else if (_state_id_TimeProperties==71){
 		if (1==0){}
-		else if ((_occurredEvent(_event,92/*openDoors*/))){
+		else if ((_occurredEvent(_event,108/*openDoors*/))){
 		y .reset ();
 
-		_state_id_AutomaticDoorClose = 61;//moving to state Loading
-		_goto_AutomaticDoorClose(_info);
+		_state_id_TimeProperties = 69;//moving to state Loading
+		_goto_TimeProperties(_info);
 		}
-		else if ((_occurredEvent(_event,88/*setMoving*/)) && (moving ==true )){
+		else if ((_occurredEvent(_event,104/*setMoving*/)) && (moving ==true )){
 		
-		_state_id_AutomaticDoorClose = 62;//moving to state Moving
-		_goto_AutomaticDoorClose(_info);
+		_state_id_TimeProperties = 70;//moving to state Moving
+		_goto_TimeProperties(_info);
 		}
 }
-else if (_state_id_AutomaticDoorClose==62){
+else if (_state_id_TimeProperties==70){
 		if (1==0){}
-		else if ((_occurredEvent(_event,94/*setFloor*/))){
+		else if ((_occurredEvent(_event,110/*setFloor*/))){
 		x .reset ();
 
-		_state_id_AutomaticDoorClose = 63;//moving to state Idle
-		_goto_AutomaticDoorClose(_info);
+		_state_id_TimeProperties = 71;//moving to state Idle
+		_goto_TimeProperties(_info);
 		}
 }
 }
 
-public void _goto_AutomaticDoorClose(String _info){
-_cls_lift0.pw.println("[AutomaticDoorClose]MOVED ON METHODCALL: "+ _info +" TO STATE::> " + _string_AutomaticDoorClose(_state_id_AutomaticDoorClose, 1));
+public void _goto_TimeProperties(String _info){
+_cls_lift0.pw.println("[TimeProperties]MOVED ON METHODCALL: "+ _info +" TO STATE::> " + _string_TimeProperties(_state_id_TimeProperties, 1));
 _cls_lift0.pw.flush();
 }
 
-public String _string_AutomaticDoorClose(int _state_id, int _mode){
+public String _string_TimeProperties(int _state_id, int _mode){
 switch(_state_id){
-case 60: if (_mode == 0) return "DoorOpenTooLong"; else return "!!!SYSTEM REACHED BAD STATE!!! DoorOpenTooLong "+new _BadStateExceptionlift().toString()+" ";
-case 61: if (_mode == 0) return "Loading"; else return "Loading";
-case 62: if (_mode == 0) return "Moving"; else return "Moving";
-case 63: if (_mode == 0) return "Idle"; else return "Idle";
+case 68: if (_mode == 0) return "DoorOpenTooLong"; else return "!!!SYSTEM REACHED BAD STATE!!! DoorOpenTooLong "+new _BadStateExceptionlift().toString()+" ";
+case 69: if (_mode == 0) return "Loading"; else return "Loading";
+case 70: if (_mode == 0) return "Moving"; else return "Moving";
+case 71: if (_mode == 0) return "Idle"; else return "Idle";
 default: return "!!!SYSTEM REACHED AN UNKNOWN STATE!!!";
 }
 }

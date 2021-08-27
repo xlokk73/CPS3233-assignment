@@ -11,7 +11,7 @@ GLOBAL {
 		setFloor() = {*.setFloor(*)}
 	}
 	
-	PROPERTY AutomaticDoorClose{
+	PROPERTY TimeProperties{
 		STATES {
 			BAD {
 				DoorOpenTooLong {System.out.println("Oqqow!! lift open too long");}
@@ -32,7 +32,8 @@ GLOBAL {
 			Idle -> Loading [openDoors \ \ y.reset(); ]
 			Idle -> Moving [setMoving \ moving==true \ ]
 			
-			Loading -> Idle [closeDoors \ \ x.reset();]
+			Loading -> Idle [closeDoors \ y.compareTo(3) < 0 \ x.reset();]
+			Loading -> DoorOpenTooLong [closeDoors \ y.compareTo(3) >= 0 \ ]
 			
 			Moving -> Idle [setFloor \ \ x.reset();]
 		}

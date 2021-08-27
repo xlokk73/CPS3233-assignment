@@ -5,7 +5,6 @@
 [AutomaticDoorClose]MOVED ON METHODCALL: void com.liftmania.Lift.setFloor(int) TO STATE::> Idle
 [AutomaticDoorClose]AUTOMATON::> AutomaticDoorClose() STATE::>Idle
 [AutomaticDoorClose]AUTOMATON::> AutomaticDoorClose() STATE::>Idle
-[AutomaticDoorClose]AUTOMATON::> AutomaticDoorClose() STATE::>Idle
 [AutomaticDoorClose]MOVED ON METHODCALL: void com.liftmania.gui.Shaft.openDoors() TO STATE::> Loading
 [AutomaticDoorClose]AUTOMATON::> AutomaticDoorClose() STATE::>Loading
 [AutomaticDoorClose]MOVED ON METHODCALL: void com.liftmania.gui.Shaft.closeDoors() TO STATE::> Idle

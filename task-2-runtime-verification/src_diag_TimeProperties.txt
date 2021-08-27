@@ -1,4 +1,4 @@
-digraph _logic_AutomaticDoorClose {
+digraph _logic_TimeProperties {
 rankdir=LR;
 node [shape = circle]; Loading Moving Idle;
 node [shape = octagon]; DoorOpenTooLong;
