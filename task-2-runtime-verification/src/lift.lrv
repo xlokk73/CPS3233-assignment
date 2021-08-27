@@ -8,6 +8,7 @@ GLOBAL {
 		setMoving(boolean moving) = {*.setMoving(moving)}
 		closeDoors() = {*.closeDoors()}
 		openDoors() = {*.openDoors()}
+		setFloor() = {*.setFloor(*)}
 	}
 	
 	PROPERTY AutomaticDoorClose{
@@ -27,12 +28,13 @@ GLOBAL {
 		}
 		
 		TRANSITIONS {			
-			Idle -> Loading [openDoors \ \ y.reset();]
-			Idle -> Moving [setMoving \ moving==true \ y.reset();]
+			
+			Idle -> Loading [openDoors \ \ y.reset(); ]
+			Idle -> Moving [setMoving \ moving==true \ ]
 			
 			Loading -> Idle [closeDoors \ \ x.reset();]
 			
-			Moving -> Idle [setMoving \ moving==false \ x.reset();]
+			Moving -> Idle [setFloor \ \ x.reset();]
 		}
 	}
 

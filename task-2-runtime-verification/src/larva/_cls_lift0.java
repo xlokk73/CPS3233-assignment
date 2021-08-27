@@ -120,15 +120,14 @@ else if (_state_id_AutomaticDoorClose==63){
 		_goto_AutomaticDoorClose(_info);
 		}
 		else if ((_occurredEvent(_event,88/*setMoving*/)) && (moving ==true )){
-		y .reset ();
-
+		
 		_state_id_AutomaticDoorClose = 62;//moving to state Moving
 		_goto_AutomaticDoorClose(_info);
 		}
 }
 else if (_state_id_AutomaticDoorClose==62){
 		if (1==0){}
-		else if ((_occurredEvent(_event,88/*setMoving*/)) && (moving ==false )){
+		else if ((_occurredEvent(_event,94/*setFloor*/))){
 		x .reset ();
 
 		_state_id_AutomaticDoorClose = 63;//moving to state Idle

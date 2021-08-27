@@ -32,6 +32,15 @@ _cls_inst._call(thisJoinPoint.getSignature().toString(), 92/*openDoors*/);
 _cls_inst._call_all_filtered(thisJoinPoint.getSignature().toString(), 92/*openDoors*/);
 }
 }
+before () : (call(* *.setFloor(..)) && args(*) && !cflow(adviceexecution()) && !cflow(within(larva.*))  && !(within(larva.*))) {
+
+synchronized(_asp_lift0.lock){
+
+_cls_lift0 _cls_inst = _cls_lift0._get_cls_lift0_inst();
+_cls_inst._call(thisJoinPoint.getSignature().toString(), 94/*setFloor*/);
+_cls_inst._call_all_filtered(thisJoinPoint.getSignature().toString(), 94/*setFloor*/);
+}
+}
 before () : (call(* *.closeDoors(..)) && !cflow(adviceexecution()) && !cflow(within(larva.*))  && !(within(larva.*))) {
 
 synchronized(_asp_lift0.lock){
