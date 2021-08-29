@@ -16,7 +16,7 @@ GLOBAL {
 		STATES {
 			BAD {
 				DoorOpenTooLong {System.out.println("Oqqow!! lift open too long");}
-				MovingTookTooLong {System.out.ptintln("Oqqow!! lift took too long to start moving")}
+				MovingTookTooLong {System.out.ptintln("Oqqow!! lift took too long to start moving");}
 			}
 			
 			NORMAL {

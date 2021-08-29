@@ -3,6 +3,7 @@
 \usepackage{listings}
 \usepackage{tikz}
 \usepackage{amssymb}
+\usepackage{dot2texi}
 \usetikzlibrary{automata, positioning, arrows}
 
 
@@ -136,16 +137,22 @@ M = {
 
 \begin{figure}[h] % ’ht’ tells LaTeX to place the figure ’here’ or at the top of the page
     \centering % centers the figure
-    \begin{tikzpicture}
+    \begin{tikzpicture}[>=stealth,auto,state/.append style={fill=black!10}]
         % tikz code goes here
         \node[state, initial] (Idle) {Idle};
         \node[state, right of=Idle] (Loading) {Loading};
-        \node[state, right of=Loading] (Moving) {Moving};
+        \node[state, left of=Idle] (Moving) {Moving};
+        \node[state, above right of=Moving] (Requested) {Requested};
+        \node[state, right of=Requested] (LoadingRequested) {LoadingRequested};
         
-        \draw (Idle) edge[bend left, below] node{openDoor, y:=0} (Loading);
-        \draw (Loading) edge[bend left, above] node{closeDoor, x:=0, y$<$3} (Idle);
-       	\draw (Idle) edge[bend left, above] node{goUp/goDown, x$<$3} (Moving);
-	\draw (Moving) edge[bend left, below] node{stop, x:=0} (Idle);
+        \draw (Idle) edge[bend right, below] node{openDoor, y:=0} (Loading);
+        \draw (Loading) edge[bend right, above] node{closeDoor, x:=0, y$<$3} (Idle);
+	\draw (Moving) edge[bend right, below] node{stop, x:=0} (Idle);
+	\draw (Moving) edge[bend right, below] node{requested, x:=0} (Requested);
+	\draw (Requested) edge[bend right, below] node{goUp/goDown, x$<$3} (Moving);
+	\draw (Loading) edge[bend right, below] node{requested} (LoadingRequested);
+        \draw (LoadingRequested) edge[bend right, above] node{closeDoor, y$<$3, x:=0}(Requested);
+        \draw (Idle) edge[bend right, below] node{requested, x:=0} (Requested);
         
     \end{tikzpicture}
     \caption{FSA figure}

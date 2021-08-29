@@ -1,12 +1,18 @@
 digraph _logic_TimeProperties {
 rankdir=LR;
-node [shape = circle]; Loading Moving Requested Idle;
-node [shape = octagon]; DoorOpenTooLong;
+node [shape = circle]; Loading Moving Requested LoadingRequested Idle;
+node [shape = octagon]; DoorOpenTooLong MovingTookTooLong;
 node [shape = point]; _s_s;
 _s_s -> Idle;
+Requested -> Moving [ label = "(1) setMoving\\moving == true && x . compareTo ( 3 ) < 0 "];
+Requested -> MovingTookTooLong [ label = "(2) setMoving\\moving == true && x . compareTo ( 3 ) >= 0 "];
 Loading -> Idle [ label = "(1) closeDoors\\y . compareTo ( 3 ) < 0 \\x . reset ( ) ; "];
 Loading -> DoorOpenTooLong [ label = "(2) closeDoors\\y . compareTo ( 3 ) >= 0 "];
+Loading -> LoadingRequested [ label = "(3) callLiftToFloor"];
 Idle -> Loading [ label = "(1) openDoors\\\\y . reset ( ) ; "];
-Idle -> Moving [ label = "(2) setMoving\\moving == true "];
+Idle -> Requested [ label = "(2) callLiftToFloor\\\\x . reset ( ) ; "];
 Moving -> Idle [ label = "(1) setFloor\\\\x . reset ( ) ; "];
+Moving -> Requested [ label = "(2) callLiftToFloor\\\\x . reset ( ) ; "];
+LoadingRequested -> Requested [ label = "(1) closeDoors\\y . compareTo ( 3 ) < 0 \\x . reset ( ) ; "];
+LoadingRequested -> DoorOpenTooLong [ label = "(2) closeDoors\\y . compareTo ( 3 ) >= 0 "];
 }

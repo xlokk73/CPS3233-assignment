@@ -19,8 +19,8 @@ synchronized(_asp_lift0.lock){
 
 _cls_lift0 _cls_inst = _cls_lift0._get_cls_lift0_inst();
 _cls_inst.moving = moving;
-_cls_inst._call(thisJoinPoint.getSignature().toString(), 112/*setMoving*/);
-_cls_inst._call_all_filtered(thisJoinPoint.getSignature().toString(), 112/*setMoving*/);
+_cls_inst._call(thisJoinPoint.getSignature().toString(), 20/*setMoving*/);
+_cls_inst._call_all_filtered(thisJoinPoint.getSignature().toString(), 20/*setMoving*/);
 }
 }
 before () : (call(* *.openDoors(..)) && !cflow(adviceexecution()) && !cflow(within(larva.*))  && !(within(larva.*))) {
@@ -28,8 +28,8 @@ before () : (call(* *.openDoors(..)) && !cflow(adviceexecution()) && !cflow(with
 synchronized(_asp_lift0.lock){
 
 _cls_lift0 _cls_inst = _cls_lift0._get_cls_lift0_inst();
-_cls_inst._call(thisJoinPoint.getSignature().toString(), 116/*openDoors*/);
-_cls_inst._call_all_filtered(thisJoinPoint.getSignature().toString(), 116/*openDoors*/);
+_cls_inst._call(thisJoinPoint.getSignature().toString(), 24/*openDoors*/);
+_cls_inst._call_all_filtered(thisJoinPoint.getSignature().toString(), 24/*openDoors*/);
 }
 }
 before () : (call(* *.setFloor(..)) && args(*) && !cflow(adviceexecution()) && !cflow(within(larva.*))  && !(within(larva.*))) {
@@ -37,8 +37,17 @@ before () : (call(* *.setFloor(..)) && args(*) && !cflow(adviceexecution()) && !
 synchronized(_asp_lift0.lock){
 
 _cls_lift0 _cls_inst = _cls_lift0._get_cls_lift0_inst();
-_cls_inst._call(thisJoinPoint.getSignature().toString(), 118/*setFloor*/);
-_cls_inst._call_all_filtered(thisJoinPoint.getSignature().toString(), 118/*setFloor*/);
+_cls_inst._call(thisJoinPoint.getSignature().toString(), 26/*setFloor*/);
+_cls_inst._call_all_filtered(thisJoinPoint.getSignature().toString(), 26/*setFloor*/);
+}
+}
+before () : (call(* *.callLiftToFloor(..)) && args(*) && !cflow(adviceexecution()) && !cflow(within(larva.*))  && !(within(larva.*))) {
+
+synchronized(_asp_lift0.lock){
+
+_cls_lift0 _cls_inst = _cls_lift0._get_cls_lift0_inst();
+_cls_inst._call(thisJoinPoint.getSignature().toString(), 28/*callLiftToFloor*/);
+_cls_inst._call_all_filtered(thisJoinPoint.getSignature().toString(), 28/*callLiftToFloor*/);
 }
 }
 before () : (call(* *.closeDoors(..)) && !cflow(adviceexecution()) && !cflow(within(larva.*))  && !(within(larva.*))) {
@@ -46,8 +55,8 @@ before () : (call(* *.closeDoors(..)) && !cflow(adviceexecution()) && !cflow(wit
 synchronized(_asp_lift0.lock){
 
 _cls_lift0 _cls_inst = _cls_lift0._get_cls_lift0_inst();
-_cls_inst._call(thisJoinPoint.getSignature().toString(), 114/*closeDoors*/);
-_cls_inst._call_all_filtered(thisJoinPoint.getSignature().toString(), 114/*closeDoors*/);
+_cls_inst._call(thisJoinPoint.getSignature().toString(), 22/*closeDoors*/);
+_cls_inst._call_all_filtered(thisJoinPoint.getSignature().toString(), 22/*closeDoors*/);
 }
 }
 }

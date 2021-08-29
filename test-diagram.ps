@@ -1,343 +1,48 @@
-%!PS-Adobe-3.0
-%%Creator: graphviz version 2.48.0 (20210717.1556)
-%%Title: _logic_AutomaticDoorClose
-%%Pages: (atend)
-%%BoundingBox: (atend)
-%%EndComments
-save
-%%BeginProlog
-/DotDict 200 dict def
-DotDict begin
-
-/setupLatin1 {
-mark
-/EncodingVector 256 array def
- EncodingVector 0
-
-ISOLatin1Encoding 0 255 getinterval putinterval
-EncodingVector 45 /hyphen put
-
-% Set up ISO Latin 1 character encoding
-/starnetISO {
-        dup dup findfont dup length dict begin
-        { 1 index /FID ne { def }{ pop pop } ifelse
-        } forall
-        /Encoding EncodingVector def
-        currentdict end definefont
-} def
-/Times-Roman starnetISO def
-/Times-Italic starnetISO def
-/Times-Bold starnetISO def
-/Times-BoldItalic starnetISO def
-/Helvetica starnetISO def
-/Helvetica-Oblique starnetISO def
-/Helvetica-Bold starnetISO def
-/Helvetica-BoldOblique starnetISO def
-/Courier starnetISO def
-/Courier-Oblique starnetISO def
-/Courier-Bold starnetISO def
-/Courier-BoldOblique starnetISO def
-cleartomark
-} bind def
-
-%%BeginResource: procset graphviz 0 0
-/coord-font-family /Times-Roman def
-/default-font-family /Times-Roman def
-/coordfont coord-font-family findfont 8 scalefont def
-
-/InvScaleFactor 1.0 def
-/set_scale {
-       dup 1 exch div /InvScaleFactor exch def
-       scale
-} bind def
-
-% styles
-/solid { [] 0 setdash } bind def
-/dashed { [9 InvScaleFactor mul dup ] 0 setdash } bind def
-/dotted { [1 InvScaleFactor mul 6 InvScaleFactor mul] 0 setdash } bind def
-/invis {/fill {newpath} def /stroke {newpath} def /show {pop newpath} def} bind def
-/bold { 2 setlinewidth } bind def
-/filled { } bind def
-/unfilled { } bind def
-/rounded { } bind def
-/diagonals { } bind def
-/tapered { } bind def
-
-% hooks for setting color 
-/nodecolor { sethsbcolor } bind def
-/edgecolor { sethsbcolor } bind def
-/graphcolor { sethsbcolor } bind def
-/nopcolor {pop pop pop} bind def
-
-/beginpage {	% i j npages
-	/npages exch def
-	/j exch def
-	/i exch def
-	/str 10 string def
-	npages 1 gt {
-		gsave
-			coordfont setfont
-			0 0 moveto
-			(\() show i str cvs show (,) show j str cvs show (\)) show
-		grestore
-	} if
-} bind def
-
-/set_font {
-	findfont exch
-	scalefont setfont
-} def
-
-% draw text fitted to its expected width
-/alignedtext {			% width text
-	/text exch def
-	/width exch def
-	gsave
-		width 0 gt {
-			[] 0 setdash
-			text stringwidth pop width exch sub text length div 0 text ashow
-		} if
-	grestore
-} def
-
-/boxprim {				% xcorner ycorner xsize ysize
-		4 2 roll
-		moveto
-		2 copy
-		exch 0 rlineto
-		0 exch rlineto
-		pop neg 0 rlineto
-		closepath
-} bind def
-
-/ellipse_path {
-	/ry exch def
-	/rx exch def
-	/y exch def
-	/x exch def
-	matrix currentmatrix
-	newpath
-	x y translate
-	rx ry scale
-	0 0 1 0 360 arc
-	setmatrix
-} bind def
-
-/endpage { showpage } bind def
-/showpage { } def
-
-/layercolorseq
-	[	% layer color sequence - darkest to lightest
-		[0 0 0]
-		[.2 .8 .8]
-		[.4 .8 .8]
-		[.6 .8 .8]
-		[.8 .8 .8]
-	]
-def
-
-/layerlen layercolorseq length def
-
-/setlayer {/maxlayer exch def /curlayer exch def
-	layercolorseq curlayer 1 sub layerlen mod get
-	aload pop sethsbcolor
-	/nodecolor {nopcolor} def
-	/edgecolor {nopcolor} def
-	/graphcolor {nopcolor} def
-} bind def
-
-/onlayer { curlayer ne {invis} if } def
-
-/onlayers {
-	/myupper exch def
-	/mylower exch def
-	curlayer mylower lt
-	curlayer myupper gt
-	or
-	{invis} if
-} def
-
-/curlayer 0 def
-
-%%EndResource
-%%EndProlog
-%%BeginSetup
-14 default-font-family set_font
-% /arrowlength 10 def
-% /arrowwidth 5 def
-
-% make sure pdfmark is harmless for PS-interpreters other than Distiller
-/pdfmark where {pop} {userdict /pdfmark /cleartomark load put} ifelse
-% make '<<' and '>>' safe on PS Level 1 devices
-/languagelevel where {pop languagelevel}{1} ifelse
-2 lt {
-    userdict (<<) cvn ([) cvn load put
-    userdict (>>) cvn ([) cvn load put
-} if
-
-%%EndSetup
-setupLatin1
-%%Page: 1 1
-%%PageBoundingBox: 36 36 651 255
-%%PageOrientation: Portrait
-0 0 1 beginpage
-gsave
-36 36 615 219 boxprim clip newpath
-1 1 set_scale 0 rotate 40 40 translate
-% Loading
-gsave
-1 setlinewidth
-0 0 0 nodecolor
-40.9464 72.8 40.8928 40.8928 ellipse_path stroke
-0 0 0 nodecolor
-14 /Times-Roman set_font
-17.4464 69.1 moveto 47 (Loading) alignedtext
-grestore
-% Idle
-gsave
-1 setlinewidth
-0 0 0 nodecolor
-517.2363 34.8 24.8972 24.8972 ellipse_path stroke
-0 0 0 nodecolor
-14 /Times-Roman set_font
-506.2363 31.1 moveto 22 (Idle) alignedtext
-grestore
-% Loading->Idle
-gsave
-1 setlinewidth
-0 0 0 edgecolor
-newpath 82.0611 71.5787 moveto
-149.7839 69.2535 291.0369 63.2692 409.8927 50.8 curveto
-434.355 48.2337 461.803 44.0714 482.6853 40.6354 curveto
-stroke
-0 0 0 edgecolor
-newpath 483.3754 44.0687 moveto
-492.6611 38.9673 lineto
-482.2208 37.1646 lineto
-closepath fill
-1 setlinewidth
-solid
-0 0 0 edgecolor
-newpath 483.3754 44.0687 moveto
-492.6611 38.9673 lineto
-482.2208 37.1646 lineto
-closepath stroke
-0 0 0 edgecolor
-14 /Times-Roman set_font
-99.8927 74.6 moveto 310 (\(1\) closeLiftDoor\\y . compareTo \( 3 \) < 3 \\x . reset \( \) ; ) alignedtext
-grestore
-% DoorOpenTooLong
-gsave
-1 setlinewidth
-0 0 0 nodecolor
-newpath 606.4237 103.3442 moveto
-606.4237 118.2558 lineto
-554.1789 128.8 lineto
-480.2937 128.8 lineto
-428.0489 118.2558 lineto
-428.0489 103.3442 lineto
-480.2937 92.8 lineto
-554.1789 92.8 lineto
-closepath stroke
-0 0 0 nodecolor
-14 /Times-Roman set_font
-461.7363 107.1 moveto 111 (DoorOpenTooLong) alignedtext
-grestore
-% Loading->DoorOpenTooLong
-gsave
-1 setlinewidth
-0 0 0 edgecolor
-newpath 80.3389 84.651 moveto
-86.8138 86.2884 93.5058 87.7621 99.8927 88.8 curveto
-207.6805 106.3162 333.022 110.8276 417.7924 111.5789 curveto
-stroke
-0 0 0 edgecolor
-newpath 417.9 115.0797 moveto
-427.9252 111.6525 lineto
-417.9509 108.0799 lineto
-closepath fill
-1 setlinewidth
-solid
-0 0 0 edgecolor
-newpath 417.9 115.0797 moveto
-427.9252 111.6525 lineto
-417.9509 108.0799 lineto
-closepath stroke
-0 0 0 edgecolor
-14 /Times-Roman set_font
-133.3927 114.6 moveto 243 (\(2\) closeLiftDoor\\y . compareTo \( 3 \) >= 3 ) alignedtext
-grestore
-% Moving
-gsave
-1 setlinewidth
-0 0 0 nodecolor
-40.9464 171.8 39.7935 39.7935 ellipse_path stroke
-0 0 0 nodecolor
-14 /Times-Roman set_font
-18.4464 168.1 moveto 45 (Moving) alignedtext
-grestore
-% Idle->Loading
-gsave
-1 setlinewidth
-0 0 0 edgecolor
-newpath 492.5156 32.7143 moveto
-415.5793 26.2473 173.6854 8.3339 99.8927 31.8 curveto
-93.3435 33.8826 86.8979 37.0035 80.8216 40.6114 curveto
-stroke
-0 0 0 edgecolor
-newpath 78.708 37.8102 moveto
-72.2142 46.1816 lineto
-82.5112 43.6869 lineto
-closepath fill
-1 setlinewidth
-solid
-0 0 0 edgecolor
-newpath 78.708 37.8102 moveto
-72.2142 46.1816 lineto
-82.5112 43.6869 lineto
-closepath stroke
-0 0 0 edgecolor
-14 /Times-Roman set_font
-166.8927 35.6 moveto 176 (\(1\) openLiftDoor\\\\y . reset \( \) ; ) alignedtext
-grestore
-% _s_s
-gsave
-0 0 0 nodecolor
-40.9464 1.8 1.8 1.8 ellipse_path fill
-1 setlinewidth
-filled
-0 0 0 nodecolor
-40.9464 1.8 1.8 1.8 ellipse_path stroke
-grestore
-% _s_s->Idle
-gsave
-1 setlinewidth
-0 0 0 edgecolor
-newpath 42.8711 1.7852 moveto
-57.9158 1.5552 253.5416 -1.0595 409.8927 15.8 curveto
-434.4583 18.4489 461.9032 23.4033 482.7582 27.5887 curveto
-stroke
-0 0 0 edgecolor
-newpath 482.2196 31.051 moveto
-492.7186 29.6294 lineto
-483.6247 24.1934 lineto
-closepath fill
-1 setlinewidth
-solid
-0 0 0 edgecolor
-newpath 482.2196 31.051 moveto
-492.7186 29.6294 lineto
-483.6247 24.1934 lineto
-closepath stroke
-grestore
-endpage
-showpage
-grestore
-%%PageTrailer
-%%EndPage: 1
-%%Trailer
-%%Pages: 1
-%%BoundingBox: 36 36 651 255
-end
-restore
-%%EOF
+digraph _logic_TimeProperties {
+	graph [bb="0,0,897.47,234.39",
+		rankdir=LR
+	];
+	node [label="\N",
+		shape=point
+	];
+	Loading	[height=1.1374,
+		pos="48.746,77.646",
+		shape=circle,
+		width=1.1374];
+	Idle	[height=0.68605,
+		pos="517.83,39.646",
+		shape=circle,
+		width=0.68605];
+	Loading -> Idle	[label="(1) closeDoors\\y . compareTo ( 3 ) < 0 \\x . reset ( ) ; ",
+		lp="262.99,82.146",
+		pos="e,493.26,43.806 89.879,76.358 156.58,73.957 294.43,67.892 410.49,55.646 434.95,53.066 462.4,48.904 483.28,45.472"];
+	DoorOpenTooLong	[height=0.5,
+		pos="517.83,115.65",
+		shape=octagon,
+		width=2.4818];
+	Loading -> DoorOpenTooLong	[label="(2) closeDoors\\y . compareTo ( 3 ) >= 0 ",
+		lp="262.99,122.15",
+		pos="e,428.29,115.45 88.449,88.317 97.277,90.401 106.66,92.341 115.49,93.646 217.94,108.79 336.48,113.77 418.03,115.28"];
+	Moving	[height=1.1013,
+		pos="857.82,39.646",
+		shape=circle,
+		width=1.1013];
+	Moving -> Idle	[label="(1) setFloor\\\\x . reset ( ) ; ",
+		lp="712.68,28.146",
+		pos="e,542.33,34.216 820.7,25.607 813.97,23.547 806.94,21.749 800.18,20.646 723.42,8.116 702.65,13.78 625.18,20.646 600.57,22.828 573.12,\
+27.796 552.28,32.105"];
+	Requested	[height=1.354,
+		pos="48.746,185.65",
+		shape=circle,
+		width=1.354];
+	Idle -> Loading	[label="(1) openDoors\\\\y . reset ( ) ; ",
+		lp="262.99,44.146",
+		pos="e,81.473,52.919 492.97,37.713 417.84,31.899 186.92,16.2 115.49,36.646 106.85,39.121 98.234,43.099 90.226,47.626"];
+	Idle -> Moving	[label="(2) setMoving\\moving == true ",
+		lp="712.68,47.146",
+		pos="e,818,39.646 542.6,39.646 597.45,39.646 733.82,39.646 807.58,39.646"];
+	_s_s	[height=0.05,
+		pos="48.746,6.6465",
+		width=0.05];
+	_s_s -> Idle	[pos="e,493.32,34.481 50.652,6.633 65.403,6.4229 257.2,4.0584 410.49,20.646 435.06,23.305 462.5,28.259 483.36,32.442"];
+}
