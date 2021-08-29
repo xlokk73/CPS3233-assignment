@@ -1,6 +1,6 @@
 digraph _logic_TimeProperties {
 rankdir=LR;
-node [shape = circle]; Loading Moving Idle;
+node [shape = circle]; Loading Moving Requested Idle;
 node [shape = octagon]; DoorOpenTooLong;
 node [shape = point]; _s_s;
 _s_s -> Idle;

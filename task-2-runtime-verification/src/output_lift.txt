@@ -1,22 +1,35 @@
-[AutomaticDoorClose]AUTOMATON::> AutomaticDoorClose() STATE::>Idle
-[AutomaticDoorClose]MOVED ON METHODCALL: void com.liftmania.Lift.setMoving(boolean) TO STATE::> Moving
-[AutomaticDoorClose]AUTOMATON::> AutomaticDoorClose() STATE::>Moving
-[AutomaticDoorClose]AUTOMATON::> AutomaticDoorClose() STATE::>Moving
-[AutomaticDoorClose]MOVED ON METHODCALL: void com.liftmania.Lift.setFloor(int) TO STATE::> Idle
-[AutomaticDoorClose]AUTOMATON::> AutomaticDoorClose() STATE::>Idle
-[AutomaticDoorClose]AUTOMATON::> AutomaticDoorClose() STATE::>Idle
-[AutomaticDoorClose]MOVED ON METHODCALL: void com.liftmania.gui.Shaft.openDoors() TO STATE::> Loading
-[AutomaticDoorClose]AUTOMATON::> AutomaticDoorClose() STATE::>Loading
-[AutomaticDoorClose]MOVED ON METHODCALL: void com.liftmania.gui.Shaft.closeDoors() TO STATE::> Idle
-[AutomaticDoorClose]AUTOMATON::> AutomaticDoorClose() STATE::>Idle
-[AutomaticDoorClose]AUTOMATON::> AutomaticDoorClose() STATE::>Idle
-[AutomaticDoorClose]MOVED ON METHODCALL: void com.liftmania.Lift.setMoving(boolean) TO STATE::> Moving
-[AutomaticDoorClose]AUTOMATON::> AutomaticDoorClose() STATE::>Moving
-[AutomaticDoorClose]AUTOMATON::> AutomaticDoorClose() STATE::>Moving
-[AutomaticDoorClose]MOVED ON METHODCALL: void com.liftmania.Lift.setFloor(int) TO STATE::> Idle
-[AutomaticDoorClose]AUTOMATON::> AutomaticDoorClose() STATE::>Idle
-[AutomaticDoorClose]AUTOMATON::> AutomaticDoorClose() STATE::>Idle
-[AutomaticDoorClose]MOVED ON METHODCALL: void com.liftmania.gui.Shaft.openDoors() TO STATE::> Loading
-[AutomaticDoorClose]AUTOMATON::> AutomaticDoorClose() STATE::>Loading
-[AutomaticDoorClose]MOVED ON METHODCALL: void com.liftmania.gui.Shaft.closeDoors() TO STATE::> Idle
-[AutomaticDoorClose]AUTOMATON::> AutomaticDoorClose() STATE::>Idle
+[TimeProperties]AUTOMATON::> TimeProperties() STATE::>Idle
+[TimeProperties]MOVED ON METHODCALL: void com.liftmania.Lift.setMoving(boolean) TO STATE::> Moving
+[TimeProperties]AUTOMATON::> TimeProperties() STATE::>Moving
+[TimeProperties]AUTOMATON::> TimeProperties() STATE::>Moving
+[TimeProperties]MOVED ON METHODCALL: void com.liftmania.Lift.setFloor(int) TO STATE::> Idle
+[TimeProperties]AUTOMATON::> TimeProperties() STATE::>Idle
+[TimeProperties]AUTOMATON::> TimeProperties() STATE::>Idle
+[TimeProperties]AUTOMATON::> TimeProperties() STATE::>Idle
+[TimeProperties]MOVED ON METHODCALL: void com.liftmania.gui.Shaft.openDoors() TO STATE::> Loading
+[TimeProperties]AUTOMATON::> TimeProperties() STATE::>Loading
+[TimeProperties]MOVED ON METHODCALL: void com.liftmania.gui.Shaft.closeDoors() TO STATE::> Idle
+[TimeProperties]AUTOMATON::> TimeProperties() STATE::>Idle
+[TimeProperties]AUTOMATON::> TimeProperties() STATE::>Idle
+[TimeProperties]MOVED ON METHODCALL: void com.liftmania.Lift.setMoving(boolean) TO STATE::> Moving
+[TimeProperties]AUTOMATON::> TimeProperties() STATE::>Moving
+[TimeProperties]AUTOMATON::> TimeProperties() STATE::>Moving
+[TimeProperties]MOVED ON METHODCALL: void com.liftmania.Lift.setFloor(int) TO STATE::> Idle
+[TimeProperties]AUTOMATON::> TimeProperties() STATE::>Idle
+[TimeProperties]AUTOMATON::> TimeProperties() STATE::>Idle
+[TimeProperties]MOVED ON METHODCALL: void com.liftmania.gui.Shaft.openDoors() TO STATE::> Loading
+[TimeProperties]AUTOMATON::> TimeProperties() STATE::>Loading
+[TimeProperties]MOVED ON METHODCALL: void com.liftmania.gui.Shaft.closeDoors() TO STATE::> Idle
+[TimeProperties]AUTOMATON::> TimeProperties() STATE::>Idle
+[TimeProperties]AUTOMATON::> TimeProperties() STATE::>Idle
+[TimeProperties]MOVED ON METHODCALL: void com.liftmania.Lift.setMoving(boolean) TO STATE::> Moving
+[TimeProperties]AUTOMATON::> TimeProperties() STATE::>Moving
+[TimeProperties]AUTOMATON::> TimeProperties() STATE::>Moving
+[TimeProperties]MOVED ON METHODCALL: void com.liftmania.Lift.setFloor(int) TO STATE::> Idle
+[TimeProperties]AUTOMATON::> TimeProperties() STATE::>Idle
+[TimeProperties]AUTOMATON::> TimeProperties() STATE::>Idle
+[TimeProperties]AUTOMATON::> TimeProperties() STATE::>Idle
+[TimeProperties]MOVED ON METHODCALL: void com.liftmania.gui.Shaft.openDoors() TO STATE::> Loading
+[TimeProperties]AUTOMATON::> TimeProperties() STATE::>Loading
+[TimeProperties]MOVED ON METHODCALL: void com.liftmania.gui.Shaft.closeDoors() TO STATE::> Idle
+[TimeProperties]AUTOMATON::> TimeProperties() STATE::>Idle

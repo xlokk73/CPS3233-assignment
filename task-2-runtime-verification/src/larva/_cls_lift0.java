@@ -94,7 +94,7 @@ else if (no_automata < 0)
 }catch(Exception ex){ex.printStackTrace();}
 }
 
-int _state_id_TimeProperties = 71;
+int _state_id_TimeProperties = 76;
 
 public void _performLogic_TimeProperties(String _info, int... _event) {
 
@@ -102,42 +102,42 @@ _cls_lift0.pw.println("[TimeProperties]AUTOMATON::> TimeProperties("+") STATE::>
 _cls_lift0.pw.flush();
 
 if (0==1){}
-else if (_state_id_TimeProperties==69){
+else if (_state_id_TimeProperties==73){
 		if (1==0){}
-		else if ((_occurredEvent(_event,106/*closeDoors*/)) && (y .compareTo (3 )<0 )){
+		else if ((_occurredEvent(_event,114/*closeDoors*/)) && (y .compareTo (3 )<0 )){
 		x .reset ();
 
-		_state_id_TimeProperties = 71;//moving to state Idle
+		_state_id_TimeProperties = 76;//moving to state Idle
 		_goto_TimeProperties(_info);
 		}
-		else if ((_occurredEvent(_event,106/*closeDoors*/)) && (y .compareTo (3 )>=0 )){
+		else if ((_occurredEvent(_event,114/*closeDoors*/)) && (y .compareTo (3 )>=0 )){
 		
-		_state_id_TimeProperties = 68;//moving to state DoorOpenTooLong
+		_state_id_TimeProperties = 72;//moving to state DoorOpenTooLong
 _cls_lift0.pw .println ("Oqqow!! lift open too long");
 
 		_goto_TimeProperties(_info);
 		}
 }
-else if (_state_id_TimeProperties==71){
+else if (_state_id_TimeProperties==76){
 		if (1==0){}
-		else if ((_occurredEvent(_event,108/*openDoors*/))){
+		else if ((_occurredEvent(_event,116/*openDoors*/))){
 		y .reset ();
 
-		_state_id_TimeProperties = 69;//moving to state Loading
+		_state_id_TimeProperties = 73;//moving to state Loading
 		_goto_TimeProperties(_info);
 		}
-		else if ((_occurredEvent(_event,104/*setMoving*/)) && (moving ==true )){
+		else if ((_occurredEvent(_event,112/*setMoving*/)) && (moving ==true )){
 		
-		_state_id_TimeProperties = 70;//moving to state Moving
+		_state_id_TimeProperties = 74;//moving to state Moving
 		_goto_TimeProperties(_info);
 		}
 }
-else if (_state_id_TimeProperties==70){
+else if (_state_id_TimeProperties==74){
 		if (1==0){}
-		else if ((_occurredEvent(_event,110/*setFloor*/))){
+		else if ((_occurredEvent(_event,118/*setFloor*/))){
 		x .reset ();
 
-		_state_id_TimeProperties = 71;//moving to state Idle
+		_state_id_TimeProperties = 76;//moving to state Idle
 		_goto_TimeProperties(_info);
 		}
 }
@@ -150,10 +150,11 @@ _cls_lift0.pw.flush();
 
 public String _string_TimeProperties(int _state_id, int _mode){
 switch(_state_id){
-case 68: if (_mode == 0) return "DoorOpenTooLong"; else return "!!!SYSTEM REACHED BAD STATE!!! DoorOpenTooLong "+new _BadStateExceptionlift().toString()+" ";
-case 69: if (_mode == 0) return "Loading"; else return "Loading";
-case 70: if (_mode == 0) return "Moving"; else return "Moving";
-case 71: if (_mode == 0) return "Idle"; else return "Idle";
+case 75: if (_mode == 0) return "Requested"; else return "Requested";
+case 72: if (_mode == 0) return "DoorOpenTooLong"; else return "!!!SYSTEM REACHED BAD STATE!!! DoorOpenTooLong "+new _BadStateExceptionlift().toString()+" ";
+case 73: if (_mode == 0) return "Loading"; else return "Loading";
+case 74: if (_mode == 0) return "Moving"; else return "Moving";
+case 76: if (_mode == 0) return "Idle"; else return "Idle";
 default: return "!!!SYSTEM REACHED AN UNKNOWN STATE!!!";
 }
 }

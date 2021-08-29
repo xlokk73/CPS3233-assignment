@@ -19,8 +19,8 @@ synchronized(_asp_lift0.lock){
 
 _cls_lift0 _cls_inst = _cls_lift0._get_cls_lift0_inst();
 _cls_inst.moving = moving;
-_cls_inst._call(thisJoinPoint.getSignature().toString(), 104/*setMoving*/);
-_cls_inst._call_all_filtered(thisJoinPoint.getSignature().toString(), 104/*setMoving*/);
+_cls_inst._call(thisJoinPoint.getSignature().toString(), 112/*setMoving*/);
+_cls_inst._call_all_filtered(thisJoinPoint.getSignature().toString(), 112/*setMoving*/);
 }
 }
 before () : (call(* *.openDoors(..)) && !cflow(adviceexecution()) && !cflow(within(larva.*))  && !(within(larva.*))) {
@@ -28,8 +28,8 @@ before () : (call(* *.openDoors(..)) && !cflow(adviceexecution()) && !cflow(with
 synchronized(_asp_lift0.lock){
 
 _cls_lift0 _cls_inst = _cls_lift0._get_cls_lift0_inst();
-_cls_inst._call(thisJoinPoint.getSignature().toString(), 108/*openDoors*/);
-_cls_inst._call_all_filtered(thisJoinPoint.getSignature().toString(), 108/*openDoors*/);
+_cls_inst._call(thisJoinPoint.getSignature().toString(), 116/*openDoors*/);
+_cls_inst._call_all_filtered(thisJoinPoint.getSignature().toString(), 116/*openDoors*/);
 }
 }
 before () : (call(* *.setFloor(..)) && args(*) && !cflow(adviceexecution()) && !cflow(within(larva.*))  && !(within(larva.*))) {
@@ -37,8 +37,8 @@ before () : (call(* *.setFloor(..)) && args(*) && !cflow(adviceexecution()) && !
 synchronized(_asp_lift0.lock){
 
 _cls_lift0 _cls_inst = _cls_lift0._get_cls_lift0_inst();
-_cls_inst._call(thisJoinPoint.getSignature().toString(), 110/*setFloor*/);
-_cls_inst._call_all_filtered(thisJoinPoint.getSignature().toString(), 110/*setFloor*/);
+_cls_inst._call(thisJoinPoint.getSignature().toString(), 118/*setFloor*/);
+_cls_inst._call_all_filtered(thisJoinPoint.getSignature().toString(), 118/*setFloor*/);
 }
 }
 before () : (call(* *.closeDoors(..)) && !cflow(adviceexecution()) && !cflow(within(larva.*))  && !(within(larva.*))) {
@@ -46,8 +46,8 @@ before () : (call(* *.closeDoors(..)) && !cflow(adviceexecution()) && !cflow(wit
 synchronized(_asp_lift0.lock){
 
 _cls_lift0 _cls_inst = _cls_lift0._get_cls_lift0_inst();
-_cls_inst._call(thisJoinPoint.getSignature().toString(), 106/*closeDoors*/);
-_cls_inst._call_all_filtered(thisJoinPoint.getSignature().toString(), 106/*closeDoors*/);
+_cls_inst._call(thisJoinPoint.getSignature().toString(), 114/*closeDoors*/);
+_cls_inst._call_all_filtered(thisJoinPoint.getSignature().toString(), 114/*closeDoors*/);
 }
 }
 }
