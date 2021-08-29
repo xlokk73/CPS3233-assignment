@@ -1,7 +1,7 @@
 GLOBAL {
 	VARIABLES {
-		Clock x = new Clock();	%% Checks for Bad State: MovingTookTooLong
-		Clock y = new Clock();  %% Checks for Bad State: DoorOpenTooLong
+		Clock x = new Clock();	%% Checks for Bad State: BadMoving
+		Clock y = new Clock();  %% Checks for Bad State: BadLoading
 	}
 	
 	EVENTS {				
@@ -15,8 +15,8 @@ GLOBAL {
 	PROPERTY TimeProperties{
 		STATES {
 			BAD {
-				DoorOpenTooLong {System.out.println("Oqqow!! lift open too long");}
-				MovingTookTooLong {System.out.ptintln("Oqqow!! lift took too long to start moving");}
+				BadLoading {System.out.println("Oqqow!! lift open too long");}
+				BadMoving {System.out.println("Oqqow!! lift took too long to start moving");}
 			}
 			
 			NORMAL {
@@ -37,17 +37,17 @@ GLOBAL {
 			Idle -> Requested [callLiftToFloor \ \ x.reset(); ]
 			
 			Loading -> Idle [closeDoors \ y.compareTo(3) < 0 \ x.reset();]
-			Loading -> DoorOpenTooLong [closeDoors \ y.compareTo(3) >= 0 \ ]
+			Loading -> BadLoading [closeDoors \ y.compareTo(3) >= 0 \ ]
 			Loading -> LoadingRequested [callLiftToFloor \ \ ]
 			
 			Moving -> Idle [setFloor \ \ x.reset();]
 			Moving -> Requested [callLiftToFloor \ \ x.reset();]
 			
 			Requested -> Moving [setMoving \ moving==true && x.compareTo(3)<0 \ ]
-			Requested -> MovingTookTooLong [setMoving \ moving==true && x.compareTo(3)>=0 \ ]
+			Requested -> BadMoving [setMoving \ moving==true && x.compareTo(3)>=0 \ ]
 			
 			LoadingRequested -> Requested [closeDoors \ y.compareTo(3)<0 \ x.reset(); ]
-			LoadingRequested -> DoorOpenTooLong [closeDoors \ y.compareTo(3)>=0 \]
+			LoadingRequested -> BadLoading [closeDoors \ y.compareTo(3)>=0 \]
 			
 		}
 	}

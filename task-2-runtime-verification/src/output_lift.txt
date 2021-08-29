@@ -1,8 +1,6 @@
 [TimeProperties]AUTOMATON::> TimeProperties() STATE::>Idle
-[TimeProperties]MOVED ON METHODCALL: void com.liftmania.Lift.setMoving(boolean) TO STATE::> Moving
-[TimeProperties]AUTOMATON::> TimeProperties() STATE::>Moving
-[TimeProperties]AUTOMATON::> TimeProperties() STATE::>Moving
-[TimeProperties]MOVED ON METHODCALL: void com.liftmania.Lift.setFloor(int) TO STATE::> Idle
+[TimeProperties]AUTOMATON::> TimeProperties() STATE::>Idle
+[TimeProperties]AUTOMATON::> TimeProperties() STATE::>Idle
 [TimeProperties]AUTOMATON::> TimeProperties() STATE::>Idle
 [TimeProperties]AUTOMATON::> TimeProperties() STATE::>Idle
 [TimeProperties]AUTOMATON::> TimeProperties() STATE::>Idle
@@ -11,19 +9,5 @@
 [TimeProperties]AUTOMATON::> TimeProperties() STATE::>Idle
 [TimeProperties]MOVED ON METHODCALL: void com.liftmania.gui.Shaft.openDoors() TO STATE::> Loading
 [TimeProperties]AUTOMATON::> TimeProperties() STATE::>Loading
-Oqqow!! lift open too long
-[TimeProperties]MOVED ON METHODCALL: void com.liftmania.gui.Shaft.closeDoors() TO STATE::> !!!SYSTEM REACHED BAD STATE!!! DoorOpenTooLong 
-aspects._asp_lift0.ajc$before$aspects__asp_lift0$5$ed143934(_asp_lift0.aj:49)
-com.liftmania.gui.Shaft.animateLift(Shaft.java:185)
-com.liftmania.gui.Shaft.run(Shaft.java:289)
-java.lang.Thread.run(Thread.java:748) 
-[TimeProperties]AUTOMATON::> TimeProperties() STATE::>DoorOpenTooLong
-[TimeProperties]AUTOMATON::> TimeProperties() STATE::>DoorOpenTooLong
-[TimeProperties]AUTOMATON::> TimeProperties() STATE::>DoorOpenTooLong
-[TimeProperties]AUTOMATON::> TimeProperties() STATE::>DoorOpenTooLong
-[TimeProperties]AUTOMATON::> TimeProperties() STATE::>DoorOpenTooLong
-[TimeProperties]AUTOMATON::> TimeProperties() STATE::>DoorOpenTooLong
-[TimeProperties]AUTOMATON::> TimeProperties() STATE::>DoorOpenTooLong
-[TimeProperties]AUTOMATON::> TimeProperties() STATE::>DoorOpenTooLong
-[TimeProperties]AUTOMATON::> TimeProperties() STATE::>DoorOpenTooLong
-[TimeProperties]AUTOMATON::> TimeProperties() STATE::>DoorOpenTooLong
+[TimeProperties]MOVED ON METHODCALL: void com.liftmania.gui.Shaft.closeDoors() TO STATE::> Idle
+[TimeProperties]AUTOMATON::> TimeProperties() STATE::>Idle

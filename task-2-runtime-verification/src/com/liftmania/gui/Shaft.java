@@ -180,7 +180,7 @@ public class Shaft extends JPanel implements Runnable {
 		//Open and close doorts
 		openDoors();
 		try {
-			Thread.sleep(5000);
+			Thread.sleep(2000);
 		} catch (Exception e) {}
 		closeDoors();
 		
