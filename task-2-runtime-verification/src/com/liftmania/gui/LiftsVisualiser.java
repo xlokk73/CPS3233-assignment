@@ -77,7 +77,7 @@ public class LiftsVisualiser extends JFrame implements ActionListener {
 	}
 
 	public void animateLiftMovement(Lift lift, int floorNumber) {
-		
+		System.out.println("MOVING******4");
 		//Delegate animation to the shaft responsible so processing can move on
 		shafts[lift.getId()].addAnimationCommand(new AnimationCommand(
 				AnimationCommand.Command.move, floorNumber));
@@ -85,10 +85,12 @@ public class LiftsVisualiser extends JFrame implements ActionListener {
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
+		System.out.println("HERE*****");
 		StringTokenizer tokenizer = new StringTokenizer(e.getActionCommand(),
 				",");
 		String cmd = tokenizer.nextToken();
 		if (cmd.equalsIgnoreCase("move")) {
+			System.out.println("MOVING******1");
 			int liftNumber = Integer.parseInt(tokenizer.nextToken());
 			int floor = Integer.parseInt(tokenizer.nextToken());
 			controller.moveLift(liftNumber, floor);
@@ -99,6 +101,7 @@ public class LiftsVisualiser extends JFrame implements ActionListener {
 			int liftNumber = Integer.parseInt(tokenizer.nextToken());
 			controller.closeLiftDoor(liftNumber);
 		} else if (cmd.equalsIgnoreCase("call")) {
+			System.out.println("CALLING*****");
 			int floorNumber = Integer.parseInt(tokenizer.nextToken());
 			controller.callLiftToFloor(floorNumber);
 		}

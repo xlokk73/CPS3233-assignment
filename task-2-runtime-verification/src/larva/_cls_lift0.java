@@ -23,7 +23,6 @@ _cls_lift0_instances.put(root, root);
 }
 
 _cls_lift0 parent; //to remain null - this class does not have a parent!
-public static boolean moving;
 int no_automata = 1;
 public Clock x = new Clock(this,"x");
 public Clock y = new Clock(this,"y");
@@ -94,7 +93,7 @@ else if (no_automata < 0)
 }catch(Exception ex){ex.printStackTrace();}
 }
 
-int _state_id_TimeProperties = 20;
+int _state_id_TimeProperties = 78;
 
 public void _performLogic_TimeProperties(String _info, int... _event) {
 
@@ -102,83 +101,117 @@ _cls_lift0.pw.println("[TimeProperties]AUTOMATON::> TimeProperties("+") STATE::>
 _cls_lift0.pw.flush();
 
 if (0==1){}
-else if (_state_id_TimeProperties==18){
+else if (_state_id_TimeProperties==76){
 		if (1==0){}
-		else if ((_occurredEvent(_event,20/*setMoving*/)) && (moving ==true &&x .compareTo (3 )<0 )){
+		else if ((_occurredEvent(_event,122/*animateUp*/)) && (x .compareTo (3 )<0 )){
 		
-		_state_id_TimeProperties = 17;//moving to state Moving
+		_state_id_TimeProperties = 75;//moving to state Moving
 		_goto_TimeProperties(_info);
 		}
-		else if ((_occurredEvent(_event,20/*setMoving*/)) && (moving ==true &&x .compareTo (3 )>=0 )){
+		else if ((_occurredEvent(_event,124/*animateDown*/)) && (x .compareTo (3 )<0 )){
 		
-		_state_id_TimeProperties = 15;//moving to state BadMoving
+		_state_id_TimeProperties = 75;//moving to state Moving
+		_goto_TimeProperties(_info);
+		}
+		else if ((_occurredEvent(_event,122/*animateUp*/)) && (x .compareTo (3 )>=0 )){
+		
+		_state_id_TimeProperties = 72;//moving to state BadMoving
+_cls_lift0.pw .println ("Oqqow!! lift took too long to start moving");
+
+		_goto_TimeProperties(_info);
+		}
+		else if ((_occurredEvent(_event,124/*animateDown*/)) && (x .compareTo (3 )>=0 )){
+		
+		_state_id_TimeProperties = 72;//moving to state BadMoving
 _cls_lift0.pw .println ("Oqqow!! lift took too long to start moving");
 
 		_goto_TimeProperties(_info);
 		}
 }
-else if (_state_id_TimeProperties==16){
+else if (_state_id_TimeProperties==74){
 		if (1==0){}
-		else if ((_occurredEvent(_event,22/*closeDoors*/)) && (y .compareTo (3 )<0 )){
+		else if ((_occurredEvent(_event,126/*closeDoors*/)) && (y .compareTo (3 )<0 )){
 		x .reset ();
 
-		_state_id_TimeProperties = 20;//moving to state Idle
+		_state_id_TimeProperties = 78;//moving to state Idle
 		_goto_TimeProperties(_info);
 		}
-		else if ((_occurredEvent(_event,22/*closeDoors*/)) && (y .compareTo (3 )>=0 )){
+		else if ((_occurredEvent(_event,126/*closeDoors*/)) && (y .compareTo (3 )>=0 )){
 		
-		_state_id_TimeProperties = 14;//moving to state BadLoading
+		_state_id_TimeProperties = 71;//moving to state BadLoading
 _cls_lift0.pw .println ("Oqqow!! lift open too long");
 
 		_goto_TimeProperties(_info);
 		}
-		else if ((_occurredEvent(_event,28/*callLiftToFloor*/))){
+		else if ((_occurredEvent(_event,132/*callLiftToFloor*/))){
 		
-		_state_id_TimeProperties = 19;//moving to state LoadingRequested
+		_state_id_TimeProperties = 77;//moving to state LoadingRequested
 		_goto_TimeProperties(_info);
 		}
 }
-else if (_state_id_TimeProperties==20){
+else if (_state_id_TimeProperties==78){
 		if (1==0){}
-		else if ((_occurredEvent(_event,24/*openDoors*/))){
+		else if ((_occurredEvent(_event,128/*openDoors*/))){
 		y .reset ();
 
-		_state_id_TimeProperties = 16;//moving to state Loading
+		_state_id_TimeProperties = 74;//moving to state Loading
 		_goto_TimeProperties(_info);
 		}
-		else if ((_occurredEvent(_event,28/*callLiftToFloor*/))){
+		else if ((_occurredEvent(_event,132/*callLiftToFloor*/))){
 		x .reset ();
 
-		_state_id_TimeProperties = 18;//moving to state Requested
+		_state_id_TimeProperties = 76;//moving to state Requested
 		_goto_TimeProperties(_info);
 		}
-}
-else if (_state_id_TimeProperties==17){
-		if (1==0){}
-		else if ((_occurredEvent(_event,26/*setFloor*/))){
-		x .reset ();
-
-		_state_id_TimeProperties = 20;//moving to state Idle
-		_goto_TimeProperties(_info);
-		}
-		else if ((_occurredEvent(_event,28/*callLiftToFloor*/))){
-		x .reset ();
-
-		_state_id_TimeProperties = 18;//moving to state Requested
-		_goto_TimeProperties(_info);
-		}
-}
-else if (_state_id_TimeProperties==19){
-		if (1==0){}
-		else if ((_occurredEvent(_event,22/*closeDoors*/)) && (y .compareTo (3 )<0 )){
-		x .reset ();
-
-		_state_id_TimeProperties = 18;//moving to state Requested
-		_goto_TimeProperties(_info);
-		}
-		else if ((_occurredEvent(_event,22/*closeDoors*/)) && (y .compareTo (3 )>=0 )){
+		else if ((_occurredEvent(_event,122/*animateUp*/))){
 		
-		_state_id_TimeProperties = 14;//moving to state BadLoading
+		_state_id_TimeProperties = 75;//moving to state Moving
+		_goto_TimeProperties(_info);
+		}
+		else if ((_occurredEvent(_event,124/*animateDown*/))){
+		
+		_state_id_TimeProperties = 75;//moving to state Moving
+		_goto_TimeProperties(_info);
+		}
+		else if ((_occurredEvent(_event,128/*openDoors*/))){
+		y .reset ();
+
+		_state_id_TimeProperties = 74;//moving to state Loading
+		_goto_TimeProperties(_info);
+		}
+		else if ((_occurredEvent(_event,132/*callLiftToFloor*/))){
+		x .reset ();
+
+		_state_id_TimeProperties = 76;//moving to state Requested
+		_goto_TimeProperties(_info);
+		}
+}
+else if (_state_id_TimeProperties==75){
+		if (1==0){}
+		else if ((_occurredEvent(_event,130/*setFloor*/))){
+		x .reset ();
+
+		_state_id_TimeProperties = 78;//moving to state Idle
+		_goto_TimeProperties(_info);
+		}
+		else if ((_occurredEvent(_event,132/*callLiftToFloor*/))){
+		x .reset ();
+
+		_state_id_TimeProperties = 76;//moving to state Requested
+		_goto_TimeProperties(_info);
+		}
+}
+else if (_state_id_TimeProperties==77){
+		if (1==0){}
+		else if ((_occurredEvent(_event,126/*closeDoors*/)) && (y .compareTo (3 )<0 )){
+		x .reset ();
+
+		_state_id_TimeProperties = 76;//moving to state Requested
+		_goto_TimeProperties(_info);
+		}
+		else if ((_occurredEvent(_event,126/*closeDoors*/)) && (y .compareTo (3 )>=0 )){
+		
+		_state_id_TimeProperties = 71;//moving to state BadLoading
 _cls_lift0.pw .println ("Oqqow!! lift open too long");
 
 		_goto_TimeProperties(_info);
@@ -193,13 +226,14 @@ _cls_lift0.pw.flush();
 
 public String _string_TimeProperties(int _state_id, int _mode){
 switch(_state_id){
-case 18: if (_mode == 0) return "Requested"; else return "Requested";
-case 16: if (_mode == 0) return "Loading"; else return "Loading";
-case 17: if (_mode == 0) return "Moving"; else return "Moving";
-case 20: if (_mode == 0) return "Idle"; else return "Idle";
-case 19: if (_mode == 0) return "LoadingRequested"; else return "LoadingRequested";
-case 14: if (_mode == 0) return "BadLoading"; else return "!!!SYSTEM REACHED BAD STATE!!! BadLoading "+new _BadStateExceptionlift().toString()+" ";
-case 15: if (_mode == 0) return "BadMoving"; else return "!!!SYSTEM REACHED BAD STATE!!! BadMoving "+new _BadStateExceptionlift().toString()+" ";
+case 76: if (_mode == 0) return "Requested"; else return "Requested";
+case 74: if (_mode == 0) return "Loading"; else return "Loading";
+case 75: if (_mode == 0) return "Moving"; else return "Moving";
+case 78: if (_mode == 0) return "Idle"; else return "Idle";
+case 77: if (_mode == 0) return "LoadingRequested"; else return "LoadingRequested";
+case 71: if (_mode == 0) return "BadLoading"; else return "!!!SYSTEM REACHED BAD STATE!!! BadLoading "+new _BadStateExceptionlift().toString()+" ";
+case 72: if (_mode == 0) return "BadMoving"; else return "!!!SYSTEM REACHED BAD STATE!!! BadMoving "+new _BadStateExceptionlift().toString()+" ";
+case 73: if (_mode == 0) return "Debug"; else return "!!!SYSTEM REACHED BAD STATE!!! Debug "+new _BadStateExceptionlift().toString()+" ";
 default: return "!!!SYSTEM REACHED AN UNKNOWN STATE!!!";
 }
 }

@@ -47,11 +47,12 @@ public class LiftController {
 	 *            - The floor to move to (0-based).
 	 */
 	public void moveLift(int liftNumber, int floorNumber) {
+		System.out.println("MOVING******2");
 		moveLift(lifts[liftNumber],  floorNumber);
 	}
 	
 	public void moveLift(Lift lift, int floorNumber) {
-
+		System.out.println("MOVING******3");
 		//The animation process is trusted with updating the state of the lift (floorNumber, moving, etc)
 		visualiser.animateLiftMovement(lift, floorNumber);
 	}

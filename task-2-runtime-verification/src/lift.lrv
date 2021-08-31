@@ -5,11 +5,16 @@ GLOBAL {
 	}
 	
 	EVENTS {				
-		setMoving(boolean moving) = {*.setMoving(moving)}	%% goUp/goDown 
+		animateUp() = {*.animateUp(*)}
+		animateDown() = {*.animateDown(*)}
+		
 		closeDoors() = {*.closeDoors()}						%% closeDoor
 		openDoors() = {*.openDoors()}						%% openDoor
 		setFloor() = {*.setFloor(*)} 						%% stop
 		callLiftToFloor() = {*.callLiftToFloor(*)}			%% requested
+		
+		moveLift() = {*.moveLift(*,*)}
+		animateLiftMovement() = {*.animateLiftMovement(*, *)}
 	}
 	
 	PROPERTY TimeProperties{
@@ -17,6 +22,7 @@ GLOBAL {
 			BAD {
 				BadLoading {System.out.println("Oqqow!! lift open too long");}
 				BadMoving {System.out.println("Oqqow!! lift took too long to start moving");}
+				Debug {System.out.println("FLOOR BUTTON DETECTED $$$$$$$$$$$$$");}
 			}
 			
 			NORMAL {
@@ -33,8 +39,11 @@ GLOBAL {
 		
 		TRANSITIONS {			
 			
+			
 			Idle -> Loading [openDoors \ \ y.reset(); ]
 			Idle -> Requested [callLiftToFloor \ \ x.reset(); ]
+			Idle -> Moving [animateUp \ \ ]
+			Idle -> Moving [animateDown \ \ ]
 			
 			Loading -> Idle [closeDoors \ y.compareTo(3) < 0 \ x.reset();]
 			Loading -> BadLoading [closeDoors \ y.compareTo(3) >= 0 \ ]
@@ -43,13 +52,20 @@ GLOBAL {
 			Moving -> Idle [setFloor \ \ x.reset();]
 			Moving -> Requested [callLiftToFloor \ \ x.reset();]
 			
-			Requested -> Moving [setMoving \ moving==true && x.compareTo(3)<0 \ ]
-			Requested -> BadMoving [setMoving \ moving==true && x.compareTo(3)>=0 \ ]
+			Requested -> Moving [animateUp \ x.compareTo(3)<0 \ ]
+			Requested -> Moving [animateDown \ x.compareTo(3)<0 \ ]
+
+			Requested -> BadMoving [animateUp \ x.compareTo(3)>=0 \ ]
+			Requested -> BadMoving [animateDown \ x.compareTo(3)>=0 \ ]
 			
 			LoadingRequested -> Requested [closeDoors \ y.compareTo(3)<0 \ x.reset(); ]
 			LoadingRequested -> BadLoading [closeDoors \ y.compareTo(3)>=0 \]
 			
-		}
+			Idle -> Loading [openDoors \ \ y.reset(); ]
+			Idle -> Requested [callLiftToFloor \ \ x.reset(); ]
+			
+			
+			}
 	}
 
 	

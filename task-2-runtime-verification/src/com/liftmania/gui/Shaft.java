@@ -151,7 +151,7 @@ public class Shaft extends JPanel implements Runnable {
 	 *            - The floor to animate to (zero-based)
 	 */
 	public void animateLift(int toFloor) {
-
+		System.out.println("MOVING******6");
 		//Update lift state
 		lift.setMoving(true);
 		
@@ -160,14 +160,14 @@ public class Shaft extends JPanel implements Runnable {
 		lift.setMoving(true);
 
 		if (toFloor > fromFloor) {
-
+			System.out.println("MOVING******7");
 			for (int i = fromFloor; i < toFloor; i++) {
 				animateUp(i);
 				lift.setFloor(i);
 			}
 
 		} else {
-
+			System.out.println("MOVING******7");
 			for (int i = fromFloor; i > toFloor; i--) {
 				animateDown(i);
 				lift.setFloor(i);
@@ -191,6 +191,7 @@ public class Shaft extends JPanel implements Runnable {
 	}
 
 	public void animateUp(int currentFloor) {
+		System.out.println("Going up...");
 
 		int lower = currentFloor * animationStepsPerFloor;
 		int upper = lower + animationStepsPerFloor - 1;
@@ -286,13 +287,14 @@ public class Shaft extends JPanel implements Runnable {
 				AnimationCommand cmd = animationCommands.remove();
 				
 				if (cmd.command == AnimationCommand.Command.move) {
+					System.out.println("MOVING*****5");
 					animateLift(cmd.toFloor);
 				} else if (cmd.command == AnimationCommand.Command.close) {
-					//closeDoors(cmd.liftNumber);
+					closeDoors();
 					setLiftFloor(cmd.toFloor);
 				} else if (cmd.command == AnimationCommand.Command.open) {
 					openDoors();
-					//setLiftFloor(cmd.fromFloor);
+					setLiftFloor(cmd.toFloor);
 				}
 			}
 			

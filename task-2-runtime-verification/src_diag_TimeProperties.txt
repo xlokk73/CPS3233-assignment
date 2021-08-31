@@ -1,16 +1,22 @@
 digraph _logic_TimeProperties {
 rankdir=LR;
 node [shape = circle]; Loading Moving Requested LoadingRequested Idle;
-node [shape = octagon]; BadLoading BadMoving;
+node [shape = octagon]; BadLoading BadMoving Debug;
 node [shape = point]; _s_s;
 _s_s -> Idle;
-Requested -> Moving [ label = "(1) setMoving\\moving == true && x . compareTo ( 3 ) < 0 "];
-Requested -> BadMoving [ label = "(2) setMoving\\moving == true && x . compareTo ( 3 ) >= 0 "];
+Requested -> Moving [ label = "(1) animateUp\\x . compareTo ( 3 ) < 0 "];
+Requested -> Moving [ label = "(2) animateDown\\x . compareTo ( 3 ) < 0 "];
+Requested -> BadMoving [ label = "(3) animateUp\\x . compareTo ( 3 ) >= 0 "];
+Requested -> BadMoving [ label = "(4) animateDown\\x . compareTo ( 3 ) >= 0 "];
 Loading -> Idle [ label = "(1) closeDoors\\y . compareTo ( 3 ) < 0 \\x . reset ( ) ; "];
 Loading -> BadLoading [ label = "(2) closeDoors\\y . compareTo ( 3 ) >= 0 "];
 Loading -> LoadingRequested [ label = "(3) callLiftToFloor"];
 Idle -> Loading [ label = "(1) openDoors\\\\y . reset ( ) ; "];
 Idle -> Requested [ label = "(2) callLiftToFloor\\\\x . reset ( ) ; "];
+Idle -> Moving [ label = "(3) animateUp"];
+Idle -> Moving [ label = "(4) animateDown"];
+Idle -> Loading [ label = "(5) openDoors\\\\y . reset ( ) ; "];
+Idle -> Requested [ label = "(6) callLiftToFloor\\\\x . reset ( ) ; "];
 Moving -> Idle [ label = "(1) setFloor\\\\x . reset ( ) ; "];
 Moving -> Requested [ label = "(2) callLiftToFloor\\\\x . reset ( ) ; "];
 LoadingRequested -> Requested [ label = "(1) closeDoors\\y . compareTo ( 3 ) < 0 \\x . reset ( ) ; "];

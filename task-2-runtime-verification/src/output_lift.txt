@@ -1,13 +1,17 @@
 [TimeProperties]AUTOMATON::> TimeProperties() STATE::>Idle
+[TimeProperties]MOVED ON METHODCALL: void com.liftmania.LiftController.callLiftToFloor(int) TO STATE::> Requested
+[TimeProperties]AUTOMATON::> TimeProperties() STATE::>Requested
+[TimeProperties]AUTOMATON::> TimeProperties() STATE::>Requested
+[TimeProperties]AUTOMATON::> TimeProperties() STATE::>Requested
+[TimeProperties]MOVED ON METHODCALL: void com.liftmania.gui.Shaft.animateUp(int) TO STATE::> Moving
+[TimeProperties]AUTOMATON::> TimeProperties() STATE::>Moving
+[TimeProperties]MOVED ON METHODCALL: void com.liftmania.Lift.setFloor(int) TO STATE::> Idle
 [TimeProperties]AUTOMATON::> TimeProperties() STATE::>Idle
-[TimeProperties]AUTOMATON::> TimeProperties() STATE::>Idle
-[TimeProperties]AUTOMATON::> TimeProperties() STATE::>Idle
-[TimeProperties]AUTOMATON::> TimeProperties() STATE::>Idle
-[TimeProperties]AUTOMATON::> TimeProperties() STATE::>Idle
-[TimeProperties]AUTOMATON::> TimeProperties() STATE::>Idle
+[TimeProperties]MOVED ON METHODCALL: void com.liftmania.gui.Shaft.animateUp(int) TO STATE::> Moving
+[TimeProperties]AUTOMATON::> TimeProperties() STATE::>Moving
+[TimeProperties]MOVED ON METHODCALL: void com.liftmania.Lift.setFloor(int) TO STATE::> Idle
 [TimeProperties]AUTOMATON::> TimeProperties() STATE::>Idle
 [TimeProperties]AUTOMATON::> TimeProperties() STATE::>Idle
 [TimeProperties]MOVED ON METHODCALL: void com.liftmania.gui.Shaft.openDoors() TO STATE::> Loading
 [TimeProperties]AUTOMATON::> TimeProperties() STATE::>Loading
 [TimeProperties]MOVED ON METHODCALL: void com.liftmania.gui.Shaft.closeDoors() TO STATE::> Idle
-[TimeProperties]AUTOMATON::> TimeProperties() STATE::>Idle
