@@ -8,28 +8,23 @@ GLOBAL {
 		animateUp() = {*.animateUp(*)}
 		animateDown() = {*.animateDown(*)}
 		
+		setMoving(isMoving) = {*.setMoving(boolean isMoving)}
 		closeDoors() = {*.closeDoors()}						%% closeDoor
 		openDoors() = {*.openDoors()}						%% openDoor
 		setFloor() = {*.setFloor(*)} 						%% stop
 		callLiftToFloor() = {*.callLiftToFloor(*)}			%% requested
 		
-		moveLift() = {*.moveLift(*,*)}
-		animateLiftMovement() = {*.animateLiftMovement(*, *)}
 	}
 	
-	PROPERTY TimeProperties{
+	PROPERTY LiftOpenTimeProperty {
 		STATES {
 			BAD {
-				BadLoading {System.out.println("Oqqow!! lift open too long");}
-				BadMoving {System.out.println("Oqqow!! lift took too long to start moving");}
-				Debug {System.out.println("FLOOR BUTTON DETECTED $$$$$$$$$$$$$");}
+				OpenTooLong
 			}
 			
 			NORMAL {
 				Loading
-				Moving 
-				Requested 
-				LoadingRequested
+				Moving
 			}
 			
 			STARTING {
@@ -37,36 +32,60 @@ GLOBAL {
 			}
 		}
 		
-		TRANSITIONS {			
+		TRANSITIONS {
+			Idle -> Loading [openDoors \ \ y.reset();]
+			Idle -> Moving [setMoving \ isMoving \ ]
 			
+			Loading -> Idle [closeDoors \ y.compareTo(3)<0 \ ]
+			Loading -> OpenTooLong [closeDoors \ y.compareTo(3)>=0 \]
 			
-			Idle -> Loading [openDoors \ \ y.reset(); ]
-			Idle -> Requested [callLiftToFloor \ \ x.reset(); ]
-			Idle -> Moving [animateUp \ \ ]
-			Idle -> Moving [animateDown \ \ ]
-			
-			Loading -> Idle [closeDoors \ y.compareTo(3) < 0 \ x.reset();]
-			Loading -> BadLoading [closeDoors \ y.compareTo(3) >= 0 \ ]
-			Loading -> LoadingRequested [callLiftToFloor \ \ ]
-			
-			Moving -> Idle [setFloor \ \ x.reset();]
-			Moving -> Requested [callLiftToFloor \ \ x.reset();]
-			
-			Requested -> Moving [animateUp \ x.compareTo(3)<0 \ ]
-			Requested -> Moving [animateDown \ x.compareTo(3)<0 \ ]
-
-			Requested -> BadMoving [animateUp \ x.compareTo(3)>=0 \ ]
-			Requested -> BadMoving [animateDown \ x.compareTo(3)>=0 \ ]
-			
-			LoadingRequested -> Requested [closeDoors \ y.compareTo(3)<0 \ x.reset(); ]
-			LoadingRequested -> BadLoading [closeDoors \ y.compareTo(3)>=0 \]
-			
-			Idle -> Loading [openDoors \ \ y.reset(); ]
-			Idle -> Requested [callLiftToFloor \ \ x.reset(); ]
-			
-			
-			}
+			Moving -> Idle [setFloor \ \]
+		}
 	}
+	
+	%%PROPERTY StartMovingTimeProperty {
+	%%
+	%%	STATES {
+	%%		BAD {
+	%%			BadMoving {System.out.println("Oqqow!! lift took too long to start moving");}
+	%%		}
+	%%		
+	%%		NORMAL {
+	%%			Loading
+	%%			Moving 
+	%%			Requested 
+	%%			LoadingRequested
+	%%		}
+	%%		
+	%%		STARTING {
+	%%			Idle
+	%%		}
+	%%	}
+	%%	
+	%%	TRANSITIONS {			
+	%%		
+	%%		
+	%%		Idle -> Loading [openDoors \ \ ]
+	%%		Idle -> Requested [callLiftToFloor \ \ x.reset(); ]
+	%%		Idle -> Moving [setMoving \ isMoving \ ]
+	%%		
+	%%		Loading -> Idle [closeDoors \ \ x.reset();]
+	%%		Loading -> LoadingRequested [callLiftToFloor \ \ ]
+	%%		
+	%%		Moving -> Idle [setFloor \ \ x.reset();]
+	%%		Moving -> Requested [callLiftToFloor \ \ x.reset();]
+	%%		
+	%%		Requested -> Moving [setMoving \ isMoving && x.compareTo(3)<0 \ ]
+	%%		Requested -> BadMoving [setMoving \ isMoving && x.compareTo(3)>=0 \ ]
+	%%		
+	%%		LoadingRequested -> Requested [closeDoors \ \ x.reset(); ]
+	%%		
+	%%		Idle -> Loading [openDoors \ \ y.reset(); ]
+	%%		Idle -> Requested [callLiftToFloor \ \ x.reset(); ]
+	%%		
+	%%		
+	%%	}
+	%%}
 
 	
 }

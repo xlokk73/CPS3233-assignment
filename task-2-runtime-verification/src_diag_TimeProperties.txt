@@ -1,7 +1,7 @@
 digraph _logic_TimeProperties {
 rankdir=LR;
 node [shape = circle]; Loading Moving Requested LoadingRequested Idle;
-node [shape = octagon]; BadLoading BadMoving Debug;
+node [shape = octagon]; BadLoading BadMoving;
 node [shape = point]; _s_s;
 _s_s -> Idle;
 Requested -> Moving [ label = "(1) animateUp\\x . compareTo ( 3 ) < 0 "];

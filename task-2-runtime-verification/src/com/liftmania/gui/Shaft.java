@@ -151,7 +151,6 @@ public class Shaft extends JPanel implements Runnable {
 	 *            - The floor to animate to (zero-based)
 	 */
 	public void animateLift(int toFloor) {
-		System.out.println("MOVING******6");
 		//Update lift state
 		lift.setMoving(true);
 		
@@ -160,14 +159,12 @@ public class Shaft extends JPanel implements Runnable {
 		lift.setMoving(true);
 
 		if (toFloor > fromFloor) {
-			System.out.println("MOVING******7");
 			for (int i = fromFloor; i < toFloor; i++) {
 				animateUp(i);
 				lift.setFloor(i);
 			}
 
 		} else {
-			System.out.println("MOVING******7");
 			for (int i = fromFloor; i > toFloor; i--) {
 				animateDown(i);
 				lift.setFloor(i);

@@ -1,0 +1,19 @@
+digraph _logic_StartMovingTimeProperty {
+rankdir=LR;
+node [shape = circle]; Loading Moving Requested LoadingRequested Idle;
+node [shape = octagon]; BadMoving;
+node [shape = point]; _s_s;
+_s_s -> Idle;
+Requested -> Moving [ label = "(1) setMoving\\isMoving && x . compareTo ( 3 ) < 0 "];
+Requested -> BadMoving [ label = "(2) setMoving\\isMoving && x . compareTo ( 3 ) >= 0 "];
+Loading -> Idle [ label = "(1) closeDoors\\\\x . reset ( ) ; "];
+Loading -> LoadingRequested [ label = "(2) callLiftToFloor"];
+Idle -> Loading [ label = "(1) openDoors"];
+Idle -> Requested [ label = "(2) callLiftToFloor\\\\x . reset ( ) ; "];
+Idle -> Moving [ label = "(3) setMoving\\isMoving "];
+Idle -> Loading [ label = "(4) openDoors\\\\y . reset ( ) ; "];
+Idle -> Requested [ label = "(5) callLiftToFloor\\\\x . reset ( ) ; "];
+Moving -> Idle [ label = "(1) setFloor\\\\x . reset ( ) ; "];
+Moving -> Requested [ label = "(2) callLiftToFloor\\\\x . reset ( ) ; "];
+LoadingRequested -> Requested [ label = "(1) closeDoors\\\\x . reset ( ) ; "];
+}
