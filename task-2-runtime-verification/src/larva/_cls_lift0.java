@@ -94,7 +94,7 @@ else if (no_automata < 0)
 }catch(Exception ex){ex.printStackTrace();}
 }
 
-int _state_id_LiftOpenTimeProperty = 125;
+int _state_id_LiftOpenTimeProperty = 3;
 
 public void _performLogic_LiftOpenTimeProperty(String _info, int... _event) {
 
@@ -102,38 +102,38 @@ _cls_lift0.pw.println("[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty("
 _cls_lift0.pw.flush();
 
 if (0==1){}
-else if (_state_id_LiftOpenTimeProperty==123){
+else if (_state_id_LiftOpenTimeProperty==1){
 		if (1==0){}
-		else if ((_occurredEvent(_event,222/*closeDoors*/)) && (y .compareTo (3 )<0 )){
+		else if ((_occurredEvent(_event,6/*closeDoors*/)) && (y .compareTo (3 )<0 )){
 		
-		_state_id_LiftOpenTimeProperty = 125;//moving to state Idle
+		_state_id_LiftOpenTimeProperty = 3;//moving to state Idle
 		_goto_LiftOpenTimeProperty(_info);
 		}
-		else if ((_occurredEvent(_event,222/*closeDoors*/)) && (y .compareTo (3 )>=0 )){
+		else if ((_occurredEvent(_event,6/*closeDoors*/)) && (y .compareTo (3 )>=0 )){
 		
-		_state_id_LiftOpenTimeProperty = 122;//moving to state OpenTooLong
+		_state_id_LiftOpenTimeProperty = 0;//moving to state OpenTooLong
 		_goto_LiftOpenTimeProperty(_info);
 		}
 }
-else if (_state_id_LiftOpenTimeProperty==125){
+else if (_state_id_LiftOpenTimeProperty==3){
 		if (1==0){}
-		else if ((_occurredEvent(_event,224/*openDoors*/))){
+		else if ((_occurredEvent(_event,8/*openDoors*/))){
 		y .reset ();
 
-		_state_id_LiftOpenTimeProperty = 123;//moving to state Loading
+		_state_id_LiftOpenTimeProperty = 1;//moving to state Loading
 		_goto_LiftOpenTimeProperty(_info);
 		}
-		else if ((_occurredEvent(_event,220/*setMoving*/)) && (isMoving )){
+		else if ((_occurredEvent(_event,4/*setMoving*/)) && (isMoving )){
 		
-		_state_id_LiftOpenTimeProperty = 124;//moving to state Moving
+		_state_id_LiftOpenTimeProperty = 2;//moving to state Moving
 		_goto_LiftOpenTimeProperty(_info);
 		}
 }
-else if (_state_id_LiftOpenTimeProperty==124){
+else if (_state_id_LiftOpenTimeProperty==2){
 		if (1==0){}
-		else if ((_occurredEvent(_event,226/*setFloor*/))){
+		else if ((_occurredEvent(_event,10/*setFloor*/))){
 		
-		_state_id_LiftOpenTimeProperty = 125;//moving to state Idle
+		_state_id_LiftOpenTimeProperty = 3;//moving to state Idle
 		_goto_LiftOpenTimeProperty(_info);
 		}
 }
@@ -146,10 +146,10 @@ _cls_lift0.pw.flush();
 
 public String _string_LiftOpenTimeProperty(int _state_id, int _mode){
 switch(_state_id){
-case 123: if (_mode == 0) return "Loading"; else return "Loading";
-case 124: if (_mode == 0) return "Moving"; else return "Moving";
-case 125: if (_mode == 0) return "Idle"; else return "Idle";
-case 122: if (_mode == 0) return "OpenTooLong"; else return "!!!SYSTEM REACHED BAD STATE!!! OpenTooLong "+new _BadStateExceptionlift().toString()+" ";
+case 1: if (_mode == 0) return "Loading"; else return "Loading";
+case 2: if (_mode == 0) return "Moving"; else return "Moving";
+case 3: if (_mode == 0) return "Idle"; else return "Idle";
+case 0: if (_mode == 0) return "OpenTooLong"; else return "!!!SYSTEM REACHED BAD STATE!!! OpenTooLong "+new _BadStateExceptionlift().toString()+" ";
 default: return "!!!SYSTEM REACHED AN UNKNOWN STATE!!!";
 }
 }

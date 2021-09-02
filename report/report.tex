@@ -36,8 +36,9 @@
 In this section, the specifications of the elevator system are expressed in several different formal notations. The notations are Finite State Automata (FSAs), Regular Expressions (RE), Timed Automata (TAs) and Duration Calculus (DC). From the ones listed, TAs and DC are the capable of expressing timed events. \\
 
 \subsection{Finite State Automata}
-A finite state automata was designed to describe the elevator system. The formal definition of the state machine can be seen in listing \ref{lst:FSA}. The lift can be in one of three states: Idle, Loading or Moving. Idle is when the lift is not moving and has its door closed. Loading when the lift is not moving but has the doors open. Moving is when the lift is moving either up or down. Note that a 'bad' state could be added for when the lift is moving and has the doors open as the lift should never be in this state.
-This FSA can be seen visually in \ref{fig:FSA}. \\
+A finite state automata was designed to describe the elevator system. The formal definition of the state machine can be seen in listing \ref{lst:FSA}. The lift can be in one of three states: Idle, Loading or Moving. Idle is when the lift is not moving and has its door closed. Loading when the lift is not moving but has the doors open. Moving is when the lift is moving either up or down. Note that a 'bad' state could be added for when the lift is moving and has the doors open as the lift should never be in this state. \\
+
+This FSA describes the flow of the lift lifetime in a very basic nature for example it does not consider elevator summoning or floor requests. This can be seen visually in figure \ref{fig:FSA}. A more detailed automaton considering more actions and time constraints is discussed in section \ref{sec:timed-automata}.
 
 
 
@@ -78,7 +79,7 @@ Idle,
 	\draw (Moving) edge[bend left, below] node{stop} (Idle);
         
     \end{tikzpicture}
-    \caption{FSA figure}
+    \caption{Basic FSA}
     \label{fig:FSA}
 \end{figure}
 
@@ -102,13 +103,16 @@ caption={RE definition}
 
 
 \subsection{Timed Automata}
-For the timed automata, the same state machine above was used with some clocks added to verify time-constrained events. In the formal definition if the automaton, the transition functions where modified to accommodate such changes. The formal specification can be seen in listing \ref{lst:TA}. The transition functions follow the format \texttt{[from, to, letter, clocks reseted, condition]}. \\
+\label{sec:timed-automata}
+For the timed automata, the same state machine above was used with some clocks and states added to verify time-constrained events. In the formal definition of the automaton, the transition functions where modified to accommodate such changes. The formal specification can be seen in listing \ref{lst:TA}. The transition functions follow the format \texttt{[from, to, letter, clocks reseted, condition]}. \\
 
-Important to note in the automaton is that the alphabet is composed of signals the lift can detect, not buttons a user may push. For example the user may interact with the lift by pushing a floor button. This is not detected by the automaton but the lift then proceeds to close the door (provided that it was open). It is the door closing that the automaton uses to verify the scenario. \\
+The first time property that is handled says that "upon a request, after the door closes, the elevator starts moving in less than 3 seconds". When adapted to the provided automaton, this translates to "when the lift is \textit{Idle} (because a floor button was pressed so the door closed), it goes either up or down in less than 3 seconds". This is verified by clock x. \\
 
-The first time property that is handled states that "upon a request, after the door closes, the elevator starts moving in less than 3 seconds". When adapted to the provided automaton, this translates to "when the lift is \textit{Idle} (because a floor button was pressed so the door closed), it goes either up or down in less than 3 seconds". This is verified by clock x.
+The second time property expresses that "after the door has been open for 3 seconds, it closes automatically". This implies that when the lift has its doors opened i.e. its in the \textit{Loading} state, it must go to the \textit{Idle} in less than 3 seconds. This is because if a user presses the button in less than 3 seconds, the door will close and if he does not press any button, the door closes automatically. This is verified by clock y.  \\
 
-The second time property states that "after the door has been open for 3 seconds, it closes automatically". This implies that when the lift has its doors opened i.e. its in the \textit{Loading} state, it must go to the \textit{Idle} in less than 3 seconds. This is because if a user presses the button in less than 3 seconds, the door will close and if he does not press any button, the door closes automatically. This is verified by clock y. 
+The two new states are \texttt{Requested} and \texttt{LoadingRequested}. A new event, \texttt{requested} is also added to the alphabet. These new additions concern the summon button present at each floor. The \texttt{Requested} state signifies when the lift a floor was requested while the lift was moving or idle. The state \texttt{LoadingRequested} is the same except that before the request, the lift was in the \texttt{Loading} state. \\
+
+The state \texttt{Requested} was added for the time property that states that the lift must start moving in less than 3 seconds i.e., the time property handles by clock x. Therefore, every transition that leads to the \texttt{Requested} state resets clock x. Meanwhile, \texttt{LoadingRequested}) is needed for the close-door time property handled by clock y. 
 
 \begin{lstlisting}[
 caption={TA definition}
@@ -120,17 +124,19 @@ M = {
 {idle},
 {x, y},
 {
-    [ Idle, Loading, openDoor, {}, true ]
+    [ Idle, Loading, openDoor, {y:=0}, true ]
     
-    [ Idle, Moving, goUp, {}, x<3 ]
-    
-    [ Idle, Moving, goDown, {y:=0}, x<3 ]
-    
-    [ Loading, Loading, true]
-    
+    [ Idle, Requested, request, {x:=0}, true ]
+        
     [ Loading, Idle, closeDoor, {x:=0}, y<3 ]
     
+    [Loading, LoadingRequested, request, {}, true]
+    
     [ Moving, Idle, stop, {x:=0}, true ]
+    
+    [ LoadingRequested, Requested, closeDoor, {x:=0}, y<3 ]
+    
+    [ Requested, Moving, goUp/goDown, {}, x<3 ]
 }
 }
 \end{lstlisting}
@@ -148,11 +154,10 @@ M = {
         \draw (Idle) edge[bend right, below] node{openDoor, y:=0} (Loading);
         \draw (Loading) edge[bend right, above] node{closeDoor, x:=0, y$<$3} (Idle);
 	\draw (Moving) edge[bend right, below] node{stop, x:=0} (Idle);
-	\draw (Moving) edge[bend right, below] node{requested, x:=0} (Requested);
 	\draw (Requested) edge[bend right, below] node{goUp/goDown, x$<$3} (Moving);
-	\draw (Loading) edge[bend right, below] node{requested} (LoadingRequested);
+	\draw (Loading) edge[bend right, below] node{request} (LoadingRequested);
         \draw (LoadingRequested) edge[bend right, above] node{closeDoor, y$<$3, x:=0}(Requested);
-        \draw (Idle) edge[bend right, below] node{requested, x:=0} (Requested);
+        \draw (Idle) edge[bend right, below] node{request, x:=0} (Requested);
         
     \end{tikzpicture}
     \caption{FSA figure}

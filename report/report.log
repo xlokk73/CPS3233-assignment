@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.6.1)  28 AUG 2021 10:52
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.6.1)  2 SEP 2021 12:01
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -410,7 +410,7 @@ Package: xkeyval 2020/11/20 v2.8 package option processing (HA)
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
 \verbatim@out=\write4
-runsystem(echo 'write18-test-2021828652'>"report.w18")...disabled (restricted).
+runsystem(echo 'write18-test-202192721'>"report.w18")...disabled (restricted).
 
 
 
@@ -544,27 +544,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 36--37
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 39--41
+Underfull \hbox (badness 10000) in paragraph at lines 39--40
 
  []
 
 LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 4
-8.
+9.
 (/usr/local/texlive/2021/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 48.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 49.
 LaTeX Font Info:    Trying to load font information for OML+cmr on input line 5
-2.
+3.
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/base/omlcmr.fd
 File: omlcmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <12> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 52.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 53.
 
-Overfull \hbox (73.17682pt too wide) in paragraph at lines 80--81
+Overfull \hbox (73.17682pt too wide) in paragraph at lines 81--82
  [][] 
  []
 
@@ -572,24 +572,19 @@ Overfull \hbox (73.17682pt too wide) in paragraph at lines 80--81
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 87--88
+Underfull \hbox (badness 10000) in paragraph at lines 88--89
 
  []
 
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 89--90
+Underfull \hbox (badness 10000) in paragraph at lines 90--91
 
  []
 
 
-Overfull \hbox (17.5502pt too wide) in paragraph at lines 91--94
+Overfull \hbox (17.5502pt too wide) in paragraph at lines 92--95
 \OT1/cmtt/m/n/12 goUp > stop > openDoor > closeDoor > openDoor > closeDoor > go
 Down
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 105--106
-
  []
 
 
@@ -598,30 +593,42 @@ Underfull \hbox (badness 10000) in paragraph at lines 107--108
  []
 
 [3]
-Overfull \hbox (67.12709pt too wide) in paragraph at lines 157--158
- [][] 
+Underfull \hbox (badness 10000) in paragraph at lines 109--110
+
  []
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+Underfull \hbox (badness 10000) in paragraph at lines 111--112
 
-[4] (./report.bbl
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 113--114
+
+ []
+
+[4]
+Overfull \hbox (61.25215pt too wide) in paragraph at lines 162--163
+ [][] 
+ []
+
+[5] (./report.bbl
 
 LaTeX Warning: Empty `thebibliography' environment on input line 3.
 
-) [5] [6] (./report.aux)
+) [6] (./report.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 15596 strings out of 478994
- 315357 string characters out of 5858185
- 859870 words of memory out of 5000000
- 32813 multiletter control sequences out of 15000+600000
+ 15599 strings out of 478994
+ 315403 string characters out of 5858185
+ 823868 words of memory out of 5000000
+ 32816 multiletter control sequences out of 15000+600000
  413046 words of font info for 64 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 87i,10n,89p,545b,1473s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 87i,10n,89p,548b,1652s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 }</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
@@ -633,7 +640,7 @@ ocal/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/lo
 cal/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/loc
 al/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr
 /local/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on report.pdf (6 pages, 540402 bytes).
+Output written on report.pdf (6 pages, 542064 bytes).
 PDF statistics:
  68 PDF objects out of 1000 (max. 8388607)
  48 compressed objects within 1 object stream
