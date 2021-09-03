@@ -5,6 +5,8 @@
 \usepackage{amssymb}
 \usepackage{dot2texi}
 \usetikzlibrary{automata, positioning, arrows}
+\usepackage{booktabs}
+\usepackage{tablefootnote}
 
 
 \setlength\parindent{24pt}
@@ -178,6 +180,52 @@ $$\square [doorOpen] ; [\neg doorOpen] \Rightarrow \int doorOpen < 3$$
 The formula looks for the pattern of an open door followed by a closed door and then verifies that the door was open for less than 3 seconds. 
 
 \section{Runtime Verification}
+
+For runtime verification, the Larva tool was used. The automata applied where directly derived from the timed automaton discussed in section \ref{sec:timed-automata}. However, it was not implemented as a single automaton in order to check for properties individually. \\
+
+The first property investigated was the door close property. First off, to make the investigation simpler, a single lift was considered. This is because the automaton designed only considers one lift. The Java code was analysed to find the methods that correspond with the designed events. These methods were present in \textit{Lift.java}. The methods and their corresponding events is shown in table \ref{tab:lift-open-time-property}.
+
+% Requires the booktabs if the memoir class is not being used
+\begin{table}[htbp]
+   \centering
+   %\topcaption{Table captions are better up top} % requires the topcapt package
+   \begin{tabular}{@{}  |c|c| @{}} % Column formatting, @{} suppresses leading/trailing spac
+      \toprule
+      Method    & Event \\
+      \midrule
+      Lift.setMoving(boolean isMoving)   &  goUp/goDown *\\
+      Lift.closeDoors()       & closeDoor  \\
+      Lift.openDoors()       & openDoor  \\
+      Lift.setFloor() & stop    \\
+      \bottomrule
+   \end{tabular}
+   \caption{LiftOpenTimeProperty events table}
+   \tablefootnote{*isMoving parameter must be true}
+   \label{tab:lift-open-time-property}
+\end{table}
+
+To add support for multiple lift, the \texttt{FOREACH} Larva keyword was used to iterate over lift objects. All the event methods resided in the class \textit{Lift.java}. This meant that adding multiple lift support was done by binding the Lift object in the event declarations and then assigning it to the \texttt{FOREACH} object using the \texttt{WHERE} keyword.
+
+\begin{adjustbox}{max width=\textwidth}
+
+\begin{lstlisting}[
+language=bash, 
+caption={Multiple lift support for LiftOpenProperty}
+\label{lst:labelname}
+]
+setMoving(isMoving) = {Lift l.setMoving(boolean isMoving)} WHERE {lift = l;} %%goUp/goDown
+closeDoors() = {Lift l.closeDoors()} WHERE {lift = l;}					%% closeDoor
+openDoors() = {Lift l.openDoors()} WHERE {lift = l;}					%% openDoor
+setFloor() = {Lift l.setFloor(*)} WHERE {lift = l;}						%% stop
+\end{lstlisting}
+
+\end{adjustbox}
+
+
+
+The second property is called \texttt{StartMovingTimeProperty} and verifies that the lift start moving in less than 3 seconds after the door closes following a request. A new event was added for the summon request action. The method that corresponds to this event is \texttt{callLiftToFloor}. \\
+
+This method provided some difficulty when switching to adding support for multiple lift verification. The reason being that this method does not reside in the \textit{Lift.java} class. 
 
 \section{Model-Based Testing}
 

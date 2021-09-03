@@ -91,7 +91,7 @@ public class LiftController {
 	 * @param floor - The floor number (0-based).
 	 */
 	
-	public void callLiftToFloor(int floor) {
+	public Lift callLiftToFloor(int floor) {
 		
 		//Find lifts closest to the required floor
 		ArrayList<Lift> closestLifts = getClosestStationaryLifts(floor);
@@ -104,7 +104,8 @@ public class LiftController {
 		Lift lift = closestLifts.get((int)(Math.random() * (closestLifts.size())));
 		
 		moveLift(lift, floor);
-
+		
+		return lift;
 	}
 	
 	public ArrayList<Lift> getClosestStationaryLifts(int floor) {

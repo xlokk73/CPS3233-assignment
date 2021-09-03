@@ -3,9 +3,7 @@
 [LiftOpenTimeProperty]MOVED ON METHODCALL: void com.liftmania.Lift.setMoving(boolean) TO STATE::> Moving
 [LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty() STATE::>Moving
 [LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty() STATE::>Moving
-[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty() STATE::>Moving
 [LiftOpenTimeProperty]MOVED ON METHODCALL: void com.liftmania.Lift.setFloor(int) TO STATE::> Idle
-[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty() STATE::>Idle
 [LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty() STATE::>Idle
 [LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty() STATE::>Idle
 [LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty() STATE::>Idle

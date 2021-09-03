@@ -1,0 +1,91 @@
+digraph _logic_TimeProperties {
+	graph [bb="0,0,656.9,234.62",
+		rankdir=LR
+	];
+	node [label="\N",
+		shape=point
+	];
+	Loading	[height=1.1374,
+		pos="338.69,160.46",
+		shape=circle,
+		width=1.1374];
+	LoadingRequested	[height=2.1845,
+		pos="264.09,150.04",
+		shape=circle,
+		width=2.1845];
+	Loading -> LoadingRequested	[label="(3) callLiftToFloor",
+		lp="244.8,162.25",
+		pos="e,297.49,154.7 297.9,154.76 297.83,154.75 297.76,154.74 297.69,154.73"];
+	Idle	[height=0.68605,
+		pos="358.09,67.409",
+		shape=circle,
+		width=0.68605];
+	Loading -> Idle	[label="(1) closeDoors\\y . compareTo ( 3 ) < 0 \\x . reset ( ) ; ",
+		lp="509.4,105.68",
+		pos="e,364.95,91.163 359.66,125.06 361.67,117.27 363.22,109.04 364.13,101.31"];
+	BadLoading	[height=0.5,
+		pos="291.62,216.62",
+		shape=octagon,
+		width=1.6806];
+	Loading -> BadLoading	[label="(2) closeDoors\\y . compareTo ( 3 ) >= 0 ",
+		lp="425.96,199.86",
+		pos="e,306.75,198.58 312.13,192.15 312.02,192.29 311.9,192.43 311.79,192.56"];
+	Moving	[height=1.1013,
+		pos="389.28,103.71",
+		shape=circle,
+		width=1.1013];
+	Requested	[height=1.354,
+		pos="295.52,75.833",
+		shape=circle,
+		width=1.354];
+	Moving -> Requested	[label="(2) callLiftToFloor\\\\x . reset ( ) ; ",
+		lp="448.21,87.414",
+		pos="e,344.53,76.33 357.05,80.389 356.16,80.067 355.27,79.75 354.36,79.439"];
+	Moving -> Idle	[label="(1) setFloor\\\\x . reset ( ) ; ",
+		lp="445.25,59.99",
+		pos="e,372.56,67.39 372.82,67.524 372.77,67.501 372.73,67.479 372.69,67.457"];
+	Requested -> Moving	[label="(1) animateUp\\x . compareTo ( 3 ) < 0 ",
+		lp="229.25,110.12",
+		pos="e,349.61,105.65 336.63,102.13 337.71,102.46 338.79,102.79 339.87,103.1"];
+	Requested -> Moving	[label="(2) animateDown\\x . compareTo ( 3 ) < 0 ",
+		lp="460.03,97.313",
+		pos="e,351.14,92.373 342.4,89.773 342.49,89.8 342.58,89.827 342.67,89.854"];
+	BadMoving	[height=0.5,
+		pos="240.43,18",
+		shape=octagon,
+		width=1.6219];
+	Requested -> BadMoving	[label="(3) animateUp\\x . compareTo ( 3 ) >= 0 ",
+		lp="153.85,43.655",
+		pos="e,266.43,35.742 266.99,36.293 266.9,36.201 266.8,36.109 266.71,36.017"];
+	Requested -> BadMoving	[label="(4) animateDown\\x . compareTo ( 3 ) >= 0 ",
+		lp="135.26,52.186",
+		pos="e,249.63,36.215 257.41,45.421 256.97,44.93 256.54,44.44 256.11,43.952"];
+	LoadingRequested -> Requested	[label="(1) closeDoors\\y . compareTo ( 3 ) < 0 \\x . reset ( ) ; ",
+		lp="147.5,69.55",
+		pos="e,295.35,76.232 294.86,77.383 294.97,77.132 295.06,76.91 295.14,76.718"];
+	LoadingRequested -> BadLoading	[label="(2) closeDoors\\y . compareTo ( 3 ) >= 0 ",
+		lp="405.61,224.08",
+		pos="e,291.62,216.61 291.6,216.57 291.61,216.58 291.61,216.59 291.61,216.59"];
+	Idle -> Loading	[label="(1) openDoors\\\\y . reset ( ) ; ",
+		lp="258.38,105.58",
+		pos="e,333.64,119.5 342.23,86.624 339.61,93.405 337.3,101.38 335.53,109.53"];
+	Idle -> Loading	[label="(5) openDoors\\\\y . reset ( ) ; ",
+		lp="431.57,108.57",
+		pos="e,347.05,120.34 352.99,91.858 351.8,97.582 350.48,103.89 349.15,110.29"];
+	Idle -> Moving	[label="(3) animateUp",
+		lp="320.77,84.802",
+		pos="e,362.05,92.659 361.68,92.182 361.74,92.262 361.8,92.342 361.87,92.421"];
+	Idle -> Moving	[label="(4) animateDown",
+		lp="424,79.014",
+		pos="e,374.77,86.823 374.41,86.411 374.47,86.48 374.53,86.549 374.59,86.617"];
+	Idle -> Requested	[label="(2) callLiftToFloor\\\\x . reset ( ) ; ",
+		lp="240.95,71.593",
+		pos="e,333.14,64.121 333.56,64.084 333.49,64.09 333.42,64.096 333.35,64.102"];
+	Idle -> Requested	[label="(6) callLiftToFloor\\\\x . reset ( ) ; ",
+		lp="427.7,69.622",
+		pos="e,334.89,77.179 335.31,77.103 335.24,77.116 335.17,77.129 335.1,77.141"];
+	_s_s	[height=0.05,
+		pos="416.87,12.33",
+		width=0.05];
+	_s_s -> Idle	[pos="e,376.12,50.509 415.41,13.691 410.92,17.901 396.77,31.165 383.65,43.459"];
+}
