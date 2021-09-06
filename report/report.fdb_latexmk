@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex report"] 1630955228 "report.aux" "report.bbl" "report" 1630955232
+["bibtex report"] 1630958308 "report.aux" "report.bbl" "report" 1630958315
   "/usr/local/texlive/2021/texmf-dist/bibtex/bst/base/abbrv.bst" 1292289607 20329 b5fed53e10044d0f8112183785c759b1 ""
   "references.bib" 1630492276 3874 1dbd394e0860ba98d5625cbb17d577fc ""
-  "report.aux" 1630955232 2745 98c8e94e46ab2c09434ae55fa7dc7511 "pdflatex"
+  "report.aux" 1630958315 3581 1f875e6bdb13da3f4a335abc7d300b23 "pdflatex"
   (generated)
-  "report.blg"
   "report.bbl"
-["pdflatex"] 1630955228 "report.tex" "report.pdf" "report" 1630955232
+  "report.blg"
+["pdflatex"] 1630958308 "report.tex" "report.pdf" "report" 1630958315
   "/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/tfm/jknappen/ec/tcrm1200.tfm" 1136768653 1536 74b7293ec3713bb7fdca8dd1bd1f469c ""
@@ -165,15 +165,19 @@
   "/usr/local/texlive/2021/texmf-var/web2c/pdftex/pdflatex.fmt" 1622577000 2724735 cd3bcb0ec0c58feb16127994053c9212 ""
   "/usr/local/texlive/2021/texmf.cnf" 1616695596 577 4c1911a7228e554c6032256d3cf5567d ""
   "Logo.jpg" 1630492276 425907 e0ff1f8b268d174486cf5449b13310e4 ""
+  "images/all-properties.png" 1630958259 948371 784b7993fb96b2dd2e2e5ffb8c680281 ""
   "images/lift-open-test-failed.png" 1630835024 621068 d9f54d4867e5eba243d8fa27ccda12e7 ""
   "images/lift-open-test-multiple.png" 1630921272 958717 d578877bd57734b863edd0088049aa80 ""
   "images/lift-open-test-passed.png" 1630834417 1190513 2a9c040d69c967e2075f46199a19d1df ""
-  "report.aux" 1630955232 2745 98c8e94e46ab2c09434ae55fa7dc7511 "pdflatex"
-  "report.bbl" 1630955228 49 0eba253fc001332e731e8aba3f23127b "bibtex report"
-  "report.tex" 1630955223 14290 cf17c72be9db7b19546487ff8915b5fe ""
-  "report.toc" 1630955232 626 4f3b955fdd1295eed92c8ce026ee2cea "pdflatex"
+  "images/start-moving-time-property-failed.png" 1630957706 939233 d76f4f7f5ad3fc0e1b3a645f47d69f1e ""
+  "images/start-moving-time-property-failure-edit.png" 1630958064 424213 d9069ceb134e80d14bce9ecdb4d664fc ""
+  "images/start-moving-time-property-several.png" 1630956175 1438030 8479d06f3de0469e120eee0ff0e7778c ""
+  "report.aux" 1630958315 3581 1f875e6bdb13da3f4a335abc7d300b23 "pdflatex"
+  "report.bbl" 1630958308 49 0eba253fc001332e731e8aba3f23127b "bibtex report"
+  "report.tex" 1630958190 16358 7ef567219cde0b4be09a853f03b61a8b ""
+  "report.toc" 1630958315 626 e799060a01298f290005170199519bf2 "pdflatex"
   (generated)
-  "report.aux"
-  "report.log"
-  "report.toc"
   "report.pdf"
+  "report.aux"
+  "report.toc"
+  "report.log"

@@ -221,7 +221,7 @@ setFloor() = {Lift l.setFloor(*)} WHERE {lift = l;}
 
 The second property is called \texttt{StartMovingTimeProperty} and verifies that the lift start moving in less than 3 seconds after the door closes following a request. A new event was added for the summon request action. The method that corresponds to this event is \texttt{callLiftToFloor}. \\
 
-This method provided some difficulty when switching to adding support for multiple lift verification. The reason being that this method does not reside in the \textit{Lift.java} class. It resided in the \textit{JavaController.java} class. When \texttt{callLiftToFloor} is called, it performs some calculations and then proceeds to execute \texttt{moveLift} with the chosen lift. To find out which lift was called via Larva, the source needed to be edited. The change done was very minimal and does not impact the design of the lift system at all. The \texttt{callLiftToFloor} method signature was changed to return a lift object instead of void. This is then used by Larva by making use of the \texttt{uponReturning} keyword when declaring the event. The whole event declaration is as follows: \newline\texttt{callLiftToFloor(Lift l) = {LiftController lc.callLiftToFloor(*)uponReturning(l)} where {lift = l;}}, where '\texttt{lift}' is the iterated object declared in the FOREACH loop. 
+This method provided some difficulty when switching to adding support for multiple lift verification. The reason being that this method does not reside in the \textit{Lift.java} class. It resided in the \textit{JavaController.java} class. When \texttt{callLiftToFloor} is called, it performs some calculations and then proceeds to execute \texttt{moveLift} with the chosen lift. To find out which lift was called via Larva, the source needed to be edited. The change done was very minimal and does not impact the design of the lift system at all. The \texttt{callLiftToFloor} method signature was changed to return a lift object instead of void. This is then used by Larva by making use of the \texttt{uponReturning} keyword when declaring the event. The whole event declaration is as follows: \newline\texttt{callLiftToFloor(Lift l) = {*callLiftToFloor(*)uponReturning(l)} where {lift = l;}}, where '\texttt{lift}' is the iterated object declared in the FOREACH loop. 
 
 \subsection{Testing}
 In the tests shown, one property at a time was tested to make the outputs more legible. Figure \ref{fig:lift-open-test-passed} shows the property \texttt{LiftOpenTimeProperty} running as should. several buttons were pressed and the lift always moved as specified. \\
@@ -235,7 +235,7 @@ In the tests shown, one property at a time was tested to make the outputs more l
 
 For the second test shown in figure \ref{fig:lift-open-test-failed}, time taken to close the door automatically was changed from the java source code in file \textit{Shaft.java}. The figure shows that verification failed because the door was closing after 3 seconds.
 
-\begin{figure}[htbp]
+\begin{figure}[h]
    \centering
    \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{images/lift-open-test-failed} % requires the graphicx package
    \caption{\texttt{LiftOpenTimeProperty} failed}
@@ -244,13 +244,46 @@ For the second test shown in figure \ref{fig:lift-open-test-failed}, time taken 
 
 Referirng to figure \ref{fig:lift-open-test-multiple} the third test shown, displays the verification being conducted on several (three) lifts. Identifiers are used to differentiate the multiple lifts being verified. 
 
-\begin{figure}[htbp]
+\begin{figure}[h]
    \centering
    \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{images/lift-open-test-multiple} % requires the graphicx package
    \caption{\texttt{LiftOpenTimeProperty} on several lifts}
    \label{fig:lift-open-test-multiple}
 \end{figure}
 
+Figure \ref{fig:start-moving-time-property-several} shows the fourth documented test. This test shows the verification of the \texttt{StartMovingTimeProperty} working on more than one lift. To make the output more clear, the \texttt{LiftOpenTimeProperty} was removed from the script to focus only on the property  discussed. Other tests were conducted on t
+
+\begin{figure}[h]
+   \centering
+   \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{images/start-moving-time-property-several} % requires the graphicx package
+   \caption{\texttt{StartMovingTimeProperty} on several lifts}
+   \label{fig:start-moving-time-property-several}
+\end{figure}
+
+A failure was also induced for this property. The \texttt{animateLift} method in \textit{Shaft.java} was edited to wait three seconds before starting to move the lift. The added code can be seen in figure \ref{fig:start-moving-time-property-failure-edit}. As expected, this caused the verification to fail. The output can be seen in figure \ref{fig:start-moving-time-property-failed}
+
+\begin{figure}[h]
+   \centering
+   \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{images/start-moving-time-property-failure-edit} % requires the graphicx package
+   \caption{Added code to stop for three seconds before starting to move lift in \textit{Shaft.java}}
+   \label{fig:start-moving-time-property-failure-edit}
+\end{figure}
+
+\begin{figure}[h]
+   \centering
+   \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{images/start-moving-time-property-failed} % requires the graphicx package
+   \caption{\texttt{StartMovingTimeProperty} failure}
+   \label{fig:start-moving-time-property-failed}
+\end{figure}
+
+The final test showcased in this section can be seen in figure \ref{fig:all-properties}. This shows all the properties being run at once for several lifts. 
+
+\begin{figure}[h]
+   \centering
+   \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{images/all-properties} % requires the graphicx package
+   \caption{All properties}
+   \label{fig:all-properties}
+\end{figure}
 
 
 \section{Model-Based Testing}
