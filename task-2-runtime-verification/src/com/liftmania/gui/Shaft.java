@@ -151,6 +151,8 @@ public class Shaft extends JPanel implements Runnable {
 	 *            - The floor to animate to (zero-based)
 	 */
 	public void animateLift(int toFloor) {
+		
+		
 		//Update lift state
 		lift.setMoving(true);
 		

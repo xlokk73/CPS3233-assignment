@@ -103,6 +103,7 @@ public class LiftController {
 		//Pick random lift
 		Lift lift = closestLifts.get((int)(Math.random() * (closestLifts.size())));
 		
+		
 		moveLift(lift, floor);
 		
 		return lift;
@@ -126,7 +127,7 @@ public class LiftController {
 	}
 	
 	public static void main(String[] args) throws Exception {
-		new LiftController(6, 1, false);
+		new LiftController(6, 2, false);
 	}
 
 }
