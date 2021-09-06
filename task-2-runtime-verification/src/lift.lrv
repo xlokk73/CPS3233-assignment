@@ -1,6 +1,10 @@
+IMPORTS {
+	import com.liftmania.Lift;
+}
+
 GLOBAL {
 	
-	%%FOREACH (Lift lift) {
+	FOREACH (Lift lift) {
 		VARIABLES {
 			Clock x = new Clock();	%% Checks for Bad State: BadMoving
 			Clock y = new Clock();  %% Checks for Bad State: BadLoading
@@ -8,17 +12,11 @@ GLOBAL {
 		
 		EVENTS {				
 			
-			%%setMoving(isMoving) = {Lift l.setMoving(boolean isMoving)} where {lift = l;} %%goUp/goDown
-			%%closeDoors() = {Lift l.closeDoors()} where {lift = l;}			%% closeDoor
-			%%openDoors() = {Lift l.openDoors()} where {lift = l;}	%% openDoor
-			%%setFloor() = {Lift l.setFloor(*)} where {lift = l;}		%% stop
+			setMoving(isMoving) = {Lift l.setMoving(boolean isMoving)} where {lift = l;} %%goUp/goDown
+			closeDoors() = {Lift l.closeDoors()} where {lift = l;}			%% closeDoor
+			openDoors() = {Lift l.openDoors()} where {lift = l;}	%% openDoor
+			setFloor() = {Lift l.setFloor(*)} where {lift = l;}		%% stop
 			%%callLiftToFloor(Lift l) = {LiftController lc.callLiftToFloor(*)uponReturning(l)} where {lift = l;} %% summonRequest
-			
-			setMoving(isMoving) = {*.setMoving(boolean isMoving)}
-		closeDoors() = {*.closeDoors()}						%% closeDoor
-		openDoors() = {*.openDoors()}						%% openDoor
-		setFloor() = {*.setFloor(*)} 						%% stop
-		callLiftToFloor() = {*.callLiftToFloor(*)}			%% requested
 			
 		}
 		
@@ -47,7 +45,7 @@ GLOBAL {
 				
 				Moving -> Idle [setFloor \ \]
 			}
-		%%}
+		}
 		
 		
 
