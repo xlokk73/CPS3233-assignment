@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.6.1)  7 SEP 2021 11:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.6.1)  7 SEP 2021 21:17
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -410,7 +410,7 @@ Package: xkeyval 2020/11/20 v2.8 package option processing (HA)
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
 \verbatim@out=\write4
-runsystem(echo 'write18-test-202197705'>"report.w18")...disabled (restricted).
+runsystem(echo 'write18-test-2021971277'>"report.w18")...disabled (restricted).
 
 
 
@@ -812,50 +812,14 @@ Package pdftex.def Info: images/all-properties.png  used on input line 295.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-LaTeX Warning: Reference `fig:TA' on page 8 undefined on input line 301.
-
-(./report.bbl
-
-LaTeX Warning: Empty `thebibliography' environment on input line 3.
-
-) [8 <./images/lift-open-test-passed.png>] [9 <./images/lift-open-test-failed.p
-ng>] [10 <./images/lift-open-test-multiple.png> <./images/start-moving-time-pro
-perty-several.png>] [11 <./images/start-moving-time-property-failure-edit.png> 
-<./images/start-moving-time-property-failed.png>] [12 <./images/all-properties.
-png>] (./report.aux)
-
-LaTeX Warning: There were undefined references.
+LaTeX Warning: Reference `fig:floor-request-code' on page 8 undefined on input 
+line 301.
 
 
-LaTeX Warning: There were multiply-defined labels.
+Underfull \hbox (badness 10000) in paragraph at lines 301--302
 
- ) 
-Here is how much of TeX's memory you used:
- 17386 strings out of 478994
- 345120 string characters out of 5858185
- 868683 words of memory out of 5000000
- 34531 multiletter control sequences out of 15000+600000
- 413691 words of font info for 67 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 87i,12n,93p,1009b,1734s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
-}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
-</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
-/usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></
-usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></us
-r/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/
-local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/lo
-cal/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local
-/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/te
-xlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/tex
-live/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texl
-ive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texli
-ve/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/t
-exlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on report.pdf (12 pages, 3988325 bytes).
-PDF statistics:
- 115 PDF objects out of 1000 (max. 8388607)
- 72 compressed objects within 1 object stream
- 0 named destinations out of 1000 (max. 500000)
- 53 words of extra memory for PDF output out of 10000 (max. 10000000)
+ []
 
+
+Overfull \hbox (42.26794pt too wide) in paragraph at lines 303--304
+\OT1/cmr/m/n/12 in \OT1/cmr/m/it/12 Shaft.java\OT1/cmr/m/n/1

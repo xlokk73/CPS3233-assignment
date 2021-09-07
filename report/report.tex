@@ -298,7 +298,17 @@ The final test showcased in this section can be seen in figure \ref{fig:all-prop
 \end{figure}
 
 \subsection{Larva script improvements}
-The script developed is not perfect. One flaw with the system is that requests are only summon requests. This means that only buttons on floors are verified. The reason for this decision lies in the java source code for the Lift system. 
+The script developed is not perfect. One flaw with the system is that requests are only summon requests. This means that only buttons on floors are verified. The reason for this decision lies in the java source code for the Lift system. As can be seen in figure \ref{fig:floor-request-code} was a button is pressed, it is registered as a \texttt{move} action. As opposed to using a function similar to summon requests where \texttt{callLiftToFloor} is used. \\
+
+One possible way to circumvent this problem would have been to iterate over \texttt{Shaft} objects rather than \texttt{Lift} object as the script does currently. This would have most likely work since each shaft corresponds to a single that resides in it. The \textit{Shaft.java} class also contains \texttt{openDoors()} and \texttt{closeDoors()} methods similar to the \textit{Lift.java} class. Movement events would have been recognised by the \texttt{animateUp()} and \texttt{animateDown()} present in \textit{Shaft.java}. Finally, stopping would have been recognised by the \texttt{animationPause()} method. Iteration over the \texttt{Shaft} objects would enable the script to track which shaft floor buttons were pressed. 
+
+\begin{figure}[htbp]
+   \centering
+   \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{images/floor-request-code} % requires the graphicx package
+   \caption{Floor request button code}
+   \label{fig:floor-request-code}
+\end{figure}
+
 
 
 \section{Model-Based Testing}
