@@ -16,7 +16,7 @@
 \tikzset{
         ->,  % makes the edges directed
         %>=stealth’, % makes the arrow heads bold
-        node distance=7cm, % specifies the minimum distance between two nodes. Change if n
+        node distance=6cm, % specifies the minimum distance between two nodes. Change if n
         every state/.style={thick, fill=gray!10}, % sets the properties for each ’state’ n
         initial text=$ $, % sets the text that appears on the start arrow
         }
@@ -107,7 +107,7 @@ caption={RE definition}
 
 \subsection{Timed Automata}
 \label{sec:timed-automata}
-For the timed automata, the same state machine above was used with some clocks and states added to verify time-constrained events. In the formal definition of the automaton, the transition functions where modified to accommodate such changes. The formal specification can be seen in listing \ref{lst:TA}. The transition functions follow the format \texttt{[from, to, letter, clocks reseted, condition]}. \\
+For the timed automata (figure \ref{fig:TA}, the same state machine above was used with some clocks and states added to verify time-constrained events. In the formal definition of the automaton, the transition functions where modified to accommodate such changes. The formal specification can be seen in listing \ref{lst:TA}. The transition functions follow the format \texttt{[from, to, letter, clocks reseted, condition]}. \\
 
 The first time property that is handled says that "upon a request, after the door closes, the elevator starts moving in less than 3 seconds". When adapted to the provided automaton, this translates to "when the lift is \textit{Idle} (because a floor button was pressed so the door closed), it goes either up or down in less than 3 seconds". This is verified by clock x. \\
 
@@ -144,7 +144,12 @@ M = {
 }
 \end{lstlisting}
 
-\begin{figure}[h] % ’ht’ tells LaTeX to place the figure ’here’ or at the top of the page
+
+\begin{figure}[h] %  figure placement: here, top, bottom, or page
+   \centering
+\begin{adjustbox}{max width=\textwidth}
+
+
     \centering % centers the figure
     \begin{tikzpicture}[>=stealth,auto,state/.append style={fill=black!10}]
         % tikz code goes here
@@ -152,20 +157,28 @@ M = {
         \node[state, right of=Idle] (Loading) {Loading};
         \node[state, left of=Idle] (Moving) {Moving};
         \node[state, above right of=Moving] (Requested) {Requested};
-        \node[state, right of=Requested] (LoadingRequested) {LoadingRequested};
+        \node[state, right of=Loading] (LoadingRequested) {LoadingRequested};
         
         \draw (Idle) edge[bend right, below] node{openDoor, y:=0} (Loading);
         \draw (Loading) edge[bend right, above] node{closeDoor, x:=0, y$<$3} (Idle);
 	\draw (Moving) edge[bend right, below] node{stop, x:=0} (Idle);
+	\draw (Moving) edge[bend right, below] node{request} (LoadingRequested.south);
 	\draw (Requested) edge[bend right, below] node{goUp/goDown, x$<$3} (Moving);
 	\draw (Loading) edge[bend right, below] node{request} (LoadingRequested);
         \draw (LoadingRequested) edge[bend right, above] node{closeDoor, y$<$3, x:=0}(Requested);
         \draw (Idle) edge[bend right, below] node{request, x:=0} (Requested);
         
     \end{tikzpicture}
-    \caption{FSA figure}
-    \label{fig:FSA}
+
+\end{adjustbox}
+
+\caption{FSA figure}
+\label{fig:FSA}
+
 \end{figure}
+
+
+
 
 \subsection{Duration Calculus}
 For the DC specifications, two formulas where defined, one for each time constrain. The first time constrain states that: "upon a request, after the door closes, the elevator starts moving in less than 3 seconds". This is expressed by the formula:
@@ -233,7 +246,7 @@ In the tests shown, one property at a time was tested to make the outputs more l
    \label{fig:lift-open-test-passed}
 \end{figure}
 
-For the second test shown in figure \ref{fig:lift-open-test-failed}, time taken to close the door automatically was changed from the java source code in file \textit{Shaft.java}. The figure shows that verification failed because the door was closing after 3 seconds.
+For the second test shown in figure \ref{fig:lift-open-test-failed}, time taken to close the door automatically was changed from the java source code in file \textit{Shaft.java}. The figure shows that verification failed because the door was closing after 3 seconds. \\
 
 \begin{figure}[h]
    \centering
@@ -242,7 +255,7 @@ For the second test shown in figure \ref{fig:lift-open-test-failed}, time taken 
    \label{fig:lift-open-test-failed}
 \end{figure}
 
-Referirng to figure \ref{fig:lift-open-test-multiple} the third test shown, displays the verification being conducted on several (three) lifts. Identifiers are used to differentiate the multiple lifts being verified. 
+Referirng to figure \ref{fig:lift-open-test-multiple} the third test shown, displays the verification being conducted on several (three) lifts. Identifiers are used to differentiate the multiple lifts being verified. \\
 
 \begin{figure}[h]
    \centering
@@ -251,8 +264,7 @@ Referirng to figure \ref{fig:lift-open-test-multiple} the third test shown, disp
    \label{fig:lift-open-test-multiple}
 \end{figure}
 
-Figure \ref{fig:start-moving-time-property-several} shows the fourth documented test. This test shows the verification of the \texttt{StartMovingTimeProperty} working on more than one lift. To make the output more clear, the \texttt{LiftOpenTimeProperty} was removed from the script to focus only on the property  discussed. Other tests were conducted on t
-
+Figure \ref{fig:start-moving-time-property-several} shows the fourth documented test. This test shows the verification of the \texttt{StartMovingTimeProperty} working on more than one lift. To make the output more clear, the \texttt{LiftOpenTimeProperty} was removed from the script to focus only on the property discussed. \\
 \begin{figure}[h]
    \centering
    \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{images/start-moving-time-property-several} % requires the graphicx package
@@ -284,6 +296,9 @@ The final test showcased in this section can be seen in figure \ref{fig:all-prop
    \caption{All properties}
    \label{fig:all-properties}
 \end{figure}
+
+\subsection{Larva script improvements}
+The script developed is not perfect. One flaw with the system is that requests are only summon requests. This means that only buttons on floors are verified. The reason for this decision lies in the java source code for the Lift system. 
 
 
 \section{Model-Based Testing}

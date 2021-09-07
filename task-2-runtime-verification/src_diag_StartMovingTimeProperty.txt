@@ -14,6 +14,6 @@ Idle -> Moving [ label = "(3) setMoving\\isMoving "];
 Idle -> Loading [ label = "(4) openDoors\\\\y . reset ( ) ; "];
 Idle -> Requested [ label = "(5) callLiftToFloor\\\\x . reset ( ) ; "];
 Moving -> Idle [ label = "(1) setFloor\\\\x . reset ( ) ; "];
-Moving -> Requested [ label = "(2) callLiftToFloor\\\\x . reset ( ) ; "];
+Moving -> LoadingRequested [ label = "(2) callLiftToFloor"];
 LoadingRequested -> Requested [ label = "(1) closeDoors\\\\x . reset ( ) ; "];
 }

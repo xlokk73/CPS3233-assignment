@@ -77,7 +77,7 @@ GLOBAL {
 				Loading -> LoadingRequested [callLiftToFloor \ \ ]
 				
 				Moving -> Idle [setFloor \ \ x.reset();]
-				Moving -> Requested [callLiftToFloor \ \ x.reset();]
+				Moving -> LoadingRequested [callLiftToFloor \ \ ]
 				
 				Requested -> Moving [setMoving \ isMoving && x.compareTo(3)<0 \ ]
 				Requested -> BadMoving [setMoving \ isMoving && x.compareTo(3)>=0 \ ]
