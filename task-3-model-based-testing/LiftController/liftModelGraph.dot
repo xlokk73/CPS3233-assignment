@@ -1,5 +1,7 @@
 digraph LiftModel
 {
+  IDLE -> MOVING  [label="moveLift"];
+  MOVING -> IDLE  [label="stopLift"];
   IDLE -> LOADING  [label="openDoor"];
   LOADING -> IDLE  [label="closeDoor"];
 }

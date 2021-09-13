@@ -56,7 +56,7 @@ public class LiftModel implements TimedFsmModel {
         isOpen = false;
     }
 
-    public boolean openDoorGuard() {return getState().equals(LiftStates.IDLE);}
+    public boolean openDoorGuard() { return getState().equals(LiftStates.IDLE);}
     public @Action void openDoor() {
         isOpen = true;
         lastFloor = currentFloor;
@@ -84,6 +84,32 @@ public class LiftModel implements TimedFsmModel {
         }
     }
 
+    public boolean moveLiftGuard() {return getState().equals(LiftStates.IDLE);}
+    public @Action void moveLift() {
+        liftState = LiftStates.MOVING;
+        lift.setMoving(true);
+
+        lastFloor = currentFloor;
+        currentFloor = lift.floor;
+        if (lastFloor != currentFloor) {
+            lastDifferentFloor = lastFloor;
+        }
+
+        Assert.assertFalse("Moved with door open", isOpen);
+    }
+
+    public boolean stopLiftGuard() {return getState().equals(LiftStates.MOVING);}
+    public @Action void stopLift() {
+        liftState = LiftStates.IDLE;
+        lift.setMoving(false);
+
+        lastFloor = currentFloor;
+        currentFloor = lift.floor;
+        if (lastFloor != currentFloor) {
+            lastDifferentFloor = lastFloor;
+        }
+    }
+
     @Test
     public void main() throws FileNotFoundException {
 
@@ -91,7 +117,7 @@ public class LiftModel implements TimedFsmModel {
         timedModel.setTimeoutProbability(0.5);
 
         final GreedyTester tester = new GreedyTester(timedModel);
-        tester.setRandom(new Random(1));
+        tester.setRandom(new Random(2));
         tester.setResetProbability(0.1);
 
         final GraphListener graphListener = tester.buildGraph();
