@@ -1,0 +1,5 @@
+digraph LiftModel
+{
+  IDLE -> LOADING  [label="openDoor"];
+  LOADING -> IDLE  [label="closeDoor"];
+}

@@ -1,0 +1,109 @@
+package com.liftmania;
+
+import com.liftmania.Lift;
+import com.liftmania.LiftController;
+import com.liftmania.states.LiftStates;
+import junit.framework.Assert;
+import nz.ac.waikato.modeljunit.Action;
+import nz.ac.waikato.modeljunit.GraphListener;
+import nz.ac.waikato.modeljunit.GreedyTester;
+import nz.ac.waikato.modeljunit.StopOnFailureListener;
+import nz.ac.waikato.modeljunit.coverage.ActionCoverage;
+import nz.ac.waikato.modeljunit.coverage.StateCoverage;
+import nz.ac.waikato.modeljunit.coverage.TransitionCoverage;
+import nz.ac.waikato.modeljunit.coverage.TransitionPairCoverage;
+import nz.ac.waikato.modeljunit.timing.Time;
+import nz.ac.waikato.modeljunit.timing.TimedFsmModel;
+import nz.ac.waikato.modeljunit.timing.TimedModel;
+import org.junit.Test;
+
+import java.io.FileNotFoundException;
+import java.util.Random;
+
+
+public class LiftModel implements TimedFsmModel {
+
+    //private LiftController liftController = new LiftController(6, 1, false);
+    private Lift lift = new Lift(0);
+    private LiftStates liftState = LiftStates.IDLE;
+    private boolean isOpen = false;
+    private int currentFloor = 0;
+    private int lastFloor = 0;
+    private int lastDifferentFloor = 0;
+
+    @Time
+    public int now;
+
+    @Override
+    public int getNextTimeIncrement(Random random) {
+        return 1;
+    }
+
+    @Override
+    public Object getState() {
+        return liftState;
+    }
+
+    @Override
+    public void reset(boolean b) {
+        if (b) {
+            lift = new Lift(0);
+        }
+        currentFloor = 0;
+        lastFloor = 0;
+        lastDifferentFloor = 0;
+        liftState = LiftStates.IDLE;
+        isOpen = false;
+    }
+
+    public boolean openDoorGuard() {return getState().equals(LiftStates.IDLE);}
+    public @Action void openDoor() {
+        isOpen = true;
+        lastFloor = currentFloor;
+        currentFloor = lift.floor;
+        if (lastFloor != currentFloor) {
+            lastDifferentFloor = lastFloor;
+        }
+
+        liftState = LiftStates.LOADING;
+        lift.openDoors();
+
+        Assert.assertEquals("Lift moved with door open!", lastFloor, currentFloor);
+    }
+
+    public boolean closeDoorGuard() {return getState().equals(LiftStates.LOADING);}
+    public @Action void closeDoor() {
+        liftState = LiftStates.IDLE;
+        lift.closeDoors();
+
+        isOpen = false;
+        lastFloor = currentFloor;
+        currentFloor = lift.floor;
+        if (lastFloor != currentFloor) {
+            lastDifferentFloor = lastFloor;
+        }
+    }
+
+    @Test
+    public void main() throws FileNotFoundException {
+
+        final TimedModel timedModel = new TimedModel(new LiftModel());
+        timedModel.setTimeoutProbability(0.5);
+
+        final GreedyTester tester = new GreedyTester(timedModel);
+        tester.setRandom(new Random(1));
+        tester.setResetProbability(0.1);
+
+        final GraphListener graphListener = tester.buildGraph();
+        graphListener.printGraphDot("/Users/manwel/Documents/School/cps3233/assignment/task-3-model-based-testing/LiftController/liftModelGraph.dot");
+
+        tester.addListener(new StopOnFailureListener());
+        tester.addListener("verbose");
+        tester.addCoverageMetric(new TransitionPairCoverage());
+        tester.addCoverageMetric(new TransitionCoverage());
+        tester.addCoverageMetric(new StateCoverage());
+        tester.addCoverageMetric(new ActionCoverage());
+        tester.generate(100);
+        tester.printCoverage();
+    }
+}
