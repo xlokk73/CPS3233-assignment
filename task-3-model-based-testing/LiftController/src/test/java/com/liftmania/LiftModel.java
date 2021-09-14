@@ -1,7 +1,5 @@
 package com.liftmania;
 
-import com.liftmania.Lift;
-import com.liftmania.LiftController;
 import com.liftmania.states.LiftStates;
 import junit.framework.Assert;
 import nz.ac.waikato.modeljunit.Action;
@@ -27,16 +25,16 @@ public class LiftModel implements TimedFsmModel {
     private Lift lift = new Lift(0);
     private LiftStates liftState = LiftStates.IDLE;
     private boolean isOpen = false;
+    private boolean isMoving = false;
     private int currentFloor = 0;
     private int lastFloor = 0;
     private int lastDifferentFloor = 0;
 
-    @Time
-    public int now;
+    @Time public int time = 0;
 
     @Override
-    public int getNextTimeIncrement(Random random) {
-        return 1;
+    public int getNextTimeIncrement(Random ran) {
+        return 1 + ran.nextInt(60);
     }
 
     @Override
@@ -54,6 +52,7 @@ public class LiftModel implements TimedFsmModel {
         lastDifferentFloor = 0;
         liftState = LiftStates.IDLE;
         isOpen = false;
+        isMoving = false;
     }
 
     public boolean openDoorGuard() { return getState().equals(LiftStates.IDLE);}
@@ -68,7 +67,7 @@ public class LiftModel implements TimedFsmModel {
         liftState = LiftStates.LOADING;
         lift.openDoors();
 
-        Assert.assertEquals("Lift moved with door open!", lastFloor, currentFloor);
+        Assert.assertFalse("Lift moved with door open!", lift.isMoving());
     }
 
     public boolean closeDoorGuard() {return getState().equals(LiftStates.LOADING);}
@@ -82,6 +81,12 @@ public class LiftModel implements TimedFsmModel {
         if (lastFloor != currentFloor) {
             lastDifferentFloor = lastFloor;
         }
+
+        if (lift.isOpen()) {
+            System.out.println("Lift is open before");
+        } else {
+            System.out.println("Lift is closed before");
+        }
     }
 
     public boolean moveLiftGuard() {return getState().equals(LiftStates.IDLE);}
@@ -89,13 +94,14 @@ public class LiftModel implements TimedFsmModel {
         liftState = LiftStates.MOVING;
         lift.setMoving(true);
 
+        isMoving = true;
         lastFloor = currentFloor;
         currentFloor = lift.floor;
         if (lastFloor != currentFloor) {
             lastDifferentFloor = lastFloor;
         }
 
-        Assert.assertFalse("Moved with door open", isOpen);
+        Assert.assertFalse("Moved with door open", lift.isOpen());
     }
 
     public boolean stopLiftGuard() {return getState().equals(LiftStates.MOVING);}
@@ -108,6 +114,8 @@ public class LiftModel implements TimedFsmModel {
         if (lastFloor != currentFloor) {
             lastDifferentFloor = lastFloor;
         }
+
+        Assert.assertFalse("Lift was moving with doors open", lift.isOpen());
     }
 
     @Test
