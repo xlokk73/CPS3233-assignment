@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.9.12)  12 SEP 2021 11:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.9.12)  14 SEP 2021 20:48
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -410,7 +410,8 @@ Package: xkeyval 2020/11/20 v2.8 package option processing (HA)
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
 \verbatim@out=\write4
-runsystem(echo 'write18-test-2021912699'>"report.w18")...disabled (restricted).
+runsystem(echo 'write18-test-20219141248'>"report.w18")...disabled (restricted)
+.
 
 
 
@@ -560,12 +561,35 @@ Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 \@vwid@loff=\dimen279
 \@vwid@roff=\dimen280
 ))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2020/10/26 v3.5g Customizing captions (AR)
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2020/10/21 v2.2e caption3 kernel (AR)
+\captionmargin=\dimen281
+\captionmargin@=\dimen282
+\captionwidth=\dimen283
+\caption@tempdima=\dimen284
+\caption@indent=\dimen285
+\caption@parindent=\dimen286
+\caption@hangindent=\dimen287
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count297
+\c@continuedfloat=\count298
+Package caption Info: listings package is loaded.
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2020/10/07 v1.3j Sub-captions (AR)
+\c@subfigure=\count299
+\c@subtable=\count300
+)
 (/usr/local/texlive/2021/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 )
 (/usr/local/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2021-03-18 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count297
+\l__color_backend_stack_int=\count301
 \l__pdf_internal_box=\box82
 )
 (./report.aux
@@ -575,32 +599,32 @@ LaTeX Warning: Label `fig:FSA' multiply defined.
 )
 \openout1 = `report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
  (/usr/local/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count298
-\scratchdimen=\dimen281
+\scratchcounter=\count302
+\scratchdimen=\dimen288
 \scratchbox=\box83
-\nofMPsegments=\count299
-\nofMParguments=\count300
+\nofMPsegments=\count303
+\nofMParguments=\count304
 \everyMPshowfont=\toks34
-\MPscratchCnt=\count301
-\MPscratchDim=\dimen282
-\MPnumerator=\count302
-\makeMPintoPDFobject=\count303
+\MPscratchCnt=\count305
+\MPscratchDim=\dimen289
+\MPnumerator=\count306
+\makeMPintoPDFobject=\count307
 \everyMPtoPDFconversion=\toks35
 ) (/usr/local/texlive/2021/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -611,19 +635,21 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-\c@lstlisting=\count304
+\c@lstlisting=\count308
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
 <Logo.jpg, id=4, 1020.6933pt x 352.1958pt>
 File: Logo.jpg Graphic file (type jpg)
 <use Logo.jpg>
-Package pdftex.def Info: Logo.jpg  used on input line 27.
+Package pdftex.def Info: Logo.jpg  used on input line 29.
 (pdftex.def)             Requested size: 390.0pt x 134.57204pt.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 33.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 35.
 
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 33.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 35.
 
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
@@ -637,32 +663,32 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 {/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./Logo.
 jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 39--40
+Underfull \hbox (badness 10000) in paragraph at lines 41--42
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 42--43
+Underfull \hbox (badness 10000) in paragraph at lines 44--45
 
  []
 
 LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 5
-2.
+4.
 (/usr/local/texlive/2021/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 52.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 54.
 LaTeX Font Info:    Trying to load font information for OML+cmr on input line 5
-6.
+8.
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/base/omlcmr.fd
 File: omlcmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <12> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 56.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 58.
 
-Overfull \hbox (16.2713pt too wide) in paragraph at lines 84--85
+Overfull \hbox (16.2713pt too wide) in paragraph at lines 86--87
  [][] 
  []
 
@@ -670,35 +696,30 @@ Overfull \hbox (16.2713pt too wide) in paragraph at lines 84--85
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 91--92
-
- []
-
-[2]
 Underfull \hbox (badness 10000) in paragraph at lines 93--94
 
  []
 
+[2]
+Underfull \hbox (badness 10000) in paragraph at lines 95--96
 
-Overfull \hbox (17.5502pt too wide) in paragraph at lines 95--98
+ []
+
+
+Overfull \hbox (17.5502pt too wide) in paragraph at lines 97--100
 \OT1/cmtt/m/n/12 goUp > stop > openDoor > closeDoor > openDoor > closeDoor > go
 Down
  []
 
 
-LaTeX Warning: Reference `fig:TA' on page 3 undefined on input line 110.
+LaTeX Warning: Reference `fig:TA' on page 3 undefined on input line 112.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 110--111
-
- []
-
-[3]
 Underfull \hbox (badness 10000) in paragraph at lines 112--113
 
  []
 
-
+[3]
 Underfull \hbox (badness 10000) in paragraph at lines 114--115
 
  []
@@ -708,8 +729,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 116--117
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 118--119
+
+ []
+
 [4] [5]
-Underfull \hbox (badness 10000) in paragraph at lines 198--199
+Underfull \hbox (badness 10000) in paragraph at lines 200--201
 
  []
 
@@ -719,18 +745,18 @@ File: lstlang1.sty 2020/03/24 1.8d listings language file
 (/usr/local/texlive/2021/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 ) [6]
-Underfull \hbox (badness 10000) in paragraph at lines 235--236
+Underfull \hbox (badness 10000) in paragraph at lines 237--238
 
  []
 
 
-Overfull \hbox (23.7252pt too wide) in paragraph at lines 237--238
+Overfull \hbox (23.7252pt too wide) in paragraph at lines 239--240
 \OT1/cmtt/m/n/12 callLiftToFloor(Lift l) = *callLiftToFloor(*)uponReturning(l) 
 where
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 240--241
+Underfull \hbox (badness 10000) in paragraph at lines 242--243
 
  []
 
@@ -738,13 +764,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 240--241
 File: images/lift-open-test-passed.png Graphic file (type png)
 <use images/lift-open-test-passed.png>
 Package pdftex.def Info: images/lift-open-test-passed.png  used on input line 2
-44.
+46.
 (pdftex.def)             Requested size: 389.99377pt x 238.8612pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 249--250
+Underfull \hbox (badness 10000) in paragraph at lines 251--252
 
  []
 
@@ -752,13 +778,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 249--250
 File: images/lift-open-test-failed.png Graphic file (type png)
 <use images/lift-open-test-failed.png>
 Package pdftex.def Info: images/lift-open-test-failed.png  used on input line 2
-53.
+55.
 (pdftex.def)             Requested size: 389.99779pt x 147.95792pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 258--259
+Underfull \hbox (badness 10000) in paragraph at lines 260--261
 
  []
 
@@ -766,7 +792,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 258--259
 File: images/lift-open-test-multiple.png Graphic file (type png)
 <use images/lift-open-test-multiple.png>
 Package pdftex.def Info: images/lift-open-test-multiple.png  used on input line
- 262.
+ 264.
 (pdftex.def)             Requested size: 389.99098pt x 208.73334pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -776,7 +802,7 @@ t>
 File: images/start-moving-time-property-several.png Graphic file (type png)
 <use images/start-moving-time-property-several.png>
 Package pdftex.def Info: images/start-moving-time-property-several.png  used on
- input line 270.
+ input line 272.
 (pdftex.def)             Requested size: 389.9973pt x 205.12845pt.
 [7]
 
@@ -788,7 +814,7 @@ File: images/start-moving-time-property-failure-edit.png Graphic file (type png
 )
 <use images/start-moving-time-property-failure-edit.png>
 Package pdftex.def Info: images/start-moving-time-property-failure-edit.png  us
-ed on input line 279.
+ed on input line 281.
 (pdftex.def)             Requested size: 390.0195pt x 260.71196pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -798,7 +824,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 File: images/start-moving-time-property-failed.png Graphic file (type png)
 <use images/start-moving-time-property-failed.png>
 Package pdftex.def Info: images/start-moving-time-property-failed.png  used on 
-input line 286.
+input line 288.
 (pdftex.def)             Requested size: 389.98683pt x 164.76324pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -806,18 +832,18 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 <images/all-properties.png, id=49, 1060.96375pt x 407.5225pt>
 File: images/all-properties.png Graphic file (type png)
 <use images/all-properties.png>
-Package pdftex.def Info: images/all-properties.png  used on input line 295.
+Package pdftex.def Info: images/all-properties.png  used on input line 297.
 (pdftex.def)             Requested size: 389.99258pt x 149.79846pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 301--302
+Underfull \hbox (badness 10000) in paragraph at lines 303--304
 
  []
 
 
-Overfull \hbox (42.26794pt too wide) in paragraph at lines 303--304
+Overfull \hbox (42.26794pt too wide) in paragraph at lines 305--306
 \OT1/cmr/m/n/12 in \OT1/cmr/m/it/12 Shaft.java\OT1/cmr/m/n/12 . Fi-nally, stop-
 ping would have been recog-nised by the \OT1/cmtt/m/n/12 animationPause()
  []
@@ -826,18 +852,91 @@ ping would have been recog-nised by the \OT1/cmtt/m/n/12 animationPause()
 <images/floor-request-code.png, id=54, 853.1875pt x 223.83624pt>
 File: images/floor-request-code.png Graphic file (type png)
 <use images/floor-request-code.png>
-Package pdftex.def Info: images/floor-request-code.png  used on input line 307.
+Package pdftex.def Info: images/floor-request-code.png  used on input line 309.
 
 (pdftex.def)             Requested size: 390.0105pt x 102.32039pt.
- (./report.bbl
+
+Underfull \hbox (badness 10000) in paragraph at lines 317--318
+
+ []
+
+<images/model-based-testing-diag.png, id=55, 854.19125pt x 460.72125pt>
+File: images/model-based-testing-diag.png Graphic file (type png)
+<use images/model-based-testing-diag.png>
+Package pdftex.def Info: images/model-based-testing-diag.png  used on input lin
+e 325.
+(pdftex.def)             Requested size: 390.00012pt x 210.35258pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: Reference `fig:BasicLiftModel-variables' on page 9 undefined on 
+input line 330.
+
+
+Overfull \hbox (11.3752pt too wide) in paragraph at lines 330--334
+\OT1/cmtt/m/n/12 Assert.assertEquals("Model does not match SUT: Moving", isMovi
+ng,
+ []
+
+
+Overfull \hbox (14.3446pt too wide) in paragraph at lines 330--334
+\OT1/cmtt/m/n/12 Assert.assertFalse("Moved with door open", lift.isOpen()); \OT
+1/cmr/m/n/12 The first
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 330--334
+
+ []
+
+[9 <./images/lift-open-test-failed.png>]
+<images/BasicLiftModel-variables.png, id=60, 479.7925pt x 224.84pt>
+File: images/BasicLiftModel-variables.png Graphic file (type png)
+<use images/BasicLiftModel-variables.png>
+Package pdftex.def Info: images/BasicLiftModel-variables.png  used on input lin
+e 337.
+(pdftex.def)             Requested size: 390.00613pt x 182.76439pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: Reference `fig:BasicLiftModelFail' on page 10 undefined on input
+ line 342.
+
+<images/BaseLiftModel-coverage.png, id=61, 293.095pt x 95.35625pt>
+File: images/BaseLiftModel-coverage.png Graphic file (type png)
+<use images/BaseLiftModel-coverage.png>
+Package pdftex.def Info: images/BaseLiftModel-coverage.png  used on input line 
+346.
+(pdftex.def)             Requested size: 389.99927pt x 126.8833pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<images/BasicLiftModel-fail-code.png, id=62, 385.44pt x 100.375pt>
+File: images/BasicLiftModel-fail-code.png Graphic file (type png)
+<use images/BasicLiftModel-fail-code.png>
+Package pdftex.def Info: images/BasicLiftModel-fail-code.png  used on input lin
+e 355.
+(pdftex.def)             Requested size: 195.0pt x 50.78009pt.
+<images/BasicLiftModel-fail-output.png, id=63, 945.5325pt x 139.52126pt>
+File: images/BasicLiftModel-fail-output.png Graphic file (type png)
+<use images/BasicLiftModel-fail-output.png>
+Package pdftex.def Info: images/BasicLiftModel-fail-output.png  used on input l
+ine 360.
+(pdftex.def)             Requested size: 195.0pt x 28.77235pt.
+(./report.bbl
 
 LaTeX Warning: Empty `thebibliography' environment on input line 3.
 
-) [9 <./images/lift-open-test-failed.png>] [10 <./images/lift-open-test-multipl
-e.png> <./images/start-moving-time-property-several.png>] [11 <./images/start-m
-oving-time-property-failure-edit.png> <./images/start-moving-time-property-fail
-ed.png>] [12 <./images/all-properties.png> <./images/floor-request-code.png>]
-(./report.aux)
+) [10 <./images/lift-open-test-multiple.png>] [11 <./images/start-moving-time-p
+roperty-several.png> <./images/start-moving-time-property-failure-edit.png>]
+[12 <./images/start-moving-time-property-failed.png> <./images/all-properties.p
+ng> <./images/floor-request-code.png>] [13 <./images/model-based-testing-diag.p
+ng> <./images/BasicLiftModel-variables.png>] [14 <./images/BaseLiftModel-covera
+ge.png> <./images/BasicLiftModel-fail-code.png> <./images/BasicLiftModel-fail-o
+utput.png>] (./report.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -846,13 +945,13 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 17395 strings out of 478994
- 345384 string characters out of 5858184
- 868695 words of memory out of 5000000
- 34539 multiletter control sequences out of 15000+600000
- 413691 words of font info for 67 fonts, out of 8000000 for 9000
+ 18741 strings out of 478994
+ 372093 string characters out of 5858184
+ 882527 words of memory out of 5000000
+ 35872 multiletter control sequences out of 15000+600000
+ 413991 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 87i,12n,93p,1009b,1734s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 87i,12n,117p,1009b,1732s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 }</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
@@ -867,10 +966,10 @@ live/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texl
 ive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texli
 ve/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/t
 exlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on report.pdf (12 pages, 4143718 bytes).
+Output written on report.pdf (14 pages, 4304970 bytes).
 PDF statistics:
- 117 PDF objects out of 1000 (max. 8388607)
- 72 compressed objects within 1 object stream
+ 134 PDF objects out of 1000 (max. 8388607)
+ 77 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 58 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 83 words of extra memory for PDF output out of 10000 (max. 10000000)
 

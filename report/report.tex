@@ -8,6 +8,8 @@
 \usepackage{booktabs}
 \usepackage{tablefootnote}
 \usepackage{adjustbox}
+\usepackage{caption}
+\usepackage{subcaption}
 
 
 \setlength\parindent{24pt}
@@ -312,6 +314,56 @@ One possible way to circumvent this problem would have been to iterate over \tex
 
 
 \section{Model-Based Testing}
+For model based testing ModelJUnit was used. Importing the project with maven provided several difficulties and wasted efforts. As a result, the ModelJUnit jar file was used. Also, the Intellij IDE was used for this task instead of eclipse. \\
+
+
+\subsection{BasicLiftModel}
+The previous automata were used for Model-based testing. Using this model, internal variables and states are updated and compared to the system under test (SUT). This workflow can be seen visually in figure \ref{fig:model-based-testing-diag}. 
+
+\begin{figure}[h]
+   \centering
+   \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{images/model-based-testing-diag} % requires the graphicx package
+   \caption{Model based testing diagram}
+   \label{fig:model-based-testing-diag}
+\end{figure}
+
+The first model implemented is based on the automaton seen in \ref{fig:FSA}. The variables that the model keeps track of are shown in figure \ref{fig:BasicLiftModel-variables}. When the flow enters a state in the model, these variables are updated and matched with the SUT's variables via the assert method. Two types of assert methods are used in this model: \newline
+\texttt{Assert.assertEquals("Model does not match SUT: Moving", isMoving, lift.isMoving());} \newline
+\texttt{Assert.assertFalse("Moved with door open", lift.isOpen());}
+The first one is comparing a variable of the model with a variable of the SUT while the second is comparing a verifying that a variable of SUT is in accordance with the current state.\\ 
+
+\begin{figure}[h]
+   \centering
+   \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{images/BasicLiftModel-variables} % requires the graphicx package
+   \caption{BasicLiftModel variables}
+   \label{fig:BasicLiftModel-variablesl}
+\end{figure}
+
+The tests provided full coverage for this model. This can be seen in figure \ref{fig:BaseLiftModel-coverage}. The Lift system passes the test. The \textit{Lift.java} was then edited with faulty code. The code added was a \texttt{openDoors()} call in the \texttt{moveLift()} method. This caused the test to fail as can be seen in figure \ref{fig:BasicLiftModelFail}.
+
+\begin{figure}[h]
+   \centering
+   \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{images/BaseLiftModel-coverage} % requires the graphicx package
+   \caption{BaseLiftModel test coverage}
+   \label{fig:BaseLiftModel-coverage}
+\end{figure}
+
+\begin{figure}
+\centering
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{images/BasicLiftModel-fail-code}
+  \caption{Code edit}
+\end{subfigure}%
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{images/BasicLiftModel-fail-output}
+  \caption{Output}
+\end{subfigure}
+\caption{BasicLiftModel test failure}
+\label{fig:BasicLiftModel-fail}
+\end{figure}
+
 
 \section{Runtime Verification and Testing}
 
