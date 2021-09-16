@@ -73,7 +73,8 @@ public class BasicLiftModel implements TimedFsmModel {
     }
 
     public boolean closeDoorGuard() {return getState().equals(LiftStates.LOADING);}
-    public @Action void closeDoor() {
+    public @Action void closeDoor() {    	
+    	
         liftState = LiftStates.IDLE;
         lift.closeDoors();
 

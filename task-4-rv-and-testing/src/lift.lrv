@@ -24,6 +24,7 @@ GLOBAL {
 			STATES {
 				BAD {
 					OpenTooLong
+					MovingWhileLoading
 				}
 				
 				NORMAL {
@@ -42,6 +43,7 @@ GLOBAL {
 				
 				Loading -> Idle [closeDoors \ y.compareTo(3)<0 \ ]
 				Loading -> OpenTooLong [closeDoors \ y.compareTo(3)>=0 \]
+				Loading -> MovingWhileLoading [setMoving \ \ ]
 				
 				Moving -> Idle [setFloor \ \]
 			}

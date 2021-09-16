@@ -174,8 +174,8 @@ M = {
 
 \end{adjustbox}
 
-\caption{FSA figure}
-\label{fig:FSA}
+\caption{TA figure}
+\label{fig:TA}
 
 \end{figure}
 
@@ -318,7 +318,7 @@ For model based testing ModelJUnit was used. Importing the project with maven pr
 
 
 \subsection{BasicLiftModel}
-The previous automata were used for Model-based testing. Using this model, internal variables and states are updated and compared to the system under test (SUT). This workflow can be seen visually in figure \ref{fig:model-based-testing-diag}. 
+The previous automata were used for Model-based testing. Using this model, internal variables and states are updated and compared to the system under test (SUT). This workflow can be seen visually in figure \ref{fig:model-based-testing-diag}. \\
 
 \begin{figure}[h]
    \centering
@@ -336,10 +336,10 @@ The first one is comparing a variable of the model with a variable of the SUT wh
    \centering
    \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{images/BasicLiftModel-variables} % requires the graphicx package
    \caption{BasicLiftModel variables}
-   \label{fig:BasicLiftModel-variablesl}
+   \label{fig:BasicLiftModel-variables}
 \end{figure}
 
-The tests provided full coverage for this model. This can be seen in figure \ref{fig:BaseLiftModel-coverage}. The Lift system passes the test. The \textit{Lift.java} was then edited with faulty code. The code added was a \texttt{openDoors()} call in the \texttt{moveLift()} method. This caused the test to fail as can be seen in figure \ref{fig:BasicLiftModelFail}.
+The tests provided full coverage for this model. This can be seen in figure \ref{fig:BaseLiftModel-coverage}. The Lift system passes the test. The \textit{Lift.java} was then edited with faulty code. The code added was a \texttt{openDoors()} call in the \texttt{moveLift()} method. This caused the test to fail as can be seen in figure \ref{fig:BasicLiftModel-fail}. \\
 
 \begin{figure}[h]
    \centering
@@ -348,7 +348,7 @@ The tests provided full coverage for this model. This can be seen in figure \ref
    \label{fig:BaseLiftModel-coverage}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[h]
 \centering
 \begin{subfigure}{.5\textwidth}
   \centering
@@ -366,7 +366,7 @@ The tests provided full coverage for this model. This can be seen in figure \ref
 
 
 \section{Runtime Verification and Testing}
-For this task, executing RV and model-based testing at the same time was required. This means that this task is combining the artefacts of task 2 and task 3 together.  The eclipse IDE needed to be used again so that the LARVA plugin could be used. The two tasks (2 and 3) contain a different structure. This is because the provided project structure by the respective IDE was used. This resulted in task 4 containing a combination of the structure of the two tasks. Table \ref{tab:packages-structure} shows the package structure of each task to make things clearer. Similarly, the directory trees can be seen in figure \ref{fig:directories-trees}.
+For this task, executing RV and model-based testing at the same time was required. This means that this task is combining the artefacts of task 2 and task 3 together.  The eclipse IDE needed to be used again so that the LARVA plugin could be used. The two tasks (2 and 3) contain a different structure. This is because the provided project structure by the respective IDE was used. This resulted in task 4 containing a combination of the structure of the two tasks. Table \ref{tab:packages-structure} shows the package structure of each task to make things clearer. Similarly, the directory trees can be seen in figure \ref{fig:directories-trees}. \\
 
 \begin{table}[h]
    \centering
@@ -386,7 +386,7 @@ For this task, executing RV and model-based testing at the same time was require
    \label{tab:packages-structure}
 \end{table}
 
-\begin{figure}
+\begin{figure}[h]
 \centering
 \begin{subfigure}{.5\textwidth}
   \centering
@@ -407,9 +407,9 @@ For this task, executing RV and model-based testing at the same time was require
 \label{fig:directories-trees}
 \end{figure}
 
-One difference between RV and testing is that in runtime verification, the user/tester controls the system as usual while RV is done in the background independent of what actions the user does. Meanwhile, in testing, the system is driven by the tests i.e., the tests decide what flow the system follows. In this task, RV is used but it is executed on the system driven by the tests. For example the tests run the method \texttt{moveLift()} and the RV 'catches' this and change the state accordingly. Since the Larva script and Model JUnit tests are based on the same automata, the same states should be visited. This can be seen figuratively in figure \ref{fig:tasks-diagrams}\\
+One difference between RV and testing is that in runtime verification, the user/tester controls the system as usual while RV is done in the background independent of what actions the user does. Meanwhile, in testing, the system is driven by the tests i.e., the tests decide what flow the system follows. In this task, RV is used but it is executed on the system driven by the tests. For example the tests run the method \texttt{moveLift()} and the RV 'catches' this and change the state accordingly. Since the Larva script and Model JUnit tests are based on the same automata, the same states should be visited. This can be seen figuratively in figure \ref{fig:tasks-diagrams} \\
 
-\begin{figure}
+\begin{figure}[h]
 \centering
 \begin{subfigure}{.5\textwidth}
   \centering
@@ -424,5 +424,43 @@ One difference between RV and testing is that in runtime verification, the user/
 \caption{Larva diagram for each task}
 \label{fig:tasks-diagrams}
 \end{figure}
+
+To test this setup, some faults where introduced to investigate wether larva ends in a bad state. In the first test shown in this section, the \texttt{StartMovingTimeProperty} was removed to make analysis of the Larva output less simpler. Then, the Model JUnit method that calls the \texttt{closeDoors()} was modified to wait 4 seconds before proceeding to close the doors. As expected, this resulted in a bad state being reached. The modified code and the result can be seen in figure \ref{fig:larva-test-fail}. \\
+
+The second test discussed in this section can be seen in figure \ref{fig:larva-test-fail-2}. In this test the ModelJunit code was edited to open the doors before moving. Assertions that checked for this bug were commented out so that the program does not stop running. The Larva script successfully detected the errors. \\
+
+\begin{figure}[h]
+\centering
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{images/larva-test-fail-code}
+  \caption{Modified code in ModelJUnit}
+\end{subfigure}%
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{images/larva-test-fail-output}
+  \caption{Larva output}
+\end{subfigure}
+\caption{RV reaches bad state from test example 1}
+\label{fig:larva-test-fail}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{images/larva-test-fail-2-code}
+  \caption{Modified code}
+\end{subfigure}%
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{images/larva-test-fail-2-output}
+  \caption{Larva output}
+\end{subfigure}
+\caption{RV reaches bad state from test example 2}
+\label{fig:larva-test-fail-2}
+\end{figure}
+
+Overall this setup really makes sense since if one technique can better check for something than the other, when implemented together they check for all the setups. For example, checking for timed events proved to be easier in java with the help of implemented clocks. On top of that, tests help to check for all possible scenarios without having to do them manually. This means that the tests can be done unattended. Furthermore, the purpose of RV is to be deployed with systems at runtime, where real live users will be using (driving) the system instead of the programmer. Therefore, RV still needs to be implemented for the actual runtime of the system, considering that implementing RV for the model-testing was not to complicated, it would be an extremely smart and efficient move to implement the RV for the model-testing as well. \\
 
 \end{document}
