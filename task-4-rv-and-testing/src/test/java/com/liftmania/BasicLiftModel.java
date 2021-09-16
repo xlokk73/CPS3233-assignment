@@ -1,7 +1,8 @@
-package com.liftmania;
+package test.java.com.liftmania;
 
-import com.liftmania.states.LiftStates;
+import test.java.com.liftmania.states.LiftStates;
 import junit.framework.Assert;
+import main.java.com.liftmania.Lift;
 import nz.ac.waikato.modeljunit.Action;
 import nz.ac.waikato.modeljunit.GraphListener;
 import nz.ac.waikato.modeljunit.GreedyTester;
@@ -13,20 +14,19 @@ import nz.ac.waikato.modeljunit.coverage.TransitionPairCoverage;
 import nz.ac.waikato.modeljunit.timing.Time;
 import nz.ac.waikato.modeljunit.timing.TimedFsmModel;
 import nz.ac.waikato.modeljunit.timing.TimedModel;
+
 import org.junit.Test;
 
 import java.io.FileNotFoundException;
 import java.util.Random;
 
 
-public class LiftTimeModel implements TimedFsmModel {
+public class BasicLiftModel implements TimedFsmModel {
 
-    //private LiftController liftController = new LiftController(6, 1, false);
-    private LiftController liftController = new LiftController(5, 1, false);
+    private Lift lift = new Lift(0);
     private LiftStates liftState = LiftStates.IDLE;
     private boolean isOpen = false;
     private boolean isMoving = false;
-    private long startMoving = 0;
     private int currentFloor = 0;
     private int lastFloor = 0;
     private int lastDifferentFloor = 0;
@@ -46,9 +46,11 @@ public class LiftTimeModel implements TimedFsmModel {
     @Override
     public void reset(boolean b) {
         if (b) {
-            liftController = new LiftController(5, 1, false);
+            lift = new Lift(0);
         }
-
+        currentFloor = 0;
+        lastFloor = 0;
+        lastDifferentFloor = 0;
         liftState = LiftStates.IDLE;
         isOpen = false;
         isMoving = false;
@@ -57,50 +59,74 @@ public class LiftTimeModel implements TimedFsmModel {
     public boolean openDoorGuard() { return getState().equals(LiftStates.IDLE);}
     public @Action void openDoor() {
         isOpen = true;
+        lastFloor = currentFloor;
+        currentFloor = lift.floor;
+        if (lastFloor != currentFloor) {
+            lastDifferentFloor = lastFloor;
+        }
 
         liftState = LiftStates.LOADING;
-        liftController.openLiftDoor(0);
+        lift.openDoors();
+
+        Assert.assertEquals("Model does not match SUT: Doors", isOpen, lift.isOpen());
+        Assert.assertFalse("Lift moved with door open!", lift.isMoving());
     }
 
     public boolean closeDoorGuard() {return getState().equals(LiftStates.LOADING);}
     public @Action void closeDoor() {
         liftState = LiftStates.IDLE;
-        liftController.closeLiftDoor(0);
+        lift.closeDoors();
 
         isOpen = false;
+        lastFloor = currentFloor;
+        currentFloor = lift.floor;
+        if (lastFloor != currentFloor) {
+            lastDifferentFloor = lastFloor;
+        }
+
+        if (lift.isOpen()) {
+            System.out.println("Lift is open before");
+        } else {
+            System.out.println("Lift is closed before");
+        }
+
+        Assert.assertEquals("Model does not match SUT: Doors", isOpen, lift.isOpen());
     }
 
     public boolean moveLiftGuard() {return getState().equals(LiftStates.IDLE);}
     public @Action void moveLift() {
         liftState = LiftStates.MOVING;
-        startMoving = System.currentTimeMillis();
-
-        liftController.moveLift(0, 6);
-
-        System.out.print("Time taken: ");
-        System.out.println(System.currentTimeMillis() - startMoving);
+        lift.setMoving(true);
 
         isMoving = true;
+        lastFloor = currentFloor;
+        currentFloor = lift.floor;
+        if (lastFloor != currentFloor) {
+            lastDifferentFloor = lastFloor;
+        }
+
+        Assert.assertEquals("Model does not match SUT: Moving", isMoving, lift.isMoving());
+        Assert.assertFalse("Moved with door open", lift.isOpen());
     }
 
     public boolean stopLiftGuard() {return getState().equals(LiftStates.MOVING);}
     public @Action void stopLift() {
-
-       // while(liftController.getLifts()[0].isMoving()) {}
-
-
-        if(liftController.getLifts()[0].isOpen()) {
-            System.out.println("LIFT OPEN");
-        } else {
-            System.out.println("LIFTCLOSED");
-        }
         liftState = LiftStates.IDLE;
+        lift.setMoving(false);
+
+        lastFloor = currentFloor;
+        currentFloor = lift.floor;
+        if (lastFloor != currentFloor) {
+            lastDifferentFloor = lastFloor;
+        }
+
+        Assert.assertFalse("Lift was moving with doors open", lift.isOpen());
     }
 
     @Test
     public void main() throws FileNotFoundException {
 
-        final TimedModel timedModel = new TimedModel(new LiftTimeModel());
+        final TimedModel timedModel = new TimedModel(new BasicLiftModel());
         timedModel.setTimeoutProbability(0.5);
 
         final GreedyTester tester = new GreedyTester(timedModel);

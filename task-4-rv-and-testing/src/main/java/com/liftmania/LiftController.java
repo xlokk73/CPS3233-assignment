@@ -1,9 +1,9 @@
-package com.liftmania;
+package main.java.com.liftmania;
 
 import java.util.ArrayList;
 
-import com.liftmania.gui.AnimationCommand;
-import com.liftmania.gui.LiftsVisualiser;
+import main.java.com.liftmania.gui.AnimationCommand;
+import main.java.com.liftmania.gui.LiftsVisualiser;
 
 public class LiftController {
 
@@ -129,3 +129,4 @@ public class LiftController {
 	}
 
 }
+

@@ -1,38 +1,36 @@
-[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(com.liftmania.Lift@6326e656 ) STATE::>Idle
-[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(com.liftmania.Lift@6326e656 ) STATE::>Idle
+[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(com.liftmania.Lift@7597e605 ) STATE::>Idle
+[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(com.liftmania.Lift@7597e605 ) STATE::>Idle
 [StartMovingTimeProperty]MOVED ON METHODCALL: Lift com.liftmania.LiftController.callLiftToFloor(int) TO STATE::> Requested
-[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(com.liftmania.Lift@6326e656 ) STATE::>Idle
+[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(com.liftmania.Lift@7597e605 ) STATE::>Idle
 [LiftOpenTimeProperty]MOVED ON METHODCALL: void com.liftmania.Lift.setMoving(boolean) TO STATE::> Moving
-[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(com.liftmania.Lift@6326e656 ) STATE::>Requested
+[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(com.liftmania.Lift@7597e605 ) STATE::>Requested
 [StartMovingTimeProperty]MOVED ON METHODCALL: void com.liftmania.Lift.setMoving(boolean) TO STATE::> Moving
-[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(com.liftmania.Lift@6326e656 ) STATE::>Moving
-[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(com.liftmania.Lift@6326e656 ) STATE::>Moving
-[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(com.liftmania.Lift@6326e656 ) STATE::>Moving
+[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(com.liftmania.Lift@7597e605 ) STATE::>Moving
+[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(com.liftmania.Lift@7597e605 ) STATE::>Moving
+[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(com.liftmania.Lift@7597e605 ) STATE::>Moving
 [LiftOpenTimeProperty]MOVED ON METHODCALL: void com.liftmania.Lift.setFloor(int) TO STATE::> Idle
-[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(com.liftmania.Lift@6326e656 ) STATE::>Moving
+[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(com.liftmania.Lift@7597e605 ) STATE::>Moving
 [StartMovingTimeProperty]MOVED ON METHODCALL: void com.liftmania.Lift.setFloor(int) TO STATE::> Idle
-[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(com.liftmania.Lift@6326e656 ) STATE::>Idle
-[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(com.liftmania.Lift@6326e656 ) STATE::>Idle
-[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(com.liftmania.Lift@6326e656 ) STATE::>Idle
-[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(com.liftmania.Lift@6326e656 ) STATE::>Idle
-[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(com.liftmania.Lift@6326e656 ) STATE::>Idle
-[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(com.liftmania.Lift@6326e656 ) STATE::>Idle
-[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(com.liftmania.Lift@40aaa4f5 ) STATE::>Idle
-[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(com.liftmania.Lift@40aaa4f5 ) STATE::>Idle
+[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(com.liftmania.Lift@7597e605 ) STATE::>Idle
+[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(com.liftmania.Lift@7597e605 ) STATE::>Idle
+[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(com.liftmania.Lift@7597e605 ) STATE::>Idle
+[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(com.liftmania.Lift@7597e605 ) STATE::>Idle
+[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(com.liftmania.Lift@7597e605 ) STATE::>Idle
+[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(com.liftmania.Lift@7597e605 ) STATE::>Idle
+[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(com.liftmania.Lift@7597e605 ) STATE::>Idle
+[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(com.liftmania.Lift@7597e605 ) STATE::>Idle
 [StartMovingTimeProperty]MOVED ON METHODCALL: Lift com.liftmania.LiftController.callLiftToFloor(int) TO STATE::> Requested
-[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(com.liftmania.Lift@40aaa4f5 ) STATE::>Idle
+[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(com.liftmania.Lift@7597e605 ) STATE::>Idle
 [LiftOpenTimeProperty]MOVED ON METHODCALL: void com.liftmania.Lift.setMoving(boolean) TO STATE::> Moving
-[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(com.liftmania.Lift@40aaa4f5 ) STATE::>Requested
+[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(com.liftmania.Lift@7597e605 ) STATE::>Requested
 [StartMovingTimeProperty]MOVED ON METHODCALL: void com.liftmania.Lift.setMoving(boolean) TO STATE::> Moving
-[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(com.liftmania.Lift@40aaa4f5 ) STATE::>Moving
-[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(com.liftmania.Lift@40aaa4f5 ) STATE::>Moving
-[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(com.liftmania.Lift@40aaa4f5 ) STATE::>Moving
+[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(com.liftmania.Lift@7597e605 ) STATE::>Moving
+[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(com.liftmania.Lift@7597e605 ) STATE::>Moving
+[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(com.liftmania.Lift@7597e605 ) STATE::>Moving
 [LiftOpenTimeProperty]MOVED ON METHODCALL: void com.liftmania.Lift.setFloor(int) TO STATE::> Idle
-[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(com.liftmania.Lift@40aaa4f5 ) STATE::>Moving
+[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(com.liftmania.Lift@7597e605 ) STATE::>Moving
 [StartMovingTimeProperty]MOVED ON METHODCALL: void com.liftmania.Lift.setFloor(int) TO STATE::> Idle
-[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(com.liftmania.Lift@40aaa4f5 ) STATE::>Idle
-[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(com.liftmania.Lift@40aaa4f5 ) STATE::>Idle
-[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(com.liftmania.Lift@6326e656 ) STATE::>Idle
-[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(com.liftmania.Lift@6326e656 ) STATE::>Idle
-[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(com.liftmania.Lift@40aaa4f5 ) STATE::>Idle
-[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(com.liftmania.Lift@40aaa4f5 ) STATE::>Idle
+[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(com.liftmania.Lift@7597e605 ) STATE::>Idle
+[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(com.liftmania.Lift@7597e605 ) STATE::>Idle
+[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(com.liftmania.Lift@7597e605 ) STATE::>Idle
+[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(com.liftmania.Lift@7597e605 ) STATE::>Idle

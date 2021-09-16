@@ -1,0 +1,98 @@
+\documentclass{article}
+\usepackage[x11names, svgnames, rgb]{xcolor}
+\usepackage[utf8]{inputenc}
+\usepackage{tikz}
+\usetikzlibrary{snakes,arrows,shapes}
+\usepackage{amsmath}
+%
+%
+
+%
+
+%
+
+\begin{document}
+\pagestyle{empty}
+%
+%
+%
+
+\enlargethispage{100cm}
+% Start of code
+% \begin{tikzpicture}[anchor=mid,>=latex',line join=bevel,]
+\begin{tikzpicture}[>=latex',line join=bevel,]
+  \pgfsetlinewidth{1bp}
+%%
+\pgfsetcolor{black}
+  % Edge: Loading -> Idle
+  \draw [->] (89.879bp,76.358bp) .. controls (156.58bp,73.957bp) and (294.43bp,67.892bp)  .. (410.49bp,55.646bp) .. controls (434.95bp,53.066bp) and (462.4bp,48.904bp)  .. (493.26bp,43.806bp);
+  \definecolor{strokecol}{rgb}{0.0,0.0,0.0};
+  \pgfsetstrokecolor{strokecol}
+  \draw (262.99bp,82.146bp) node {(1) closeDoorsy . compareTo ( 3 ) < 0 x . reset ( ) ;};
+  % Edge: Loading -> DoorOpenTooLong
+  \draw [->] (88.449bp,88.317bp) .. controls (97.277bp,90.401bp) and (106.66bp,92.341bp)  .. (115.49bp,93.646bp) .. controls (217.94bp,108.79bp) and (336.48bp,113.77bp)  .. (428.29bp,115.45bp);
+  \draw (262.99bp,122.15bp) node {(2) closeDoorsy . compareTo ( 3 ) >= 0};
+  % Edge: Moving -> Idle
+  \draw [->] (820.7bp,25.607bp) .. controls (813.97bp,23.547bp) and (806.94bp,21.749bp)  .. (800.18bp,20.646bp) .. controls (723.42bp,8.116bp) and (702.65bp,13.78bp)  .. (625.18bp,20.646bp) .. controls (600.57bp,22.828bp) and (573.12bp,27.796bp)  .. (542.33bp,34.216bp);
+  \draw (712.68bp,28.146bp) node {(1) setFloorx . reset ( ) ;};
+  % Edge: Idle -> Loading
+  \draw [->] (492.97bp,37.713bp) .. controls (417.84bp,31.899bp) and (186.92bp,16.2bp)  .. (115.49bp,36.646bp) .. controls (106.85bp,39.121bp) and (98.234bp,43.099bp)  .. (81.473bp,52.919bp);
+  \draw (262.99bp,44.146bp) node {(1) openDoorsy . reset ( ) ;};
+  % Edge: Idle -> Moving
+  \draw [->] (542.6bp,39.646bp) .. controls (597.45bp,39.646bp) and (733.82bp,39.646bp)  .. (818.0bp,39.646bp);
+  \draw (712.68bp,47.146bp) node {(2) setMovingmoving == true};
+  % Edge: _s_s -> Idle
+  \draw [->] (50.652bp,6.633bp) .. controls (65.403bp,6.4229bp) and (257.2bp,4.0584bp)  .. (410.49bp,20.646bp) .. controls (435.06bp,23.305bp) and (462.5bp,28.259bp)  .. (493.32bp,34.481bp);
+  % Node: Loading
+\begin{scope}
+  \definecolor{strokecol}{rgb}{0.0,0.0,0.0};
+  \pgfsetstrokecolor{strokecol}
+  \draw (48.75bp,77.65bp) ellipse (40.89bp and 40.89bp);
+  \draw (48.746bp,77.646bp) node {Loading};
+\end{scope}
+  % Node: Idle
+\begin{scope}
+  \definecolor{strokecol}{rgb}{0.0,0.0,0.0};
+  \pgfsetstrokecolor{strokecol}
+  \draw (517.83bp,39.65bp) ellipse (24.9bp and 24.9bp);
+  \draw (517.83bp,39.646bp) node {Idle};
+\end{scope}
+  % Node: DoorOpenTooLong
+\begin{scope}
+  \definecolor{strokecol}{rgb}{0.0,0.0,0.0};
+  \pgfsetstrokecolor{strokecol}
+  \draw (607.02bp,108.19bp) -- (607.02bp,123.1bp) -- (554.78bp,133.65bp) -- (480.89bp,133.65bp) -- (428.65bp,123.1bp) -- (428.65bp,108.19bp) -- (480.89bp,97.65bp) -- (554.78bp,97.65bp) -- cycle;
+  \draw (517.83bp,115.65bp) node {DoorOpenTooLong};
+\end{scope}
+  % Node: Moving
+\begin{scope}
+  \definecolor{strokecol}{rgb}{0.0,0.0,0.0};
+  \pgfsetstrokecolor{strokecol}
+  \draw (857.82bp,39.65bp) ellipse (39.79bp and 39.79bp);
+  \draw (857.82bp,39.646bp) node {Moving};
+\end{scope}
+  % Node: Requested
+\begin{scope}
+  \definecolor{strokecol}{rgb}{0.0,0.0,0.0};
+  \pgfsetstrokecolor{strokecol}
+  \draw (48.75bp,185.65bp) ellipse (48.99bp and 48.99bp);
+  \draw (48.746bp,185.65bp) node {Requested};
+\end{scope}
+  % Node: _s_s
+\begin{scope}
+  \definecolor{strokecol}{rgb}{0.0,0.0,0.0};
+  \pgfsetstrokecolor{strokecol}
+  \definecolor{fillcol}{rgb}{0.0,0.0,0.0};
+  \pgfsetfillcolor{fillcol}
+  \filldraw [opacity=1] (48.75bp,6.65bp) ellipse (1.8bp and 1.8bp);
+\end{scope}
+%
+\end{tikzpicture}
+% End of code
+
+%
+\end{document}
+%
+
+
+

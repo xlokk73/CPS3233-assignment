@@ -1,4 +1,4 @@
-package com.liftmania.gui;
+package main.java.com.liftmania.gui;
 
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
@@ -15,8 +15,8 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-import com.liftmania.Lift;
-import com.liftmania.LiftController;
+import main.java.com.liftmania.Lift;
+import main.java.com.liftmania.LiftController;
 
 @SuppressWarnings("serial")
 public class LiftsVisualiser extends JFrame implements ActionListener {

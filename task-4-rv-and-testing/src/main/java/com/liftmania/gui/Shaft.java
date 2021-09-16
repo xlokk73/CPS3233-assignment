@@ -1,4 +1,4 @@
-package com.liftmania.gui;
+package main.java.com.liftmania.gui;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -11,7 +11,7 @@ import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-import com.liftmania.Lift;
+import main.java.com.liftmania.Lift;
 
 @SuppressWarnings("serial")
 public class Shaft extends JPanel implements Runnable {
@@ -286,7 +286,6 @@ public class Shaft extends JPanel implements Runnable {
 				AnimationCommand cmd = animationCommands.remove();
 				
 				if (cmd.command == AnimationCommand.Command.move) {
-					System.out.println("MOVING*****5");
 					animateLift(cmd.toFloor);
 				} else if (cmd.command == AnimationCommand.Command.close) {
 					closeDoors();
@@ -307,3 +306,4 @@ public class Shaft extends JPanel implements Runnable {
 	}
 
 }
+
