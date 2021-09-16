@@ -1,0 +1,254 @@
+[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(main.java.com.liftmania.Lift@6aa8ceb6 ) STATE::>Idle
+[LiftOpenTimeProperty]MOVED ON METHODCALL: void main.java.com.liftmania.Lift.setMoving(boolean) TO STATE::> Moving
+[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(main.java.com.liftmania.Lift@6aa8ceb6 ) STATE::>Idle
+[StartMovingTimeProperty]MOVED ON METHODCALL: void main.java.com.liftmania.Lift.setMoving(boolean) TO STATE::> Moving
+[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(main.java.com.liftmania.Lift@6aa8ceb6 ) STATE::>Moving
+[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(main.java.com.liftmania.Lift@6aa8ceb6 ) STATE::>Moving
+[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(main.java.com.liftmania.Lift@6aa8ceb6 ) STATE::>Moving
+[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(main.java.com.liftmania.Lift@6aa8ceb6 ) STATE::>Moving
+[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(main.java.com.liftmania.Lift@6aa8ceb6 ) STATE::>Moving
+[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(main.java.com.liftmania.Lift@6aa8ceb6 ) STATE::>Moving
+[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(main.java.com.liftmania.Lift@6aa8ceb6 ) STATE::>Moving
+[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(main.java.com.liftmania.Lift@6aa8ceb6 ) STATE::>Moving
+[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(main.java.com.liftmania.Lift@6aa8ceb6 ) STATE::>Moving
+[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(main.java.com.liftmania.Lift@6aa8ceb6 ) STATE::>Moving
+[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(main.java.com.liftmania.Lift@6aa8ceb6 ) STATE::>Moving
+[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(main.java.com.liftmania.Lift@6aa8ceb6 ) STATE::>Moving
+[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(main.java.com.liftmania.Lift@6aa8ceb6 ) STATE::>Moving
+[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(main.java.com.liftmania.Lift@6aa8ceb6 ) STATE::>Moving
+[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(main.java.com.liftmania.Lift@6aa8ceb6 ) STATE::>Moving
+[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(main.java.com.liftmania.Lift@6aa8ceb6 ) STATE::>Moving
+[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(main.java.com.liftmania.Lift@6aa8ceb6 ) STATE::>Moving
+[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(main.java.com.liftmania.Lift@6aa8ceb6 ) STATE::>Moving
+[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(main.java.com.liftmania.Lift@759ebb3d ) STATE::>Idle
+[LiftOpenTimeProperty]MOVED ON METHODCALL: void main.java.com.liftmania.Lift.openDoors() TO STATE::> Loading
+[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(main.java.com.liftmania.Lift@759ebb3d ) STATE::>Idle
+[StartMovingTimeProperty]MOVED ON METHODCALL: void main.java.com.liftmania.Lift.openDoors() TO STATE::> Loading
+[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(main.java.com.liftmania.Lift@484b61fc ) STATE::>Idle
+[LiftOpenTimeProperty]MOVED ON METHODCALL: void main.java.com.liftmania.Lift.setMoving(boolean) TO STATE::> Moving
+[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(main.java.com.liftmania.Lift@484b61fc ) STATE::>Idle
+[StartMovingTimeProperty]MOVED ON METHODCALL: void main.java.com.liftmania.Lift.setMoving(boolean) TO STATE::> Moving
+[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(main.java.com.liftmania.Lift@484b61fc ) STATE::>Moving
+[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(main.java.com.liftmania.Lift@484b61fc ) STATE::>Moving
+[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(main.java.com.liftmania.Lift@484b61fc ) STATE::>Moving
+[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(main.java.com.liftmania.Lift@484b61fc ) STATE::>Moving
+[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(main.java.com.liftmania.Lift@45fe3ee3 ) STATE::>Idle
+[LiftOpenTimeProperty]MOVED ON METHODCALL: void main.java.com.liftmania.Lift.openDoors() TO STATE::> Loading
+[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(main.java.com.liftmania.Lift@45fe3ee3 ) STATE::>Idle
+[StartMovingTimeProperty]MOVED ON METHODCALL: void main.java.com.liftmania.Lift.openDoors() TO STATE::> Loading
+[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(main.java.com.liftmania.Lift@4cdf35a9 ) STATE::>Idle
+[LiftOpenTimeProperty]MOVED ON METHODCALL: void main.java.com.liftmania.Lift.setMoving(boolean) TO STATE::> Moving
+[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(main.java.com.liftmania.Lift@4cdf35a9 ) STATE::>Idle
+[StartMovingTimeProperty]MOVED ON METHODCALL: void main.java.com.liftmania.Lift.setMoving(boolean) TO STATE::> Moving
+[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(main.java.com.liftmania.Lift@4c98385c ) STATE::>Idle
+[LiftOpenTimeProperty]MOVED ON METHODCALL: void main.java.com.liftmania.Lift.setMoving(boolean) TO STATE::> Moving
+[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(main.java.com.liftmania.Lift@4c98385c ) STATE::>Idle
+[StartMovingTimeProperty]MOVED ON METHODCALL: void main.java.com.liftmania.Lift.setMoving(boolean) TO STATE::> Moving
+[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(main.java.com.liftmania.Lift@4c98385c ) STATE::>Moving
+[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(main.java.com.liftmania.Lift@4c98385c ) STATE::>Moving
+[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(main.java.com.liftmania.Lift@5fcfe4b2 ) STATE::>Idle
+[LiftOpenTimeProperty]MOVED ON METHODCALL: void main.java.com.liftmania.Lift.openDoors() TO STATE::> Loading
+[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(main.java.com.liftmania.Lift@5fcfe4b2 ) STATE::>Idle
+[StartMovingTimeProperty]MOVED ON METHODCALL: void main.java.com.liftmania.Lift.openDoors() TO STATE::> Loading
+[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(main.java.com.liftmania.Lift@5fcfe4b2 ) STATE::>Loading
+[LiftOpenTimeProperty]MOVED ON METHODCALL: void main.java.com.liftmania.Lift.closeDoors() TO STATE::> Idle
+[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(main.java.com.liftmania.Lift@5fcfe4b2 ) STATE::>Loading
+[StartMovingTimeProperty]MOVED ON METHODCALL: void main.java.com.liftmania.Lift.closeDoors() TO STATE::> Idle
+[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(main.java.com.liftmania.Lift@5fcfe4b2 ) STATE::>Idle
+[LiftOpenTimeProperty]MOVED ON METHODCALL: void main.java.com.liftmania.Lift.openDoors() TO STATE::> Loading
+[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(main.java.com.liftmania.Lift@5fcfe4b2 ) STATE::>Idle
+[StartMovingTimeProperty]MOVED ON METHODCALL: void main.java.com.liftmania.Lift.openDoors() TO STATE::> Loading
+[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(main.java.com.liftmania.Lift@5fcfe4b2 ) STATE::>Loading
+[LiftOpenTimeProperty]MOVED ON METHODCALL: void main.java.com.liftmania.Lift.closeDoors() TO STATE::> Idle
+[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(main.java.com.liftmania.Lift@5fcfe4b2 ) STATE::>Loading
+[StartMovingTimeProperty]MOVED ON METHODCALL: void main.java.com.liftmania.Lift.closeDoors() TO STATE::> Idle
+[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(main.java.com.liftmania.Lift@5fcfe4b2 ) STATE::>Idle
+[LiftOpenTimeProperty]MOVED ON METHODCALL: void main.java.com.liftmania.Lift.openDoors() TO STATE::> Loading
+[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(main.java.com.liftmania.Lift@5fcfe4b2 ) STATE::>Idle
+[StartMovingTimeProperty]MOVED ON METHODCALL: void main.java.com.liftmania.Lift.openDoors() TO STATE::> Loading
+[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(main.java.com.liftmania.Lift@5fcfe4b2 ) STATE::>Loading
+[LiftOpenTimeProperty]MOVED ON METHODCALL: void main.java.com.liftmania.Lift.closeDoors() TO STATE::> Idle
+[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(main.java.com.liftmania.Lift@5fcfe4b2 ) STATE::>Loading
+[StartMovingTimeProperty]MOVED ON METHODCALL: void main.java.com.liftmania.Lift.closeDoors() TO STATE::> Idle
+[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(main.java.com.liftmania.Lift@5fcfe4b2 ) STATE::>Idle
+[LiftOpenTimeProperty]MOVED ON METHODCALL: void main.java.com.liftmania.Lift.openDoors() TO STATE::> Loading
+[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(main.java.com.liftmania.Lift@5fcfe4b2 ) STATE::>Idle
+[StartMovingTimeProperty]MOVED ON METHODCALL: void main.java.com.liftmania.Lift.openDoors() TO STATE::> Loading
+[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(main.java.com.liftmania.Lift@5fcfe4b2 ) STATE::>Loading
+[LiftOpenTimeProperty]MOVED ON METHODCALL: void main.java.com.liftmania.Lift.closeDoors() TO STATE::> Idle
+[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(main.java.com.liftmania.Lift@5fcfe4b2 ) STATE::>Loading
+[StartMovingTimeProperty]MOVED ON METHODCALL: void main.java.com.liftmania.Lift.closeDoors() TO STATE::> Idle
+[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(main.java.com.liftmania.Lift@5fcfe4b2 ) STATE::>Idle
+[LiftOpenTimeProperty]MOVED ON METHODCALL: void main.java.com.liftmania.Lift.setMoving(boolean) TO STATE::> Moving
+[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(main.java.com.liftmania.Lift@5fcfe4b2 ) STATE::>Idle
+[StartMovingTimeProperty]MOVED ON METHODCALL: void main.java.com.liftmania.Lift.setMoving(boolean) TO STATE::> Moving
+[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(main.java.com.liftmania.Lift@5fcfe4b2 ) STATE::>Moving
+[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(main.java.com.liftmania.Lift@5fcfe4b2 ) STATE::>Moving
+[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(main.java.com.liftmania.Lift@5fcfe4b2 ) STATE::>Moving
+[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(main.java.com.liftmania.Lift@5fcfe4b2 ) STATE::>Moving
+[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(main.java.com.liftmania.Lift@5fcfe4b2 ) STATE::>Moving
+[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(main.java.com.liftmania.Lift@5fcfe4b2 ) STATE::>Moving
+[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(main.java.com.liftmania.Lift@5fcfe4b2 ) STATE::>Moving
+[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(main.java.com.liftmania.Lift@5fcfe4b2 ) STATE::>Moving
+[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(main.java.com.liftmania.Lift@5fcfe4b2 ) STATE::>Moving
+[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(main.java.com.liftmania.Lift@5fcfe4b2 ) STATE::>Moving
+[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(main.java.com.liftmania.Lift@5fcfe4b2 ) STATE::>Moving
+[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(main.java.com.liftmania.Lift@5fcfe4b2 ) STATE::>Moving
+[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(main.java.com.liftmania.Lift@5fcfe4b2 ) STATE::>Moving
+[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(main.java.com.liftmania.Lift@5fcfe4b2 ) STATE::>Moving
+[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(main.java.com.liftmania.Lift@5fcfe4b2 ) STATE::>Moving
+[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(main.java.com.liftmania.Lift@5fcfe4b2 ) STATE::>Moving
+[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(main.java.com.liftmania.Lift@5fcfe4b2 ) STATE::>Moving
+[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(main.java.com.liftmania.Lift@5fcfe4b2 ) STATE::>Moving
+[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(main.java.com.liftmania.Lift@5fcfe4b2 ) STATE::>Moving
+[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(main.java.com.liftmania.Lift@5fcfe4b2 ) STATE::>Moving
+[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(main.java.com.liftmania.Lift@5fcfe4b2 ) STATE::>Moving
+[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(main.java.com.liftmania.Lift@5fcfe4b2 ) STATE::>Moving
+[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(main.java.com.liftmania.Lift@6bf2d08e ) STATE::>Idle
+[LiftOpenTimeProperty]MOVED ON METHODCALL: void main.java.com.liftmania.Lift.setMoving(boolean) TO STATE::> Moving
+[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(main.java.com.liftmania.Lift@6bf2d08e ) STATE::>Idle
+[StartMovingTimeProperty]MOVED ON METHODCALL: void main.java.com.liftmania.Lift.setMoving(boolean) TO STATE::> Moving
+[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(main.java.com.liftmania.Lift@6bf2d08e ) STATE::>Moving
+[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(main.java.com.liftmania.Lift@6bf2d08e ) STATE::>Moving
+[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(main.java.com.liftmania.Lift@6bf2d08e ) STATE::>Moving
+[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(main.java.com.liftmania.Lift@6bf2d08e ) STATE::>Moving
+[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(main.java.com.liftmania.Lift@6bf2d08e ) STATE::>Moving
+[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(main.java.com.liftmania.Lift@6bf2d08e ) STATE::>Moving
+[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(main.java.com.liftmania.Lift@6bf2d08e ) STATE::>Moving
+[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(main.java.com.liftmania.Lift@6bf2d08e ) STATE::>Moving
+[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(main.java.com.liftmania.Lift@6bf2d08e ) STATE::>Moving
+[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(main.java.com.liftmania.Lift@6bf2d08e ) STATE::>Moving
+[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(main.java.com.liftmania.Lift@6bf2d08e ) STATE::>Moving
+[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(main.java.com.liftmania.Lift@6bf2d08e ) STATE::>Moving
+[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(main.java.com.liftmania.Lift@6bf2d08e ) STATE::>Moving
+[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(main.java.com.liftmania.Lift@6bf2d08e ) STATE::>Moving
+[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(main.java.com.liftmania.Lift@6bf2d08e ) STATE::>Moving
+[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(main.java.com.liftmania.Lift@6bf2d08e ) STATE::>Moving
+[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(main.java.com.liftmania.Lift@6bf2d08e ) STATE::>Moving
+[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(main.java.com.liftmania.Lift@6bf2d08e ) STATE::>Moving
+[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(main.java.com.liftmania.Lift@6bf2d08e ) STATE::>Moving
+[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(main.java.com.liftmania.Lift@6bf2d08e ) STATE::>Moving
+[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(main.java.com.liftmania.Lift@6bf2d08e ) STATE::>Moving
+[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(main.java.com.liftmania.Lift@6bf2d08e ) STATE::>Moving
+[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(main.java.com.liftmania.Lift@6bf2d08e ) STATE::>Moving
+[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(main.java.com.liftmania.Lift@6bf2d08e ) STATE::>Moving
+[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(main.java.com.liftmania.Lift@6bf2d08e ) STATE::>Moving
+[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(main.java.com.liftmania.Lift@6bf2d08e ) STATE::>Moving
+[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(main.java.com.liftmania.Lift@6bf2d08e ) STATE::>Moving
+[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(main.java.com.liftmania.Lift@6bf2d08e ) STATE::>Moving
+[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(main.java.com.liftmania.Lift@6bf2d08e ) STATE::>Moving
+[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(main.java.com.liftmania.Lift@6bf2d08e ) STATE::>Moving
+[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(main.java.com.liftmania.Lift@6bf2d08e ) STATE::>Moving
+[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(main.java.com.liftmania.Lift@6bf2d08e ) STATE::>Moving
+[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(main.java.com.liftmania.Lift@6bf2d08e ) STATE::>Moving
+[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(main.java.com.liftmania.Lift@6bf2d08e ) STATE::>Moving
+[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(main.java.com.liftmania.Lift@6bf2d08e ) STATE::>Moving
+[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(main.java.com.liftmania.Lift@6bf2d08e ) STATE::>Moving
+[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(main.java.com.liftmania.Lift@6bf2d08e ) STATE::>Moving
+[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(main.java.com.liftmania.Lift@6bf2d08e ) STATE::>Moving
+[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(main.java.com.liftmania.Lift@6bf2d08e ) STATE::>Moving
+[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(main.java.com.liftmania.Lift@6bf2d08e ) STATE::>Moving
+[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(main.java.com.liftmania.Lift@6bf2d08e ) STATE::>Moving
+[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(main.java.com.liftmania.Lift@6bf2d08e ) STATE::>Moving
+[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(main.java.com.liftmania.Lift@6bf2d08e ) STATE::>Moving
+[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(main.java.com.liftmania.Lift@6bf2d08e ) STATE::>Moving
+[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(main.java.com.liftmania.Lift@6bf2d08e ) STATE::>Moving
+[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(main.java.com.liftmania.Lift@6bf2d08e ) STATE::>Moving
+[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(main.java.com.liftmania.Lift@6bf2d08e ) STATE::>Moving
+[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(main.java.com.liftmania.Lift@6bf2d08e ) STATE::>Moving
+[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(main.java.com.liftmania.Lift@6bf2d08e ) STATE::>Moving
+[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(main.java.com.liftmania.Lift@6bf2d08e ) STATE::>Moving
+[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(main.java.com.liftmania.Lift@73a8dfcc ) STATE::>Idle
+[LiftOpenTimeProperty]MOVED ON METHODCALL: void main.java.com.liftmania.Lift.openDoors() TO STATE::> Loading
+[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(main.java.com.liftmania.Lift@73a8dfcc ) STATE::>Idle
+[StartMovingTimeProperty]MOVED ON METHODCALL: void main.java.com.liftmania.Lift.openDoors() TO STATE::> Loading
+[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(main.java.com.liftmania.Lift@73a8dfcc ) STATE::>Loading
+[LiftOpenTimeProperty]MOVED ON METHODCALL: void main.java.com.liftmania.Lift.closeDoors() TO STATE::> Idle
+[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(main.java.com.liftmania.Lift@73a8dfcc ) STATE::>Loading
+[StartMovingTimeProperty]MOVED ON METHODCALL: void main.java.com.liftmania.Lift.closeDoors() TO STATE::> Idle
+[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(main.java.com.liftmania.Lift@73a8dfcc ) STATE::>Idle
+[LiftOpenTimeProperty]MOVED ON METHODCALL: void main.java.com.liftmania.Lift.openDoors() TO STATE::> Loading
+[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(main.java.com.liftmania.Lift@73a8dfcc ) STATE::>Idle
+[StartMovingTimeProperty]MOVED ON METHODCALL: void main.java.com.liftmania.Lift.openDoors() TO STATE::> Loading
+[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(main.java.com.liftmania.Lift@73a8dfcc ) STATE::>Loading
+[LiftOpenTimeProperty]MOVED ON METHODCALL: void main.java.com.liftmania.Lift.closeDoors() TO STATE::> Idle
+[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(main.java.com.liftmania.Lift@73a8dfcc ) STATE::>Loading
+[StartMovingTimeProperty]MOVED ON METHODCALL: void main.java.com.liftmania.Lift.closeDoors() TO STATE::> Idle
+[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(main.java.com.liftmania.Lift@73a8dfcc ) STATE::>Idle
+[LiftOpenTimeProperty]MOVED ON METHODCALL: void main.java.com.liftmania.Lift.setMoving(boolean) TO STATE::> Moving
+[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(main.java.com.liftmania.Lift@73a8dfcc ) STATE::>Idle
+[StartMovingTimeProperty]MOVED ON METHODCALL: void main.java.com.liftmania.Lift.setMoving(boolean) TO STATE::> Moving
+[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(main.java.com.liftmania.Lift@73a8dfcc ) STATE::>Moving
+[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(main.java.com.liftmania.Lift@73a8dfcc ) STATE::>Moving
+[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(main.java.com.liftmania.Lift@73a8dfcc ) STATE::>Moving
+[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(main.java.com.liftmania.Lift@73a8dfcc ) STATE::>Moving
+[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(main.java.com.liftmania.Lift@73a8dfcc ) STATE::>Moving
+[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(main.java.com.liftmania.Lift@73a8dfcc ) STATE::>Moving
+[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(main.java.com.liftmania.Lift@73a8dfcc ) STATE::>Moving
+[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(main.java.com.liftmania.Lift@73a8dfcc ) STATE::>Moving
+[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(main.java.com.liftmania.Lift@73a8dfcc ) STATE::>Moving
+[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(main.java.com.liftmania.Lift@73a8dfcc ) STATE::>Moving
+[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(main.java.com.liftmania.Lift@73a8dfcc ) STATE::>Moving
+[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(main.java.com.liftmania.Lift@73a8dfcc ) STATE::>Moving
+[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(main.java.com.liftmania.Lift@73a8dfcc ) STATE::>Moving
+[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(main.java.com.liftmania.Lift@73a8dfcc ) STATE::>Moving
+[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(main.java.com.liftmania.Lift@3f8f9dd6 ) STATE::>Idle
+[LiftOpenTimeProperty]MOVED ON METHODCALL: void main.java.com.liftmania.Lift.openDoors() TO STATE::> Loading
+[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(main.java.com.liftmania.Lift@3f8f9dd6 ) STATE::>Idle
+[StartMovingTimeProperty]MOVED ON METHODCALL: void main.java.com.liftmania.Lift.openDoors() TO STATE::> Loading
+[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(main.java.com.liftmania.Lift@3f8f9dd6 ) STATE::>Loading
+[LiftOpenTimeProperty]MOVED ON METHODCALL: void main.java.com.liftmania.Lift.closeDoors() TO STATE::> Idle
+[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(main.java.com.liftmania.Lift@3f8f9dd6 ) STATE::>Loading
+[StartMovingTimeProperty]MOVED ON METHODCALL: void main.java.com.liftmania.Lift.closeDoors() TO STATE::> Idle
+[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(main.java.com.liftmania.Lift@3f8f9dd6 ) STATE::>Idle
+[LiftOpenTimeProperty]MOVED ON METHODCALL: void main.java.com.liftmania.Lift.setMoving(boolean) TO STATE::> Moving
+[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(main.java.com.liftmania.Lift@3f8f9dd6 ) STATE::>Idle
+[StartMovingTimeProperty]MOVED ON METHODCALL: void main.java.com.liftmania.Lift.setMoving(boolean) TO STATE::> Moving
+[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(main.java.com.liftmania.Lift@3f8f9dd6 ) STATE::>Moving
+[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(main.java.com.liftmania.Lift@3f8f9dd6 ) STATE::>Moving
+[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(main.java.com.liftmania.Lift@1963006a ) STATE::>Idle
+[LiftOpenTimeProperty]MOVED ON METHODCALL: void main.java.com.liftmania.Lift.setMoving(boolean) TO STATE::> Moving
+[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(main.java.com.liftmania.Lift@1963006a ) STATE::>Idle
+[StartMovingTimeProperty]MOVED ON METHODCALL: void main.java.com.liftmania.Lift.setMoving(boolean) TO STATE::> Moving
+[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(main.java.com.liftmania.Lift@1963006a ) STATE::>Moving
+[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(main.java.com.liftmania.Lift@1963006a ) STATE::>Moving
+[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(main.java.com.liftmania.Lift@1963006a ) STATE::>Moving
+[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(main.java.com.liftmania.Lift@1963006a ) STATE::>Moving
+[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(main.java.com.liftmania.Lift@41975e01 ) STATE::>Idle
+[LiftOpenTimeProperty]MOVED ON METHODCALL: void main.java.com.liftmania.Lift.setMoving(boolean) TO STATE::> Moving
+[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(main.java.com.liftmania.Lift@41975e01 ) STATE::>Idle
+[StartMovingTimeProperty]MOVED ON METHODCALL: void main.java.com.liftmania.Lift.setMoving(boolean) TO STATE::> Moving
+[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(main.java.com.liftmania.Lift@41975e01 ) STATE::>Moving
+[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(main.java.com.liftmania.Lift@41975e01 ) STATE::>Moving
+[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(main.java.com.liftmania.Lift@41975e01 ) STATE::>Moving
+[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(main.java.com.liftmania.Lift@41975e01 ) STATE::>Moving
+[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(main.java.com.liftmania.Lift@dcf3e99 ) STATE::>Idle
+[LiftOpenTimeProperty]MOVED ON METHODCALL: void main.java.com.liftmania.Lift.openDoors() TO STATE::> Loading
+[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(main.java.com.liftmania.Lift@dcf3e99 ) STATE::>Idle
+[StartMovingTimeProperty]MOVED ON METHODCALL: void main.java.com.liftmania.Lift.openDoors() TO STATE::> Loading
+[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(main.java.com.liftmania.Lift@dcf3e99 ) STATE::>Loading
+[LiftOpenTimeProperty]MOVED ON METHODCALL: void main.java.com.liftmania.Lift.closeDoors() TO STATE::> Idle
+[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(main.java.com.liftmania.Lift@dcf3e99 ) STATE::>Loading
+[StartMovingTimeProperty]MOVED ON METHODCALL: void main.java.com.liftmania.Lift.closeDoors() TO STATE::> Idle
+[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(main.java.com.liftmania.Lift@7dc5e7b4 ) STATE::>Idle
+[LiftOpenTimeProperty]MOVED ON METHODCALL: void main.java.com.liftmania.Lift.openDoors() TO STATE::> Loading
+[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(main.java.com.liftmania.Lift@7dc5e7b4 ) STATE::>Idle
+[StartMovingTimeProperty]MOVED ON METHODCALL: void main.java.com.liftmania.Lift.openDoors() TO STATE::> Loading
+[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(main.java.com.liftmania.Lift@75a1cd57 ) STATE::>Idle
+[LiftOpenTimeProperty]MOVED ON METHODCALL: void main.java.com.liftmania.Lift.setMoving(boolean) TO STATE::> Moving
+[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(main.java.com.liftmania.Lift@75a1cd57 ) STATE::>Idle
+[StartMovingTimeProperty]MOVED ON METHODCALL: void main.java.com.liftmania.Lift.setMoving(boolean) TO STATE::> Moving
+[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(main.java.com.liftmania.Lift@75a1cd57 ) STATE::>Moving
+[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(main.java.com.liftmania.Lift@75a1cd57 ) STATE::>Moving
+[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(main.java.com.liftmania.Lift@75a1cd57 ) STATE::>Moving
+[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(main.java.com.liftmania.Lift@75a1cd57 ) STATE::>Moving
+[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(main.java.com.liftmania.Lift@75a1cd57 ) STATE::>Moving
+[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(main.java.com.liftmania.Lift@75a1cd57 ) STATE::>Moving
+[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(main.java.com.liftmania.Lift@6f2b958e ) STATE::>Idle
+[LiftOpenTimeProperty]MOVED ON METHODCALL: void main.java.com.liftmania.Lift.openDoors() TO STATE::> Loading
+[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(main.java.com.liftmania.Lift@6f2b958e ) STATE::>Idle
+[StartMovingTimeProperty]MOVED ON METHODCALL: void main.java.com.liftmania.Lift.openDoors() TO STATE::> Loading
+[LiftOpenTimeProperty]AUTOMATON::> LiftOpenTimeProperty(main.java.com.liftmania.Lift@6f2b958e ) STATE::>Loading
+[LiftOpenTimeProperty]MOVED ON METHODCALL: void main.java.com.liftmania.Lift.closeDoors() TO STATE::> Idle
+[StartMovingTimeProperty]AUTOMATON::> StartMovingTimeProperty(main.java.com.liftmania.Lift@6f2b958e ) STATE::>Loading
+[StartMovingTimeProperty]MOVED ON METHODCALL: void main.java.com.liftmania.Lift.closeDoors() TO STATE::> Idle

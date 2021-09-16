@@ -190,7 +190,6 @@ public class Shaft extends JPanel implements Runnable {
 	}
 
 	public void animateUp(int currentFloor) {
-		System.out.println("Going up...");
 
 		int lower = currentFloor * animationStepsPerFloor;
 		int upper = lower + animationStepsPerFloor - 1;

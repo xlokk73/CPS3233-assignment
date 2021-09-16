@@ -1,6 +1,6 @@
 
 IMPORTS {
-	import com.liftmania.Lift;
+	import main.java.com.liftmania.Lift;
 }
 
 GLOBAL {
