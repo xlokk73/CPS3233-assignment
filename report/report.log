@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.9.12)  14 SEP 2021 20:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.9.12)  16 SEP 2021 15:48
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -410,8 +410,7 @@ Package: xkeyval 2020/11/20 v2.8 package option processing (HA)
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
 \verbatim@out=\write4
-runsystem(echo 'write18-test-20219141248'>"report.w18")...disabled (restricted)
-.
+runsystem(echo 'write18-test-2021916948'>"report.w18")...disabled (restricted).
 
 
 
@@ -856,6 +855,10 @@ Package pdftex.def Info: images/floor-request-code.png  used on input line 309.
 
 (pdftex.def)             Requested size: 390.0105pt x 102.32039pt.
 
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 317--318
 
  []
@@ -926,17 +929,49 @@ File: images/BasicLiftModel-fail-output.png Graphic file (type png)
 Package pdftex.def Info: images/BasicLiftModel-fail-output.png  used on input l
 ine 360.
 (pdftex.def)             Requested size: 195.0pt x 28.77235pt.
-(./report.bbl
 
-LaTeX Warning: Empty `thebibliography' environment on input line 3.
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-) [10 <./images/lift-open-test-multiple.png>] [11 <./images/start-moving-time-p
-roperty-several.png> <./images/start-moving-time-property-failure-edit.png>]
-[12 <./images/start-moving-time-property-failed.png> <./images/all-properties.p
-ng> <./images/floor-request-code.png>] [13 <./images/model-based-testing-diag.p
-ng> <./images/BasicLiftModel-variables.png>] [14 <./images/BaseLiftModel-covera
-ge.png> <./images/BasicLiftModel-fail-code.png> <./images/BasicLiftModel-fail-o
-utput.png>] (./report.aux)
+<images/task2-tree.png, id=64, 406.51875pt x 159.59625pt>
+File: images/task2-tree.png Graphic file (type png)
+<use images/task2-tree.png>
+Package pdftex.def Info: images/task2-tree.png  used on input line 393.
+(pdftex.def)             Requested size: 195.0pt x 76.55417pt.
+<images/task3-tree.png, id=65, 444.66125pt x 330.23375pt>
+File: images/task3-tree.png Graphic file (type png)
+<use images/task3-tree.png>
+Package pdftex.def Info: images/task3-tree.png  used on input line 398.
+(pdftex.def)             Requested size: 195.0pt x 144.81955pt.
+<images/task4-tree.png, id=66, 419.5675pt x 331.2375pt>
+File: images/task4-tree.png Graphic file (type png)
+<use images/task4-tree.png>
+Package pdftex.def Info: images/task4-tree.png  used on input line 403.
+(pdftex.def)             Requested size: 195.0pt x 153.94803pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 410--411
+
+ []
+
+[10 <./images/lift-open-test-multiple.png>]
+<images/task2-diagram.png, id=71, 636.3775pt x 452.69125pt>
+File: images/task2-diagram.png Graphic file (type png)
+<use images/task2-diagram.png>
+Package pdftex.def Info: images/task2-diagram.png  used on input line 416.
+(pdftex.def)             Requested size: 195.0pt x 138.70956pt.
+<images/task4-diagram.png, id=72, 695.59875pt x 439.6425pt>
+File: images/task4-diagram.png Graphic file (type png)
+<use images/task4-diagram.png>
+Package pdftex.def Info: images/task4-diagram.png  used on input line 421.
+(pdftex.def)             Requested size: 195.0pt x 123.24664pt.
+ [11 <./images/start-moving-time-property-several.png>] [12 <./images/start-mov
+ing-time-property-failure-edit.png> <./images/start-moving-time-property-failed
+.png>] [13 <./images/all-properties.png> <./images/floor-request-code.png> <./i
+mages/model-based-testing-diag.png>] [14 <./images/BasicLiftModel-variables.png
+> <./images/BaseLiftModel-coverage.png> <./images/BasicLiftModel-fail-code.png>
+ <./images/BasicLiftModel-fail-output.png>] [15 <./images/task2-tree.png> <./im
+ages/task3-tree.png> <./images/task4-tree.png> <./images/task2-diagram.png> <./
+images/task4-diagram.png>]
+(./report.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -945,10 +980,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 18741 strings out of 478994
- 372093 string characters out of 5858184
- 882527 words of memory out of 5000000
- 35872 multiletter control sequences out of 15000+600000
+ 18780 strings out of 478994
+ 373052 string characters out of 5858184
+ 882558 words of memory out of 5000000
+ 35909 multiletter control sequences out of 15000+600000
  413991 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  87i,12n,117p,1009b,1732s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -966,10 +1001,10 @@ live/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texl
 ive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texli
 ve/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/t
 exlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on report.pdf (14 pages, 4304970 bytes).
+Output written on report.pdf (15 pages, 4428278 bytes).
 PDF statistics:
- 134 PDF objects out of 1000 (max. 8388607)
- 77 compressed objects within 1 object stream
+ 147 PDF objects out of 1000 (max. 8388607)
+ 79 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 83 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 108 words of extra memory for PDF output out of 10000 (max. 10000000)
 

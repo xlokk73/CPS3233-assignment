@@ -1,12 +1,5 @@
 # Fdb version 3
-["bibtex report"] 1631612055 "report.aux" "report.bbl" "report" 1631645342
-  "/usr/local/texlive/2021/texmf-dist/bibtex/bst/base/abbrv.bst" 1292289607 20329 b5fed53e10044d0f8112183785c759b1 ""
-  "references.bib" 1630492276 3874 1dbd394e0860ba98d5625cbb17d577fc ""
-  "report.aux" 1631645342 4869 67fad63dc0b7b8b5916a5cb2a60f7cd3 "pdflatex"
-  (generated)
-  "report.bbl"
-  "report.blg"
-["pdflatex"] 1631645333 "report.tex" "report.pdf" "report" 1631645342
+["pdflatex"] 1631800105 "report.tex" "report.pdf" "report" 1631800113
   "/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/tfm/jknappen/ec/tcrm1200.tfm" 1136768653 1536 74b7293ec3713bb7fdca8dd1bd1f469c ""
@@ -182,12 +175,16 @@
   "images/start-moving-time-property-failed.png" 1630957706 939233 d76f4f7f5ad3fc0e1b3a645f47d69f1e ""
   "images/start-moving-time-property-failure-edit.png" 1630958064 424213 d9069ceb134e80d14bce9ecdb4d664fc ""
   "images/start-moving-time-property-several.png" 1630956175 1438030 8479d06f3de0469e120eee0ff0e7778c ""
-  "report.aux" 1631645342 4869 67fad63dc0b7b8b5916a5cb2a60f7cd3 "pdflatex"
-  "report.bbl" 1631612055 49 0eba253fc001332e731e8aba3f23127b "bibtex report"
-  "report.tex" 1631645318 20818 e4536c9c5988dea6ff48e65dd5ab297a ""
-  "report.toc" 1631645342 770 feeba7783c6c2ed78d78a4a7b3d36c32 "pdflatex"
+  "images/task2-diagram.png" 1631799623 49019 a144c4d0fd326cac2ca74bb238fc032f ""
+  "images/task2-tree.png" 1631796572 34684 bfe4d3393cb7d64e072dbd9fd8ca1c7d ""
+  "images/task3-tree.png" 1631796628 67420 843a51483fde7690df9ee5907fb2889d ""
+  "images/task4-diagram.png" 1631799688 53680 86d0ca96c3840a1cb413cdf595b0c658 ""
+  "images/task4-tree.png" 1631796674 64086 364f346630c7715a9a58a347fd2a4a42 ""
+  "report.aux" 1631800113 5380 3d0cec576e0e24fa4f31b40cd4dc6053 "pdflatex"
+  "report.tex" 1631800096 23571 9e190272483d3dda43092c404cda1ca3 ""
+  "report.toc" 1631800113 770 feeba7783c6c2ed78d78a4a7b3d36c32 "pdflatex"
   (generated)
-  "report.log"
-  "report.aux"
   "report.pdf"
+  "report.log"
   "report.toc"
+  "report.aux"

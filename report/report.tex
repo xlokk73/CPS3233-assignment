@@ -197,12 +197,12 @@ The formula looks for the pattern of an open door followed by a closed door and 
 
 \section{Runtime Verification}
 
-For runtime verification, the Larva tool was used. The automata applied where directly derived from the timed automaton discussed in section \ref{sec:timed-automata}. However, it was not implemented as a single automaton in order to check for properties individually. \\
+For runtime verification (RV), the Larva tool was used. The automata applied where directly derived from the timed automaton discussed in section \ref{sec:timed-automata}. However, it was not implemented as a single automaton in order to check for properties individually. \\
 
 The first property investigated was the door close property. First off, to make the investigation simpler, a single lift was considered. This is because the automaton designed only considers one lift. The Java code was analysed to find the methods that correspond with the designed events. These methods were present in \textit{Lift.java}. The methods and their corresponding events is shown in table \ref{tab:lift-open-time-property}.
 
 % Requires the booktabs if the memoir class is not being used
-\begin{table}[htbp]
+\begin{table}[h]
    \centering
    %\topcaption{Table captions are better up top} % requires the topcapt package
    \begin{tabular}{@{}  |c|c| @{}} % Column formatting, @{} suppresses leading/trailing spac
@@ -304,7 +304,7 @@ The script developed is not perfect. One flaw with the system is that requests a
 
 One possible way to circumvent this problem would have been to iterate over \texttt{Shaft} objects rather than \texttt{Lift} object as the script does currently. This would have most likely work since each shaft corresponds to a single that resides in it. The \textit{Shaft.java} class also contains \texttt{openDoors()} and \texttt{closeDoors()} methods similar to the \textit{Lift.java} class. Movement events would have been recognised by the \texttt{animateUp()} and \texttt{animateDown()} present in \textit{Shaft.java}. Finally, stopping would have been recognised by the \texttt{animationPause()} method. Iteration over the \texttt{Shaft} objects would enable the script to track which shaft floor buttons were pressed. 
 
-\begin{figure}[htbp]
+\begin{figure}[h]
    \centering
    \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{images/floor-request-code} % requires the graphicx package
    \caption{Floor request button code}
@@ -366,8 +366,63 @@ The tests provided full coverage for this model. This can be seen in figure \ref
 
 
 \section{Runtime Verification and Testing}
+For this task, executing RV and model-based testing at the same time was required. This means that this task is combining the artefacts of task 2 and task 3 together.  The eclipse IDE needed to be used again so that the LARVA plugin could be used. The two tasks (2 and 3) contain a different structure. This is because the provided project structure by the respective IDE was used. This resulted in task 4 containing a combination of the structure of the two tasks. Table \ref{tab:packages-structure} shows the package structure of each task to make things clearer. Similarly, the directory trees can be seen in figure \ref{fig:directories-trees}.
 
-\bibliographystyle{abbrv}
- \bibliography{references}
+\begin{table}[h]
+   \centering
+   %\topcaption{Table captions are better up top} % requires the topcapt package
+   \begin{tabular}{@{}  |c|c| @{}} % Column formatting, @{} suppresses leading/trailing spac
+      \toprule
+      Task   & Packages \\
+      \midrule
+      Task 2  &  com.liftmania\\
+      Task 3 & main.java.com.liftmania  \\
+      & test.java.com.liftmania\\
+      Task 4  & main.java.com.liftmania\\
+      & test.java.com.liftmania\\
+      \bottomrule
+   \end{tabular}
+   \caption{LiftOpenTimeProperty events table}
+   \label{tab:packages-structure}
+\end{table}
+
+\begin{figure}
+\centering
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{images/task2-tree}
+  \caption{Task 2}
+\end{subfigure}%
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{images/task3-tree}
+  \caption{Task 3}
+\end{subfigure}
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{images/task4-tree}
+  \caption{Task 4}
+\end{subfigure}
+\caption{Directory trees for each task}
+\label{fig:directories-trees}
+\end{figure}
+
+One difference between RV and testing is that in runtime verification, the user/tester controls the system as usual while RV is done in the background independent of what actions the user does. Meanwhile, in testing, the system is driven by the tests i.e., the tests decide what flow the system follows. In this task, RV is used but it is executed on the system driven by the tests. For example the tests run the method \texttt{moveLift()} and the RV 'catches' this and change the state accordingly. Since the Larva script and Model JUnit tests are based on the same automata, the same states should be visited. This can be seen figuratively in figure \ref{fig:tasks-diagrams}\\
+
+\begin{figure}
+\centering
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{images/task2-diagram}
+  \caption{Task 2}
+\end{subfigure}%
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{images/task4-diagram}
+  \caption{Task 4}
+\end{subfigure}
+\caption{Larva diagram for each task}
+\label{fig:tasks-diagrams}
+\end{figure}
 
 \end{document}
