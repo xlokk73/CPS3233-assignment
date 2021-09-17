@@ -197,9 +197,18 @@ The formula looks for the pattern of an open door followed by a closed door and 
 
 \section{Runtime Verification}
 
-For runtime verification (RV), the Larva tool was used. The automata applied where directly derived from the timed automaton discussed in section \ref{sec:timed-automata}. However, it was not implemented as a single automaton in order to check for properties individually. \\
+For runtime verification (RV), the Larva tool was used. The automata applied where directly derived from the automata discussed in section \ref{sec:timed-automata}. However, it was not implemented as a single automaton in order to check for properties individually. On top of that, several bas states where added since the ones shown do not include them to make it visually easier. The full automata including the bad states where generated and can be seen later on. \\
 
-The first property investigated was the door close property. First off, to make the investigation simpler, a single lift was considered. This is because the automaton designed only considers one lift. The Java code was analysed to find the methods that correspond with the designed events. These methods were present in \textit{Lift.java}. The methods and their corresponding events is shown in table \ref{tab:lift-open-time-property}.
+The first property investigated was the door close property (seen visually in figure \ref{fig:generated-automaton-LiftOpenTimeProperty}) . First off, to make the investigation simpler, a single lift was considered. This is because the automaton designed only considers one lift. The Java code was analysed to find the methods that correspond with the designed events. These methods were present in \textit{Lift.java}. The methods and their corresponding events is shown in table \ref{tab:lift-open-time-property}. \\
+
+This property does not only check for the time property. It also checks for temporal properties such as receiving a \texttt{openDoor} signal while already open. It also checks for lift movement while the lift is open. 
+
+\begin{figure}[h]
+   \centering
+   \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{images/generated-automaton-LiftOpenTimeProperty} % requires the graphicx package
+   \caption{Generated automaton for LiftOpenTimeProperty}
+   \label{fig:generated-automaton-LiftOpenTimeProperty}
+\end{figure}
 
 % Requires the booktabs if the memoir class is not being used
 \begin{table}[h]
@@ -234,7 +243,14 @@ openDoors() = {Lift l.openDoors()} WHERE {lift = l;}
 setFloor() = {Lift l.setFloor(*)} WHERE {lift = l;}
 \end{lstlisting}
 
-The second property is called \texttt{StartMovingTimeProperty} and verifies that the lift start moving in less than 3 seconds after the door closes following a request. A new event was added for the summon request action. The method that corresponds to this event is \texttt{callLiftToFloor}. \\
+The second property (visual representation in figure \ref{fig:generated-automaton-StartMovingTimeProperty}) is called \texttt{StartMovingTimeProperty} and verifies that the lift start moving in less than 3 seconds after the door closes following a request. A new event was added for the summon request action. The method that corresponds to this event is \texttt{callLiftToFloor}. \\
+
+\begin{figure}[h]
+   \centering
+   \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{images/generated-automaton-StartMovingTimeProperty} % requires the graphicx package
+   \caption{Generated automaton for StartMovingTimeProperty}
+   \label{fig:generated-automaton-StartMovingTimeProperty}
+\end{figure}
 
 This method provided some difficulty when switching to adding support for multiple lift verification. The reason being that this method does not reside in the \textit{Lift.java} class. It resided in the \textit{JavaController.java} class. When \texttt{callLiftToFloor} is called, it performs some calculations and then proceeds to execute \texttt{moveLift} with the chosen lift. To find out which lift was called via Larva, the source needed to be edited. The change done was very minimal and does not impact the design of the lift system at all. The \texttt{callLiftToFloor} method signature was changed to return a lift object instead of void. This is then used by Larva by making use of the \texttt{uponReturning} keyword when declaring the event. The whole event declaration is as follows: \newline\texttt{callLiftToFloor(Lift l) = {*callLiftToFloor(*)uponReturning(l)} where {lift = l;}}, where '\texttt{lift}' is the iterated object declared in the FOREACH loop. 
 

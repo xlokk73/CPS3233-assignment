@@ -24,6 +24,8 @@ GLOBAL {
 			STATES {
 				BAD {
 					OpenTooLong
+					MovingWhileLoading
+					ConsecutiveDoorSignals
 				}
 				
 				NORMAL {
@@ -39,11 +41,16 @@ GLOBAL {
 			TRANSITIONS {
 				Idle -> Loading [openDoors \ \ y.reset();]
 				Idle -> Moving [setMoving \ isMoving \ ]
+				Idle -> ConsecutiveDoorSignals [closeDoors \ \ ]
 				
 				Loading -> Idle [closeDoors \ y.compareTo(3)<0 \ ]
 				Loading -> OpenTooLong [closeDoors \ y.compareTo(3)>=0 \]
+				Loading -> MovingWhileLoading [setMoving \ \ ]
+				Loading -> ConsecutiveDoorSignals [openDoors \ \ ]
 				
 				Moving -> Idle [setFloor \ \]
+				Moving -> MovingWhileLoading [openDoors \ \ ]
+				Moving -> ConsecutiveDoorSignals [closeDoors \ \ ]
 			}
 		}
 		
@@ -52,6 +59,7 @@ GLOBAL {
 			STATES {
 				BAD {
 					BadMoving {System.out.println("Oqqow!! lift took too long to start moving");}
+					
 				}
 				
 				NORMAL {
@@ -81,6 +89,7 @@ GLOBAL {
 				
 				Requested -> Moving [setMoving \ isMoving && x.compareTo(3)<0 \ ]
 				Requested -> BadMoving [setMoving \ isMoving && x.compareTo(3)>=0 \ ]
+				Requested -> Requested [callLiftToFloor \ \ ]
 				
 				LoadingRequested -> Requested [closeDoors \ \ x.reset(); ]
 				

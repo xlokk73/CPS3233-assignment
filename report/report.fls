@@ -709,6 +709,10 @@ INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/base/omlcmr.fd
 INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/base/omlcmr.fd
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmti12.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmtt12.tfm
+INPUT ./images/generated-automaton-LiftOpenTimeProperty.png
+INPUT images/generated-automaton-LiftOpenTimeProperty.png
+INPUT ./images/generated-automaton-LiftOpenTimeProperty.png
+INPUT ./images/generated-automaton-LiftOpenTimeProperty.png
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
@@ -720,6 +724,10 @@ INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/listings/lstlang1.sty
 INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/listings/lstlang1.sty
 INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/listings/lstlang1.sty
 INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/listings/lstlang1.sty
+INPUT ./images/generated-automaton-StartMovingTimeProperty.png
+INPUT images/generated-automaton-StartMovingTimeProperty.png
+INPUT ./images/generated-automaton-StartMovingTimeProperty.png
+INPUT ./images/generated-automaton-StartMovingTimeProperty.png
 INPUT ./images/lift-open-test-passed.png
 INPUT images/lift-open-test-passed.png
 INPUT ./images/lift-open-test-passed.png

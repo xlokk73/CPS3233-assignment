@@ -190,7 +190,6 @@ public class Shaft extends JPanel implements Runnable {
 	}
 
 	public void animateUp(int currentFloor) {
-		System.out.println("Going up...");
 
 		int lower = currentFloor * animationStepsPerFloor;
 		int upper = lower + animationStepsPerFloor - 1;
@@ -286,7 +285,6 @@ public class Shaft extends JPanel implements Runnable {
 				AnimationCommand cmd = animationCommands.remove();
 				
 				if (cmd.command == AnimationCommand.Command.move) {
-					System.out.println("MOVING*****5");
 					animateLift(cmd.toFloor);
 				} else if (cmd.command == AnimationCommand.Command.close) {
 					closeDoors();

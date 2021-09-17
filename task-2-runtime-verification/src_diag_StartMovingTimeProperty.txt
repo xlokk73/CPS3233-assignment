@@ -6,6 +6,7 @@ node [shape = point]; _s_s;
 _s_s -> Idle;
 Requested -> Moving [ label = "(1) setMoving\\isMoving && x . compareTo ( 3 ) < 0 "];
 Requested -> BadMoving [ label = "(2) setMoving\\isMoving && x . compareTo ( 3 ) >= 0 "];
+Requested -> Requested [ label = "(3) callLiftToFloor"];
 Loading -> Idle [ label = "(1) closeDoors\\\\x . reset ( ) ; "];
 Loading -> LoadingRequested [ label = "(2) callLiftToFloor"];
 Idle -> Loading [ label = "(1) openDoors"];

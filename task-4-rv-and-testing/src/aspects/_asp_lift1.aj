@@ -22,8 +22,8 @@ lift =l ;
 _cls_lift1 _cls_inst = _cls_lift1._get_cls_lift1_inst( lift);
 _cls_inst.isMoving = isMoving;
 _cls_inst.l = l;
-_cls_inst._call(thisJoinPoint.getSignature().toString(), 80/*setMoving*/);
-_cls_inst._call_all_filtered(thisJoinPoint.getSignature().toString(), 80/*setMoving*/);
+_cls_inst._call(thisJoinPoint.getSignature().toString(), 20/*setMoving*/);
+_cls_inst._call_all_filtered(thisJoinPoint.getSignature().toString(), 20/*setMoving*/);
 }
 }
 before ( Lift l) : (call(* Lift.openDoors(..)) && target(l) && !cflow(adviceexecution()) && !cflow(within(larva.*))  && !(within(larva.*))) {
@@ -34,8 +34,8 @@ lift =l ;
 
 _cls_lift1 _cls_inst = _cls_lift1._get_cls_lift1_inst( lift);
 _cls_inst.l = l;
-_cls_inst._call(thisJoinPoint.getSignature().toString(), 84/*openDoors*/);
-_cls_inst._call_all_filtered(thisJoinPoint.getSignature().toString(), 84/*openDoors*/);
+_cls_inst._call(thisJoinPoint.getSignature().toString(), 24/*openDoors*/);
+_cls_inst._call_all_filtered(thisJoinPoint.getSignature().toString(), 24/*openDoors*/);
 }
 }
 before ( Lift l) : (call(* Lift.setFloor(..)) && target(l) && args(*) && !cflow(adviceexecution()) && !cflow(within(larva.*))  && !(within(larva.*))) {
@@ -46,8 +46,8 @@ lift =l ;
 
 _cls_lift1 _cls_inst = _cls_lift1._get_cls_lift1_inst( lift);
 _cls_inst.l = l;
-_cls_inst._call(thisJoinPoint.getSignature().toString(), 86/*setFloor*/);
-_cls_inst._call_all_filtered(thisJoinPoint.getSignature().toString(), 86/*setFloor*/);
+_cls_inst._call(thisJoinPoint.getSignature().toString(), 26/*setFloor*/);
+_cls_inst._call_all_filtered(thisJoinPoint.getSignature().toString(), 26/*setFloor*/);
 }
 }
 after () returning (Lift l) : (call(* *.callLiftToFloor(..)) && args(*) && !cflow(adviceexecution()) && !cflow(within(larva.*))  && !(within(larva.*))) {
@@ -58,8 +58,8 @@ lift =l ;
 
 _cls_lift1 _cls_inst = _cls_lift1._get_cls_lift1_inst( lift);
 _cls_inst.l = l;
-_cls_inst._call(thisJoinPoint.getSignature().toString(), 88/*callLiftToFloor*/);
-_cls_inst._call_all_filtered(thisJoinPoint.getSignature().toString(), 88/*callLiftToFloor*/);
+_cls_inst._call(thisJoinPoint.getSignature().toString(), 28/*callLiftToFloor*/);
+_cls_inst._call_all_filtered(thisJoinPoint.getSignature().toString(), 28/*callLiftToFloor*/);
 }
 }
 before ( Lift l) : (call(* Lift.closeDoors(..)) && target(l) && !cflow(adviceexecution()) && !cflow(within(larva.*))  && !(within(larva.*))) {
@@ -70,8 +70,8 @@ lift =l ;
 
 _cls_lift1 _cls_inst = _cls_lift1._get_cls_lift1_inst( lift);
 _cls_inst.l = l;
-_cls_inst._call(thisJoinPoint.getSignature().toString(), 82/*closeDoors*/);
-_cls_inst._call_all_filtered(thisJoinPoint.getSignature().toString(), 82/*closeDoors*/);
+_cls_inst._call(thisJoinPoint.getSignature().toString(), 22/*closeDoors*/);
+_cls_inst._call_all_filtered(thisJoinPoint.getSignature().toString(), 22/*closeDoors*/);
 }
 }
 }

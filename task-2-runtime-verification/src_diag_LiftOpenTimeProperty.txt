@@ -1,12 +1,17 @@
 digraph _logic_LiftOpenTimeProperty {
 rankdir=LR;
 node [shape = circle]; Loading Moving Idle;
-node [shape = octagon]; OpenTooLong;
+node [shape = octagon]; OpenTooLong MovingWhileLoading ConsecutiveDoorSignals;
 node [shape = point]; _s_s;
 _s_s -> Idle;
 Loading -> Idle [ label = "(1) closeDoors\\y . compareTo ( 3 ) < 0 "];
 Loading -> OpenTooLong [ label = "(2) closeDoors\\y . compareTo ( 3 ) >= 0 "];
+Loading -> MovingWhileLoading [ label = "(3) setMoving"];
+Loading -> ConsecutiveDoorSignals [ label = "(4) openDoors"];
 Idle -> Loading [ label = "(1) openDoors\\\\y . reset ( ) ; "];
 Idle -> Moving [ label = "(2) setMoving\\isMoving "];
+Idle -> ConsecutiveDoorSignals [ label = "(3) closeDoors"];
 Moving -> Idle [ label = "(1) setFloor"];
+Moving -> MovingWhileLoading [ label = "(2) openDoors"];
+Moving -> ConsecutiveDoorSignals [ label = "(3) closeDoors"];
 }
