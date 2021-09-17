@@ -70,7 +70,7 @@ Idle,
 
 
 
-\begin{figure}[h] % ’ht’ tells LaTeX to place the figure ’here’ or at the top of the page
+\begin{figure} % ’ht’ tells LaTeX to place the figure ’here’ or at the top of the page
     \centering % centers the figure
     \begin{tikzpicture}
         % tikz code goes here
@@ -147,7 +147,7 @@ M = {
 \end{lstlisting}
 
 
-\begin{figure}[h] %  figure placement: here, top, bottom, or page
+\begin{figure}%  figure placement: here, top, bottom, or page
    \centering
 \begin{adjustbox}{max width=\textwidth}
 
@@ -203,7 +203,7 @@ The first property investigated was the door close property (seen visually in fi
 
 This property does not only check for the time property. It also checks for temporal properties such as receiving a \texttt{openDoor} signal while already open. It also checks for lift movement while the lift is open. 
 
-\begin{figure}[h]
+\begin{figure}
    \centering
    \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{images/generated-automaton-LiftOpenTimeProperty} % requires the graphicx package
    \caption{Generated automaton for LiftOpenTimeProperty}
@@ -211,7 +211,7 @@ This property does not only check for the time property. It also checks for temp
 \end{figure}
 
 % Requires the booktabs if the memoir class is not being used
-\begin{table}[h]
+\begin{table}
    \centering
    %\topcaption{Table captions are better up top} % requires the topcapt package
    \begin{tabular}{@{}  |c|c| @{}} % Column formatting, @{} suppresses leading/trailing spac
@@ -245,7 +245,7 @@ setFloor() = {Lift l.setFloor(*)} WHERE {lift = l;}
 
 The second property (visual representation in figure \ref{fig:generated-automaton-StartMovingTimeProperty}) is called \texttt{StartMovingTimeProperty} and verifies that the lift start moving in less than 3 seconds after the door closes following a request. A new event was added for the summon request action. The method that corresponds to this event is \texttt{callLiftToFloor}. \\
 
-\begin{figure}[h]
+\begin{figure}
    \centering
    \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{images/generated-automaton-StartMovingTimeProperty} % requires the graphicx package
    \caption{Generated automaton for StartMovingTimeProperty}
@@ -257,7 +257,7 @@ This method provided some difficulty when switching to adding support for multip
 \subsection{Testing}
 In the tests shown, one property at a time was tested to make the outputs more legible. Figure \ref{fig:lift-open-test-passed} shows the property \texttt{LiftOpenTimeProperty} running as should. several buttons were pressed and the lift always moved as specified. \\
 
-\begin{figure}[h]
+\begin{figure}
    \centering
    \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{images/lift-open-test-passed} % requires the graphicx package
    \caption{\texttt{LiftOpenTimeProperty} verified}
@@ -266,7 +266,7 @@ In the tests shown, one property at a time was tested to make the outputs more l
 
 For the second test shown in figure \ref{fig:lift-open-test-failed}, time taken to close the door automatically was changed from the java source code in file \textit{Shaft.java}. The figure shows that verification failed because the door was closing after 3 seconds. \\
 
-\begin{figure}[h]
+\begin{figure}
    \centering
    \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{images/lift-open-test-failed} % requires the graphicx package
    \caption{\texttt{LiftOpenTimeProperty} failed}
@@ -275,7 +275,7 @@ For the second test shown in figure \ref{fig:lift-open-test-failed}, time taken 
 
 Referirng to figure \ref{fig:lift-open-test-multiple} the third test shown, displays the verification being conducted on several (three) lifts. Identifiers are used to differentiate the multiple lifts being verified. \\
 
-\begin{figure}[h]
+\begin{figure}
    \centering
    \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{images/lift-open-test-multiple} % requires the graphicx package
    \caption{\texttt{LiftOpenTimeProperty} on several lifts}
@@ -283,7 +283,7 @@ Referirng to figure \ref{fig:lift-open-test-multiple} the third test shown, disp
 \end{figure}
 
 Figure \ref{fig:start-moving-time-property-several} shows the fourth documented test. This test shows the verification of the \texttt{StartMovingTimeProperty} working on more than one lift. To make the output more clear, the \texttt{LiftOpenTimeProperty} was removed from the script to focus only on the property discussed. \\
-\begin{figure}[h]
+\begin{figure}
    \centering
    \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{images/start-moving-time-property-several} % requires the graphicx package
    \caption{\texttt{StartMovingTimeProperty} on several lifts}
@@ -292,14 +292,14 @@ Figure \ref{fig:start-moving-time-property-several} shows the fourth documented 
 
 A failure was also induced for this property. The \texttt{animateLift} method in \textit{Shaft.java} was edited to wait three seconds before starting to move the lift. The added code can be seen in figure \ref{fig:start-moving-time-property-failure-edit}. As expected, this caused the verification to fail. The output can be seen in figure \ref{fig:start-moving-time-property-failed}
 
-\begin{figure}[h]
+\begin{figure}
    \centering
    \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{images/start-moving-time-property-failure-edit} % requires the graphicx package
    \caption{Added code to stop for three seconds before starting to move lift in \textit{Shaft.java}}
    \label{fig:start-moving-time-property-failure-edit}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}
    \centering
    \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{images/start-moving-time-property-failed} % requires the graphicx package
    \caption{\texttt{StartMovingTimeProperty} failure}
@@ -308,7 +308,7 @@ A failure was also induced for this property. The \texttt{animateLift} method in
 
 The final test showcased in this section can be seen in figure \ref{fig:all-properties}. This shows all the properties being run at once for several lifts. 
 
-\begin{figure}[h]
+\begin{figure}
    \centering
    \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{images/all-properties} % requires the graphicx package
    \caption{All properties}
@@ -320,7 +320,7 @@ The script developed is not perfect. One flaw with the system is that requests a
 
 One possible way to circumvent this problem would have been to iterate over \texttt{Shaft} objects rather than \texttt{Lift} object as the script does currently. This would have most likely work since each shaft corresponds to a single that resides in it. The \textit{Shaft.java} class also contains \texttt{openDoors()} and \texttt{closeDoors()} methods similar to the \textit{Lift.java} class. Movement events would have been recognised by the \texttt{animateUp()} and \texttt{animateDown()} present in \textit{Shaft.java}. Finally, stopping would have been recognised by the \texttt{animationPause()} method. Iteration over the \texttt{Shaft} objects would enable the script to track which shaft floor buttons were pressed. 
 
-\begin{figure}[h]
+\begin{figure}
    \centering
    \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{images/floor-request-code} % requires the graphicx package
    \caption{Floor request button code}
@@ -334,9 +334,9 @@ For model based testing ModelJUnit was used. Importing the project with maven pr
 
 
 \subsection{BasicLiftModel}
-The previous automata were used for Model-based testing. Using this model, internal variables and states are updated and compared to the system under test (SUT). This workflow can be seen visually in figure \ref{fig:model-based-testing-diag}. \\
+The previous automata were used for Model-based testing. Using this model, internal variables and states are updated and compared to the system under test (SUT). This workflow can be seen visually in figure \ref{fig:model-based-testing-diag}. This model  also checks for temporal some temporal properties for example trying to open a lift that is already open. This is done via  assertions at the start of the method to check the current state. \\
 
-\begin{figure}[h]
+\begin{figure}
    \centering
    \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{images/model-based-testing-diag} % requires the graphicx package
    \caption{Model based testing diagram}
@@ -348,7 +348,7 @@ The first model implemented is based on the automaton seen in \ref{fig:FSA}. The
 \texttt{Assert.assertFalse("Moved with door open", lift.isOpen());}
 The first one is comparing a variable of the model with a variable of the SUT while the second is comparing a verifying that a variable of SUT is in accordance with the current state.\\ 
 
-\begin{figure}[h]
+\begin{figure}
    \centering
    \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{images/BasicLiftModel-variables} % requires the graphicx package
    \caption{BasicLiftModel variables}
@@ -357,14 +357,14 @@ The first one is comparing a variable of the model with a variable of the SUT wh
 
 The tests provided full coverage for this model. This can be seen in figure \ref{fig:BaseLiftModel-coverage}. The Lift system passes the test. The \textit{Lift.java} was then edited with faulty code. The code added was a \texttt{openDoors()} call in the \texttt{moveLift()} method. This caused the test to fail as can be seen in figure \ref{fig:BasicLiftModel-fail}. \\
 
-\begin{figure}[h]
+\begin{figure}
    \centering
    \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{images/BaseLiftModel-coverage} % requires the graphicx package
    \caption{BaseLiftModel test coverage}
    \label{fig:BaseLiftModel-coverage}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}
 \centering
 \begin{subfigure}{.5\textwidth}
   \centering
@@ -380,11 +380,47 @@ The tests provided full coverage for this model. This can be seen in figure \ref
 \label{fig:BasicLiftModel-fail}
 \end{figure}
 
+\subsection{LiftTimeModel}
+To test time properties another model was created. The provided lift system did not include a clock class so time could not be mocked easily by ModelJUnit. As a result, inline java code had to be used, for example \texttt{Thread.sleep}. \\
+
+This part was not fully implemented. Due to problems found with driving the \texttt{LiftController} class. The aim was to make the SUT run \texttt{LiftController.moveLift(...)} and simulate it from the model side to match the correct times for example verifying that the door stays open for less than 3 seconds. However a problem arose where the method \texttt{LiftController.moveLift(...)} was not taking the necessary time to run. It should have taken the function at least 2000 milliseconds since it contains a \texttt{thread.sleep} however upon debugging it was shown to take only 2 milliseconds maximum. The code to time the function can be seen in the \texttt{moveLift()} action in \textit{LiftTimeModel} class or in listing \ref{lst:time-liftcontroller}.
+
+\begin{lstlisting}[
+caption={FSA definition}
+\label{lst:time-liftcontroller}
+tabsize = 4, %% set tab space width
+showstringspaces = false, %% prevent space marking in strings, string is defined as the text that is generally printed directly to the console
+numbers = left, %% display line numbers on the left
+commentstyle = \color{green}, %% set comment color
+keywordstyle = \color{blue}, %% set keyword color
+stringstyle = \color{red}, %% set string color
+rulecolor = \color{black}, %% set frame color to avoid being affected by text color
+basicstyle = \small \ttfamily , %% set listing font and size
+breaklines = true, %% enable line breaking
+numberstyle = \tiny,
+language=java
+]
+ liftState = LiftStates.MOVING;
+        startMoving = System.currentTimeMillis();
+
+
+        if (currentFloor == 0 ) {
+            liftController.moveLift(0, 5);
+        } else {
+            liftController.moveLift(0, 0);
+        }
+
+        System.out.print("Time taken: ");
+        System.out.println(System.currentTimeMillis() - startMoving);
+
+\end{lstlisting}
+
+
 
 \section{Runtime Verification and Testing}
 For this task, executing RV and model-based testing at the same time was required. This means that this task is combining the artefacts of task 2 and task 3 together.  The eclipse IDE needed to be used again so that the LARVA plugin could be used. The two tasks (2 and 3) contain a different structure. This is because the provided project structure by the respective IDE was used. This resulted in task 4 containing a combination of the structure of the two tasks. Table \ref{tab:packages-structure} shows the package structure of each task to make things clearer. Similarly, the directory trees can be seen in figure \ref{fig:directories-trees}. \\
 
-\begin{table}[h]
+\begin{table}
    \centering
    %\topcaption{Table captions are better up top} % requires the topcapt package
    \begin{tabular}{@{}  |c|c| @{}} % Column formatting, @{} suppresses leading/trailing spac
@@ -402,7 +438,7 @@ For this task, executing RV and model-based testing at the same time was require
    \label{tab:packages-structure}
 \end{table}
 
-\begin{figure}[h]
+\begin{figure}
 \centering
 \begin{subfigure}{.5\textwidth}
   \centering
@@ -425,7 +461,7 @@ For this task, executing RV and model-based testing at the same time was require
 
 One difference between RV and testing is that in runtime verification, the user/tester controls the system as usual while RV is done in the background independent of what actions the user does. Meanwhile, in testing, the system is driven by the tests i.e., the tests decide what flow the system follows. In this task, RV is used but it is executed on the system driven by the tests. For example the tests run the method \texttt{moveLift()} and the RV 'catches' this and change the state accordingly. Since the Larva script and Model JUnit tests are based on the same automata, the same states should be visited. This can be seen figuratively in figure \ref{fig:tasks-diagrams} \\
 
-\begin{figure}[h]
+\begin{figure}
 \centering
 \begin{subfigure}{.5\textwidth}
   \centering
@@ -445,7 +481,7 @@ To test this setup, some faults where introduced to investigate wether larva end
 
 The second test discussed in this section can be seen in figure \ref{fig:larva-test-fail-2}. In this test the ModelJunit code was edited to open the doors before moving. Assertions that checked for this bug were commented out so that the program does not stop running. The Larva script successfully detected the errors. \\
 
-\begin{figure}[h]
+\begin{figure}
 \centering
 \begin{subfigure}{.5\textwidth}
   \centering
@@ -461,7 +497,7 @@ The second test discussed in this section can be seen in figure \ref{fig:larva-t
 \label{fig:larva-test-fail}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}
 \centering
 \begin{subfigure}{.5\textwidth}
   \centering

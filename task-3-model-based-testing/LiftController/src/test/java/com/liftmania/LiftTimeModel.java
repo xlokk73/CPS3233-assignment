@@ -35,7 +35,7 @@ public class LiftTimeModel implements TimedFsmModel {
 
     @Override
     public int getNextTimeIncrement(Random ran) {
-        return 1 + ran.nextInt(60);
+        return 1;
     }
 
     @Override
@@ -49,6 +49,7 @@ public class LiftTimeModel implements TimedFsmModel {
             liftController = new LiftController(5, 1, false);
         }
 
+        currentFloor = 0;
         liftState = LiftStates.IDLE;
         isOpen = false;
         isMoving = false;
@@ -59,14 +60,11 @@ public class LiftTimeModel implements TimedFsmModel {
         isOpen = true;
 
         liftState = LiftStates.LOADING;
-        liftController.openLiftDoor(0);
     }
 
     public boolean closeDoorGuard() {return getState().equals(LiftStates.LOADING);}
     public @Action void closeDoor() {
         liftState = LiftStates.IDLE;
-        liftController.closeLiftDoor(0);
-
         isOpen = false;
     }
 
@@ -75,7 +73,12 @@ public class LiftTimeModel implements TimedFsmModel {
         liftState = LiftStates.MOVING;
         startMoving = System.currentTimeMillis();
 
-        liftController.moveLift(0, 6);
+
+        if (currentFloor == 0 ) {
+            liftController.moveLift(0, 5);
+        } else {
+            liftController.moveLift(0, 0);
+        }
 
         System.out.print("Time taken: ");
         System.out.println(System.currentTimeMillis() - startMoving);
@@ -85,15 +88,6 @@ public class LiftTimeModel implements TimedFsmModel {
 
     public boolean stopLiftGuard() {return getState().equals(LiftStates.MOVING);}
     public @Action void stopLift() {
-
-       // while(liftController.getLifts()[0].isMoving()) {}
-
-
-        if(liftController.getLifts()[0].isOpen()) {
-            System.out.println("LIFT OPEN");
-        } else {
-            System.out.println("LIFTCLOSED");
-        }
         liftState = LiftStates.IDLE;
     }
 

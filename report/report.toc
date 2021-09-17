@@ -6,6 +6,7 @@
 \contentsline {section}{\numberline {2}Runtime Verification}{6}{}%
 \contentsline {subsection}{\numberline {2.1}Testing}{8}{}%
 \contentsline {subsection}{\numberline {2.2}Larva script improvements}{9}{}%
-\contentsline {section}{\numberline {3}Model-Based Testing}{10}{}%
-\contentsline {subsection}{\numberline {3.1}BasicLiftModel}{10}{}%
-\contentsline {section}{\numberline {4}Runtime Verification and Testing}{11}{}%
+\contentsline {section}{\numberline {3}Model-Based Testing}{12}{}%
+\contentsline {subsection}{\numberline {3.1}BasicLiftModel}{12}{}%
+\contentsline {subsection}{\numberline {3.2}LiftTimeModel}{15}{}%
+\contentsline {section}{\numberline {4}Runtime Verification and Testing}{15}{}%

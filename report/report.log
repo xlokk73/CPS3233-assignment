@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.9.12)  17 SEP 2021 09:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.9.12)  17 SEP 2021 11:53
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -410,7 +410,7 @@ Package: xkeyval 2020/11/20 v2.8 package option processing (HA)
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
 \verbatim@out=\write4
-runsystem(echo 'write18-test-2021917583'>"report.w18")...disabled (restricted).
+runsystem(echo 'write18-test-2021917713'>"report.w18")...disabled (restricted).
 
 
 
@@ -689,9 +689,6 @@ Overfull \hbox (16.2713pt too wide) in paragraph at lines 86--87
  []
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 93--94
 
  []
@@ -743,24 +740,21 @@ File: images/generated-automaton-LiftOpenTimeProperty.png Graphic file (type pn
 g)
 <use images/generated-automaton-LiftOpenTimeProperty.png>
 Package pdftex.def Info: images/generated-automaton-LiftOpenTimeProperty.png  u
-sed on input line 206.
+sed on input line 208.
 (pdftex.def)             Requested size: 390.00526pt x 73.54938pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
 (/usr/local/texlive/2021/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 )
 (/usr/local/texlive/2021/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 ) [6 <./images/generated-automaton-LiftOpenTimeProperty.png>]
-Overfull \hbox (93.85927pt too wide) in paragraph at lines 244--245
+Overfull \hbox (93.85927pt too wide) in paragraph at lines 246--247
 []\OT1/cmr/m/n/12 The sec-ond prop-erty (vi-sual rep-re-sen-ta-tion in fig-ure 
 4[]) is called \OT1/cmtt/m/n/12 StartMovingTimeProperty
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 244--245
+Underfull \hbox (badness 10000) in paragraph at lines 246--247
 
  []
 
@@ -770,16 +764,16 @@ File: images/generated-automaton-StartMovingTimeProperty.png Graphic file (type
  png)
 <use images/generated-automaton-StartMovingTimeProperty.png>
 Package pdftex.def Info: images/generated-automaton-StartMovingTimeProperty.png
-  used on input line 248.
+  used on input line 250.
 (pdftex.def)             Requested size: 389.99773pt x 107.84853pt.
 
-Overfull \hbox (23.7252pt too wide) in paragraph at lines 253--254
+Overfull \hbox (23.7252pt too wide) in paragraph at lines 255--256
 \OT1/cmtt/m/n/12 callLiftToFloor(Lift l) = *callLiftToFloor(*)uponReturning(l) 
 where
  []
 
 [7 <./images/generated-automaton-StartMovingTimeProperty.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 256--257
+Underfull \hbox (badness 10000) in paragraph at lines 258--259
 
  []
 
@@ -787,10 +781,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 256--257
 File: images/lift-open-test-passed.png Graphic file (type png)
 <use images/lift-open-test-passed.png>
 Package pdftex.def Info: images/lift-open-test-passed.png  used on input line 2
-60.
+62.
 (pdftex.def)             Requested size: 389.99377pt x 238.8612pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 265--266
+Underfull \hbox (badness 10000) in paragraph at lines 267--268
 
  []
 
@@ -798,13 +792,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 265--266
 File: images/lift-open-test-failed.png Graphic file (type png)
 <use images/lift-open-test-failed.png>
 Package pdftex.def Info: images/lift-open-test-failed.png  used on input line 2
-69.
+71.
 (pdftex.def)             Requested size: 389.99779pt x 147.95792pt.
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 274--275
+Underfull \hbox (badness 10000) in paragraph at lines 276--277
 
  []
 
@@ -812,264 +803,229 @@ Underfull \hbox (badness 10000) in paragraph at lines 274--275
 File: images/lift-open-test-multiple.png Graphic file (type png)
 <use images/lift-open-test-multiple.png>
 Package pdftex.def Info: images/lift-open-test-multiple.png  used on input line
- 278.
+ 280.
 (pdftex.def)             Requested size: 389.99098pt x 208.73334pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<images/start-moving-time-property-several.png, id=50, 1082.0425pt x 569.12625p
+[8 <./images/lift-open-test-passed.png>]
+<images/start-moving-time-property-several.png, id=54, 1082.0425pt x 569.12625p
 t>
 File: images/start-moving-time-property-several.png Graphic file (type png)
 <use images/start-moving-time-property-several.png>
 Package pdftex.def Info: images/start-moving-time-property-several.png  used on
- input line 286.
+ input line 288.
 (pdftex.def)             Requested size: 389.9973pt x 205.12845pt.
-[8 <./images/lift-open-test-passed.png>]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
 <images/start-moving-time-property-failure-edit.png, id=55, 560.0925pt x 374.39
 874pt>
 File: images/start-moving-time-property-failure-edit.png Graphic file (type png
 )
 <use images/start-moving-time-property-failure-edit.png>
 Package pdftex.def Info: images/start-moving-time-property-failure-edit.png  us
-ed on input line 295.
+ed on input line 297.
 (pdftex.def)             Requested size: 390.0195pt x 260.71196pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
 <images/start-moving-time-property-failed.png, id=56, 1107.13625pt x 467.7475pt
 >
 File: images/start-moving-time-property-failed.png Graphic file (type png)
 <use images/start-moving-time-property-failed.png>
 Package pdftex.def Info: images/start-moving-time-property-failed.png  used on 
-input line 302.
+input line 304.
 (pdftex.def)             Requested size: 389.98683pt x 164.76324pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
 <images/all-properties.png, id=57, 1060.96375pt x 407.5225pt>
 File: images/all-properties.png Graphic file (type png)
 <use images/all-properties.png>
-Package pdftex.def Info: images/all-properties.png  used on input line 311.
+Package pdftex.def Info: images/all-properties.png  used on input line 313.
 (pdftex.def)             Requested size: 389.99258pt x 149.79846pt.
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 317--318
+Underfull \hbox (badness 10000) in paragraph at lines 319--320
 
  []
 
 
-Overfull \hbox (42.26794pt too wide) in paragraph at lines 319--320
+Overfull \hbox (42.26794pt too wide) in paragraph at lines 321--322
 \OT1/cmr/m/n/12 in \OT1/cmr/m/it/12 Shaft.java\OT1/cmr/m/n/12 . Fi-nally, stop-
 ping would have been recog-nised by the \OT1/cmtt/m/n/12 animationPause()
  []
 
-[9 <./images/lift-open-test-failed.png>]
-<images/floor-request-code.png, id=62, 853.1875pt x 223.83624pt>
+[9 <./images/lift-open-test-failed.png>] [10 <./images/lift-open-test-multiple.
+png> <./images/start-moving-time-property-several.png>] [11 <./images/start-mov
+ing-time-property-failure-edit.png> <./images/start-moving-time-property-failed
+.png>]
+<images/floor-request-code.png, id=72, 853.1875pt x 223.83624pt>
 File: images/floor-request-code.png Graphic file (type png)
 <use images/floor-request-code.png>
-Package pdftex.def Info: images/floor-request-code.png  used on input line 323.
+Package pdftex.def Info: images/floor-request-code.png  used on input line 325.
 
 (pdftex.def)             Requested size: 390.0105pt x 102.32039pt.
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 331--332
+Underfull \hbox (badness 10000) in paragraph at lines 333--334
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 335--336
+Underfull \hbox (badness 10000) in paragraph at lines 337--338
 
  []
 
-<images/model-based-testing-diag.png, id=63, 854.19125pt x 460.72125pt>
+[12 <./images/all-properties.png> <./images/floor-request-code.png>]
+<images/model-based-testing-diag.png, id=78, 854.19125pt x 460.72125pt>
 File: images/model-based-testing-diag.png Graphic file (type png)
 <use images/model-based-testing-diag.png>
 Package pdftex.def Info: images/model-based-testing-diag.png  used on input lin
-e 339.
+e 341.
 (pdftex.def)             Requested size: 390.00012pt x 210.35258pt.
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Overfull \hbox (11.3752pt too wide) in paragraph at lines 344--348
+Overfull \hbox (11.3752pt too wide) in paragraph at lines 346--350
 \OT1/cmtt/m/n/12 Assert.assertEquals("Model does not match SUT: Moving", isMovi
 ng,
  []
 
 
-Overfull \hbox (14.3446pt too wide) in paragraph at lines 344--348
+Overfull \hbox (14.3446pt too wide) in paragraph at lines 346--350
 \OT1/cmtt/m/n/12 Assert.assertFalse("Moved with door open", lift.isOpen()); \OT
 1/cmr/m/n/12 The first
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 344--348
+Underfull \hbox (badness 10000) in paragraph at lines 346--350
 
  []
 
-[10 <./images/lift-open-test-multiple.png>]
-<images/BasicLiftModel-variables.png, id=68, 479.7925pt x 224.84pt>
+<images/BasicLiftModel-variables.png, id=79, 479.7925pt x 224.84pt>
 File: images/BasicLiftModel-variables.png Graphic file (type png)
 <use images/BasicLiftModel-variables.png>
 Package pdftex.def Info: images/BasicLiftModel-variables.png  used on input lin
-e 351.
+e 353.
 (pdftex.def)             Requested size: 390.00613pt x 182.76439pt.
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 356--357
+Underfull \hbox (badness 10000) in paragraph at lines 358--359
 
  []
 
-<images/BaseLiftModel-coverage.png, id=69, 293.095pt x 95.35625pt>
+<images/BaseLiftModel-coverage.png, id=80, 293.095pt x 95.35625pt>
 File: images/BaseLiftModel-coverage.png Graphic file (type png)
 <use images/BaseLiftModel-coverage.png>
 Package pdftex.def Info: images/BaseLiftModel-coverage.png  used on input line 
-360.
+362.
 (pdftex.def)             Requested size: 389.99927pt x 126.8833pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<images/BasicLiftModel-fail-code.png, id=70, 385.44pt x 100.375pt>
+<images/BasicLiftModel-fail-code.png, id=81, 385.44pt x 100.375pt>
 File: images/BasicLiftModel-fail-code.png Graphic file (type png)
 <use images/BasicLiftModel-fail-code.png>
 Package pdftex.def Info: images/BasicLiftModel-fail-code.png  used on input lin
-e 369.
+e 371.
 (pdftex.def)             Requested size: 195.0pt x 50.78009pt.
-<images/BasicLiftModel-fail-output.png, id=71, 945.5325pt x 139.52126pt>
+<images/BasicLiftModel-fail-output.png, id=82, 945.5325pt x 139.52126pt>
 File: images/BasicLiftModel-fail-output.png Graphic file (type png)
 <use images/BasicLiftModel-fail-output.png>
 Package pdftex.def Info: images/BasicLiftModel-fail-output.png  used on input l
-ine 374.
+ine 376.
 (pdftex.def)             Requested size: 195.0pt x 28.77235pt.
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 383--384
+Underfull \hbox (badness 10000) in paragraph at lines 384--385
 
  []
 
-[11 <./images/start-moving-time-property-several.png>]
-<images/task2-tree.png, id=76, 406.51875pt x 159.59625pt>
+[13 <./images/model-based-testing-diag.png>] [14 <./images/BasicLiftModel-varia
+bles.png> <./images/BaseLiftModel-coverage.png> <./images/BasicLiftModel-fail-c
+ode.png> <./images/BasicLiftModel-fail-output.png>]
+Overfull \hbox (84.88954pt too wide) in paragraph at lines 386--387
+\OT1/cmr/m/n/12 than 3 sec-onds. How-ever a prob-lem arose where the method \OT
+1/cmtt/m/n/12 LiftController.moveLift(...)
+ []
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2020/03/24 1.8d listings language file
+)
+Underfull \hbox (badness 10000) in paragraph at lines 421--422
+
+ []
+
+[15]
+<images/task2-tree.png, id=100, 406.51875pt x 159.59625pt>
 File: images/task2-tree.png Graphic file (type png)
 <use images/task2-tree.png>
-Package pdftex.def Info: images/task2-tree.png  used on input line 407.
+Package pdftex.def Info: images/task2-tree.png  used on input line 445.
 (pdftex.def)             Requested size: 195.0pt x 76.55417pt.
-<images/task3-tree.png, id=77, 444.66125pt x 330.23375pt>
+<images/task3-tree.png, id=101, 444.66125pt x 330.23375pt>
 File: images/task3-tree.png Graphic file (type png)
 <use images/task3-tree.png>
-Package pdftex.def Info: images/task3-tree.png  used on input line 412.
+Package pdftex.def Info: images/task3-tree.png  used on input line 450.
 (pdftex.def)             Requested size: 195.0pt x 144.81955pt.
-<images/task4-tree.png, id=78, 419.5675pt x 331.2375pt>
+<images/task4-tree.png, id=102, 419.5675pt x 331.2375pt>
 File: images/task4-tree.png Graphic file (type png)
 <use images/task4-tree.png>
-Package pdftex.def Info: images/task4-tree.png  used on input line 417.
+Package pdftex.def Info: images/task4-tree.png  used on input line 455.
 (pdftex.def)             Requested size: 195.0pt x 153.94803pt.
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 424--425
+Underfull \hbox (badness 10000) in paragraph at lines 462--463
 
  []
 
-[12 <./images/start-moving-time-property-failure-edit.png>]
-<images/task2-diagram.png, id=83, 636.3775pt x 452.69125pt>
+<images/task2-diagram.png, id=103, 636.3775pt x 452.69125pt>
 File: images/task2-diagram.png Graphic file (type png)
 <use images/task2-diagram.png>
-Package pdftex.def Info: images/task2-diagram.png  used on input line 430.
+Package pdftex.def Info: images/task2-diagram.png  used on input line 468.
 (pdftex.def)             Requested size: 195.0pt x 138.70956pt.
-<images/task4-diagram.png, id=84, 695.59875pt x 439.6425pt>
+<images/task4-diagram.png, id=104, 695.59875pt x 439.6425pt>
 File: images/task4-diagram.png Graphic file (type png)
 <use images/task4-diagram.png>
-Package pdftex.def Info: images/task4-diagram.png  used on input line 435.
+Package pdftex.def Info: images/task4-diagram.png  used on input line 473.
 (pdftex.def)             Requested size: 195.0pt x 123.24664pt.
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Overfull \hbox (86.19614pt too wide) in paragraph at lines 442--443
+Overfull \hbox (86.19614pt too wide) in paragraph at lines 480--481
 \OT1/cmr/m/n/12 larva ends in a bad state. In the first test shown in this sec-
 tion, the \OT1/cmtt/m/n/12 StartMovingTimeProperty
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 442--443
+Underfull \hbox (badness 10000) in paragraph at lines 480--481
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 444--445
+Underfull \hbox (badness 10000) in paragraph at lines 482--483
 
  []
 
-[13 <./images/start-moving-time-property-failed.png> <./images/all-properties.p
-ng>]
-<images/larva-test-fail-code.png, id=91, 669.50125pt x 465.74pt>
+<images/larva-test-fail-code.png, id=105, 669.50125pt x 465.74pt>
 File: images/larva-test-fail-code.png Graphic file (type png)
 <use images/larva-test-fail-code.png>
-Package pdftex.def Info: images/larva-test-fail-code.png  used on input line 45
-0.
+Package pdftex.def Info: images/larva-test-fail-code.png  used on input line 48
+8.
 (pdftex.def)             Requested size: 195.0pt x 135.65099pt.
-<images/larva-test-fail-output.png, id=92, 454.69875pt x 495.8525pt>
+<images/larva-test-fail-output.png, id=106, 454.69875pt x 495.8525pt>
 File: images/larva-test-fail-output.png Graphic file (type png)
 <use images/larva-test-fail-output.png>
 Package pdftex.def Info: images/larva-test-fail-output.png  used on input line 
-455.
+493.
 (pdftex.def)             Requested size: 195.0pt x 212.65253pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<images/larva-test-fail-2-code.png, id=93, 1006.76125pt x 302.12875pt>
+<images/larva-test-fail-2-code.png, id=107, 1006.76125pt x 302.12875pt>
 File: images/larva-test-fail-2-code.png Graphic file (type png)
 <use images/larva-test-fail-2-code.png>
 Package pdftex.def Info: images/larva-test-fail-2-code.png  used on input line 
-466.
+504.
 (pdftex.def)             Requested size: 195.0pt x 58.51608pt.
-<images/larva-test-fail-2-output.png, id=94, 1092.08pt x 502.87875pt>
+<images/larva-test-fail-2-output.png, id=108, 1092.08pt x 502.87875pt>
 File: images/larva-test-fail-2-output.png Graphic file (type png)
 <use images/larva-test-fail-2-output.png>
 Package pdftex.def Info: images/larva-test-fail-2-output.png  used on input lin
-e 471.
+e 509.
 (pdftex.def)             Requested size: 195.0pt x 89.79297pt.
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 478--479
+Underfull \hbox (badness 10000) in paragraph at lines 516--517
 
  []
 
-[14 <./images/floor-request-code.png> <./images/model-based-testing-diag.png>]
-[15 <./images/BasicLiftModel-variables.png> <./images/BaseLiftModel-coverage.pn
-g>] [16 <./images/BasicLiftModel-fail-code.png> <./images/BasicLiftModel-fail-o
-utput.png> <./images/task2-tree.png> <./images/task3-tree.png> <./images/task4-
-tree.png>] [17 <./images/task2-diagram.png> <./images/task4-diagram.png> <./ima
-ges/larva-test-fail-code.png> <./images/larva-test-fail-output.png>] [18 <./ima
-ges/larva-test-fail-2-code.png> <./images/larva-test-fail-2-output.png>]
+[16] [17 <./images/task2-tree.png> <./images/task3-tree.png> <./images/task4-tr
+ee.png> <./images/task2-diagram.png> <./images/task4-diagram.png>] [18 <./image
+s/larva-test-fail-code.png> <./images/larva-test-fail-output.png> <./images/lar
+va-test-fail-2-code.png> <./images/larva-test-fail-2-output.png>] [19]
 (./report.aux) ) 
 Here is how much of TeX's memory you used:
- 18830 strings out of 478994
- 375080 string characters out of 5858184
- 883048 words of memory out of 5000000
- 35953 multiletter control sequences out of 15000+600000
- 413991 words of font info for 68 fonts, out of 8000000 for 9000
+ 18881 strings out of 478994
+ 375804 string characters out of 5858184
+ 883682 words of memory out of 5000000
+ 36001 multiletter control sequences out of 15000+600000
+ 414159 words of font info for 69 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 87i,12n,117p,1009b,1732s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 87i,12n,117p,1009b,1650s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm
 -super-ts1.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmbx12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/c
@@ -1077,17 +1033,19 @@ m/cmex10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm
 /cmmi12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/
 cmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cm
 r12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr1
-7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.p
-fb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb>
-</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><
-/usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></
-usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></u
-sr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb
-></usr/local/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on report.pdf (18 pages, 5868372 bytes).
+7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.p
+fb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb>
+</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></u
+sr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></us
+r/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr
+/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/
+local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/l
+ocal/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></u
+sr/local/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
+Output written on report.pdf (19 pages, 5894880 bytes).
 PDF statistics:
- 168 PDF objects out of 1000 (max. 8388607)
- 85 compressed objects within 1 object stream
+ 180 PDF objects out of 1000 (max. 8388607)
+ 94 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  138 words of extra memory for PDF output out of 10000 (max. 10000000)
 

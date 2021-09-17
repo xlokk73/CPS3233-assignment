@@ -1,4 +1,4 @@
-digraph BasicLiftModel
+digraph LiftTimeModel
 {
   IDLE -> MOVING  [label="moveLift"];
   MOVING -> IDLE  [label="stopLift"];

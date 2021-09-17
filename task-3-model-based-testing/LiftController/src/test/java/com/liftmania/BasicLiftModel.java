@@ -56,6 +56,8 @@ public class BasicLiftModel implements TimedFsmModel {
 
     public boolean openDoorGuard() { return getState().equals(LiftStates.IDLE);}
     public @Action void openDoor() {
+        Assert.assertFalse("Lift  already open", isOpen);
+
         isOpen = true;
         lastFloor = currentFloor;
         currentFloor = lift.floor;
@@ -72,6 +74,8 @@ public class BasicLiftModel implements TimedFsmModel {
 
     public boolean closeDoorGuard() {return getState().equals(LiftStates.LOADING);}
     public @Action void closeDoor() {
+        Assert.assertTrue("Door already closed", isOpen);
+
         liftState = LiftStates.IDLE;
         lift.closeDoors();
 
